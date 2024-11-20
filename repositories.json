@@ -3,5 +3,6 @@
 [
     { "owner": "xunit", "repo": "xunit" },
     { "owner": "rsm-hcd", "repo": "AndcultureCode.CSharp.Sitefinity.Testing" }
+    
 ]
 
