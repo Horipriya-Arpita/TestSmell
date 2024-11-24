@@ -1,0 +1,1497 @@
+[
+  {
+    "name": "AbpAspNetCoreIntegratedTestBase.cs",
+    "path": "src\\Abp.AspNetCore.TestBase\\AbpAspNetCoreIntegratedTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.AspNetCore.TestBase/AbpAspNetCoreIntegratedTestBase.cs"
+  },
+  {
+    "name": "AbpAspNetCoreTestBaseModule.cs",
+    "path": "src\\Abp.AspNetCore.TestBase\\AbpAspNetCoreTestBaseModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.AspNetCore.TestBase/AbpAspNetCoreTestBaseModule.cs"
+  },
+  {
+    "name": "AbpServiceOptionsTestExtensions.cs",
+    "path": "src\\Abp.AspNetCore.TestBase\\AbpServiceOptionsTestExtensions.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.AspNetCore.TestBase/AbpServiceOptionsTestExtensions.cs"
+  },
+  {
+    "name": "TestOptions.cs",
+    "path": "src\\Abp.AspNetCore.TestBase\\TestOptions.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.AspNetCore.TestBase/TestOptions.cs"
+  },
+  {
+    "name": "AbpIntegratedTestBase.cs",
+    "path": "src\\Abp.TestBase\\TestBase\\AbpIntegratedTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.TestBase/TestBase/AbpIntegratedTestBase.cs"
+  },
+  {
+    "name": "AbpTestBaseModule.cs",
+    "path": "src\\Abp.TestBase\\TestBase\\AbpTestBaseModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.TestBase/TestBase/AbpTestBaseModule.cs"
+  },
+  {
+    "name": "TestAbpSession.cs",
+    "path": "src\\Abp.TestBase\\TestBase\\Runtime\\Session\\TestAbpSession.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp.TestBase/TestBase/Runtime/Session/TestAbpSession.cs"
+  },
+  {
+    "name": "AspectAttribute.cs",
+    "path": "src\\Abp\\Aspects\\AspectAttribute.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Aspects/AspectAttribute.cs"
+  },
+  {
+    "name": "AbpPropertiesDependenciesModelInspector.cs",
+    "path": "src\\Abp\\Dependency\\AbpPropertiesDependenciesModelInspector.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Dependency/AbpPropertiesDependenciesModelInspector.cs"
+  },
+  {
+    "name": "AndNotSpecification.cs",
+    "path": "src\\Abp\\Specifications\\AndNotSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/AndNotSpecification.cs"
+  },
+  {
+    "name": "AndSpecification.cs",
+    "path": "src\\Abp\\Specifications\\AndSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/AndSpecification.cs"
+  },
+  {
+    "name": "AnySpecification.cs",
+    "path": "src\\Abp\\Specifications\\AnySpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/AnySpecification.cs"
+  },
+  {
+    "name": "CompositeSpecification.cs",
+    "path": "src\\Abp\\Specifications\\CompositeSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/CompositeSpecification.cs"
+  },
+  {
+    "name": "ExpressionSpecification.cs",
+    "path": "src\\Abp\\Specifications\\ExpressionSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/ExpressionSpecification.cs"
+  },
+  {
+    "name": "ICompositeSpecification.cs",
+    "path": "src\\Abp\\Specifications\\ICompositeSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/ICompositeSpecification.cs"
+  },
+  {
+    "name": "ISpecification.cs",
+    "path": "src\\Abp\\Specifications\\ISpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/ISpecification.cs"
+  },
+  {
+    "name": "ISpecificationParser.cs",
+    "path": "src\\Abp\\Specifications\\ISpecificationParser.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/ISpecificationParser.cs"
+  },
+  {
+    "name": "NoneSpecification.cs",
+    "path": "src\\Abp\\Specifications\\NoneSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/NoneSpecification.cs"
+  },
+  {
+    "name": "NotSpecification.cs",
+    "path": "src\\Abp\\Specifications\\NotSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/NotSpecification.cs"
+  },
+  {
+    "name": "OrSpecification.cs",
+    "path": "src\\Abp\\Specifications\\OrSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/OrSpecification.cs"
+  },
+  {
+    "name": "Specification.cs",
+    "path": "src\\Abp\\Specifications\\Specification.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/Specification.cs"
+  },
+  {
+    "name": "SpecificationExtensions.cs",
+    "path": "src\\Abp\\Specifications\\SpecificationExtensions.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Specifications/SpecificationExtensions.cs"
+  },
+  {
+    "name": "UnspecifiedClockProvider.cs",
+    "path": "src\\Abp\\Timing\\UnspecifiedClockProvider.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/src/Abp/Timing/UnspecifiedClockProvider.cs"
+  },
+  {
+    "name": "ParameterTestAppService.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\AppServices\\ParameterTestAppService.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/AppServices/ParameterTestAppService.cs"
+  },
+  {
+    "name": "ResponseNoCacheTestAppService.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\AppServices\\ResponseNoCacheTestAppService.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/AppServices/ResponseNoCacheTestAppService.cs"
+  },
+  {
+    "name": "AuthTest2Controller.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\AuthTest2Controller.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/AuthTest2Controller.cs"
+  },
+  {
+    "name": "AuthTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\AuthTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/AuthTestController.cs"
+  },
+  {
+    "name": "DontWrapResultTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\DontWrapResultTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/DontWrapResultTestController.cs"
+  },
+  {
+    "name": "FluentValidationTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\FluentValidationTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/FluentValidationTestController.cs"
+  },
+  {
+    "name": "MultiTenancyTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\MultiTenancyTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/MultiTenancyTestController.cs"
+  },
+  {
+    "name": "ResponseCacheTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\ResponseCacheTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/ResponseCacheTestController.cs"
+  },
+  {
+    "name": "SimpleTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\SimpleTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/SimpleTestController.cs"
+  },
+  {
+    "name": "ValidationTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\ValidationTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/ValidationTestController.cs"
+  },
+  {
+    "name": "WrapResultTestController.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\Controllers\\WrapResultTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/Controllers/WrapResultTestController.cs"
+  },
+  {
+    "name": "TestTenantStore.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\App\\MultiTenancy\\TestTenantStore.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/App/MultiTenancy/TestTenantStore.cs"
+  },
+  {
+    "name": "AbpLocalizationController_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\AbpLocalizationController_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/AbpLocalizationController_Tests.cs"
+  },
+  {
+    "name": "AppTestBase.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\AppTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/AppTestBase.cs"
+  },
+  {
+    "name": "AuditLogTests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\AuditLogTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/AuditLogTests.cs"
+  },
+  {
+    "name": "AuthTestController_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\AuthTestController_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/AuthTestController_Tests.cs"
+  },
+  {
+    "name": "DateTimeModelBinder_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\DateTimeModelBinder_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/DateTimeModelBinder_Tests.cs"
+  },
+  {
+    "name": "DontWrapResultTestController_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\DontWrapResultTestController_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/DontWrapResultTestController_Tests.cs"
+  },
+  {
+    "name": "EntityHistory_Reason_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\EntityHistory_Reason_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/EntityHistory_Reason_Tests.cs"
+  },
+  {
+    "name": "FluentValidation_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\FluentValidation_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/FluentValidation_Tests.cs"
+  },
+  {
+    "name": "MultiTenancy_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\MultiTenancy_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/MultiTenancy_Tests.cs"
+  },
+  {
+    "name": "NameConflict_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\NameConflict_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/NameConflict_Tests.cs"
+  },
+  {
+    "name": "ProxyScripting_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\ProxyScripting_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/ProxyScripting_Tests.cs"
+  },
+  {
+    "name": "ResponseCacheTestController_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\ResponseCacheTestController_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/ResponseCacheTestController_Tests.cs"
+  },
+  {
+    "name": "ResponseNoCacheTestAppService_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\ResponseNoCacheTestAppService_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/ResponseNoCacheTestAppService_Tests.cs"
+  },
+  {
+    "name": "SimpleTestControllerTests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\SimpleTestControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/SimpleTestControllerTests.cs"
+  },
+  {
+    "name": "UnitOfWorkMiddleware_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\Uow\\UnitOfWorkMiddleware_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/Uow/UnitOfWorkMiddleware_Tests.cs"
+  },
+  {
+    "name": "ArrayMacther_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\Utils\\ArrayMacther_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/Utils/ArrayMacther_Tests.cs"
+  },
+  {
+    "name": "Validation_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\Validation_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/Validation_Tests.cs"
+  },
+  {
+    "name": "WrapResultTestController_Tests.cs",
+    "path": "test\\Abp.AspNetCore.Tests\\Tests\\WrapResultTestController_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AspNetCore.Tests/Tests/WrapResultTestController_Tests.cs"
+  },
+  {
+    "name": "AbpAutomapperTestModule.cs",
+    "path": "test\\Abp.AutoMapper.Tests\\AbpAutomapperTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AutoMapper.Tests/AbpAutomapperTestModule.cs"
+  },
+  {
+    "name": "AutoMapper_Inheritance_Tests.cs",
+    "path": "test\\Abp.AutoMapper.Tests\\AutoMapper_Inheritance_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AutoMapper.Tests/AutoMapper_Inheritance_Tests.cs"
+  },
+  {
+    "name": "AutoMapping_Tests.cs",
+    "path": "test\\Abp.AutoMapper.Tests\\AutoMapping_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AutoMapper.Tests/AutoMapping_Tests.cs"
+  },
+  {
+    "name": "StaticAutoMapper_Tests.cs",
+    "path": "test\\Abp.AutoMapper.Tests\\StaticAutoMapper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.AutoMapper.Tests/StaticAutoMapper_Tests.cs"
+  },
+  {
+    "name": "AbpBlobStoringAzureTestBase.cs",
+    "path": "test\\Abp.BlobStoring.Azure.Tests\\Abp\\BlobStoring\\Azure\\AbpBlobStoringAzureTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Azure.Tests/Abp/BlobStoring/Azure/AbpBlobStoringAzureTestBase.cs"
+  },
+  {
+    "name": "AbpBlobStoringAzureTestModule.cs",
+    "path": "test\\Abp.BlobStoring.Azure.Tests\\Abp\\BlobStoring\\Azure\\AbpBlobStoringAzureTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Azure.Tests/Abp/BlobStoring/Azure/AbpBlobStoringAzureTestModule.cs"
+  },
+  {
+    "name": "AzureBlobContainer_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Azure.Tests\\Abp\\BlobStoring\\Azure\\AzureBlobContainer_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Azure.Tests/Abp/BlobStoring/Azure/AzureBlobContainer_Tests.cs"
+  },
+  {
+    "name": "AzureBlobNameCalculator_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Azure.Tests\\Abp\\BlobStoring\\Azure\\AzureBlobNameCalculator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Azure.Tests/Abp/BlobStoring/Azure/AzureBlobNameCalculator_Tests.cs"
+  },
+  {
+    "name": "DefaultAzureBlobNamingNormalizerProvider_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Azure.Tests\\Abp\\BlobStoring\\Azure\\DefaultAzureBlobNamingNormalizerProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Azure.Tests/Abp/BlobStoring/Azure/DefaultAzureBlobNamingNormalizerProvider_Tests.cs"
+  },
+  {
+    "name": "AbpBlobStoringFileSystemTestBase.cs",
+    "path": "test\\Abp.BlobStoring.FileSystem.Tests\\Abp\\BlobStoring\\FileSystem\\AbpBlobStoringFileSystemTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.FileSystem.Tests/Abp/BlobStoring/FileSystem/AbpBlobStoringFileSystemTestBase.cs"
+  },
+  {
+    "name": "AbpBlobStoringFileSystemTestModule.cs",
+    "path": "test\\Abp.BlobStoring.FileSystem.Tests\\Abp\\BlobStoring\\FileSystem\\AbpBlobStoringFileSystemTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.FileSystem.Tests/Abp/BlobStoring/FileSystem/AbpBlobStoringFileSystemTestModule.cs"
+  },
+  {
+    "name": "BlogFilePathCalculator_Tests.cs",
+    "path": "test\\Abp.BlobStoring.FileSystem.Tests\\Abp\\BlobStoring\\FileSystem\\BlogFilePathCalculator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.FileSystem.Tests/Abp/BlobStoring/FileSystem/BlogFilePathCalculator_Tests.cs"
+  },
+  {
+    "name": "DefaultFileSystemBlobNamingNormalizerProvider_Tests.cs",
+    "path": "test\\Abp.BlobStoring.FileSystem.Tests\\Abp\\BlobStoring\\FileSystem\\DefaultFileSystemBlobNamingNormalizerProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.FileSystem.Tests/Abp/BlobStoring/FileSystem/DefaultFileSystemBlobNamingNormalizerProvider_Tests.cs"
+  },
+  {
+    "name": "FileSystemBlobContainer_Tests.cs",
+    "path": "test\\Abp.BlobStoring.FileSystem.Tests\\Abp\\BlobStoring\\FileSystem\\FileSystemBlobContainer_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.FileSystem.Tests/Abp/BlobStoring/FileSystem/FileSystemBlobContainer_Tests.cs"
+  },
+  {
+    "name": "AbpBlobStoringOptions_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\AbpBlobStoringOptions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/AbpBlobStoringOptions_Tests.cs"
+  },
+  {
+    "name": "AbpBlobStoringTestBase.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\AbpBlobStoringTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/AbpBlobStoringTestBase.cs"
+  },
+  {
+    "name": "AbpBlobStoringTestModule.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\AbpBlobStoringTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/AbpBlobStoringTestModule.cs"
+  },
+  {
+    "name": "BlobContainerFactory_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\BlobContainerFactory_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/BlobContainerFactory_Tests.cs"
+  },
+  {
+    "name": "BlobContainerNameAttribute_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\BlobContainerNameAttribute_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/BlobContainerNameAttribute_Tests.cs"
+  },
+  {
+    "name": "BlobContainer_Injection_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\BlobContainer_Injection_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/BlobContainer_Injection_Tests.cs"
+  },
+  {
+    "name": "BlobContainer_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\BlobContainer_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/BlobContainer_Tests.cs"
+  },
+  {
+    "name": "BlobProviderSelector_Tests.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\BlobProviderSelector_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/BlobProviderSelector_Tests.cs"
+  },
+  {
+    "name": "TestContainer1.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\TestObjects\\TestContainer1.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/TestObjects/TestContainer1.cs"
+  },
+  {
+    "name": "TestContainer2.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\TestObjects\\TestContainer2.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/TestObjects/TestContainer2.cs"
+  },
+  {
+    "name": "TestContainer3.cs",
+    "path": "test\\Abp.BlobStoring.Tests\\Abp\\BlobStoring\\TestObjects\\TestContainer3.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.BlobStoring.Tests/Abp/BlobStoring/TestObjects/TestContainer3.cs"
+  },
+  {
+    "name": "Castle_Log4Net_Tests.cs",
+    "path": "test\\Abp.Castle.Log4Net.Tests\\Castle_Log4Net_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Castle.Log4Net.Tests/Castle_Log4Net_Tests.cs"
+  },
+  {
+    "name": "AbpDapperTestModule.cs",
+    "path": "test\\Abp.Dapper.Tests\\AbpDapperTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Dapper.Tests/AbpDapperTestModule.cs"
+  },
+  {
+    "name": "DapperApplicationTestBase.cs",
+    "path": "test\\Abp.Dapper.Tests\\DapperApplicationTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Dapper.Tests/DapperApplicationTestBase.cs"
+  },
+  {
+    "name": "DapperRepository_Tests.cs",
+    "path": "test\\Abp.Dapper.Tests\\DapperRepository_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Dapper.Tests/DapperRepository_Tests.cs"
+  },
+  {
+    "name": "AbpEfCoreDapperTestApplicationBase.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Dapper.Tests\\AbpEfCoreDapperTestApplicationBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Dapper.Tests/AbpEfCoreDapperTestApplicationBase.cs"
+  },
+  {
+    "name": "AbpEfCoreDapperTestModule.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Dapper.Tests\\AbpEfCoreDapperTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Dapper.Tests/AbpEfCoreDapperTestModule.cs"
+  },
+  {
+    "name": "DomainEvents_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Dapper.Tests\\Tests\\DomainEvents_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Dapper.Tests/Tests/DomainEvents_Tests.cs"
+  },
+  {
+    "name": "Repository_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Dapper.Tests\\Tests\\Repository_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Dapper.Tests/Tests/Repository_Tests.cs"
+  },
+  {
+    "name": "Transaction_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Dapper.Tests\\Tests\\Transaction_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Dapper.Tests/Tests/Transaction_Tests.cs"
+  },
+  {
+    "name": "EntityFrameworkCoreModuleTestBase.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\EntityFrameworkCoreModuleTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/EntityFrameworkCoreModuleTestBase.cs"
+  },
+  {
+    "name": "EntityFrameworkCoreTestModule.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\EntityFrameworkCoreTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/EntityFrameworkCoreTestModule.cs"
+  },
+  {
+    "name": "DateTimeKind_Normalization_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\DateTimeKind_Normalization_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/DateTimeKind_Normalization_Tests.cs"
+  },
+  {
+    "name": "DbQuery_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\DbQuery_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/DbQuery_Tests.cs"
+  },
+  {
+    "name": "DomainEvents_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\DomainEvents_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/DomainEvents_Tests.cs"
+  },
+  {
+    "name": "EntityChangeEvents_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\EntityChangeEvents_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/EntityChangeEvents_Tests.cs"
+  },
+  {
+    "name": "ExplicitLoading_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\ExplicitLoading_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/ExplicitLoading_Tests.cs"
+  },
+  {
+    "name": "Parallel_Querying_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\Parallel_Querying_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/Parallel_Querying_Tests.cs"
+  },
+  {
+    "name": "QueryableExtensions_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\QueryableExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/QueryableExtensions_Tests.cs"
+  },
+  {
+    "name": "Repository_Extension_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\Repository_Extension_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/Repository_Extension_Tests.cs"
+  },
+  {
+    "name": "Repository_Filtering_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\Repository_Filtering_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/Repository_Filtering_Tests.cs"
+  },
+  {
+    "name": "Repository_Resolve_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\Repository_Resolve_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/Repository_Resolve_Tests.cs"
+  },
+  {
+    "name": "Repository_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\Repository_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/Repository_Tests.cs"
+  },
+  {
+    "name": "Transaction_Tests.cs",
+    "path": "test\\Abp.EntityFrameworkCore.Tests\\Tests\\Transaction_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.EntityFrameworkCore.Tests/Tests/Transaction_Tests.cs"
+  },
+  {
+    "name": "MailKitEmailSender_Tests.cs",
+    "path": "test\\Abp.MailKit.Tests\\MailKitEmailSender_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.MailKit.Tests/MailKitEmailSender_Tests.cs"
+  },
+  {
+    "name": "MemoryRepository_Simple_Tests.cs",
+    "path": "test\\Abp.MemoryDb.Tests\\Repositories\\MemoryRepository_Simple_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.MemoryDb.Tests/Repositories/MemoryRepository_Simple_Tests.cs"
+  },
+  {
+    "name": "AbpQuartzTestModule.cs",
+    "path": "test\\Abp.Quartz.Tests\\AbpQuartzTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Quartz.Tests/AbpQuartzTestModule.cs"
+  },
+  {
+    "name": "QuartzTests.cs",
+    "path": "test\\Abp.Quartz.Tests\\QuartzTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Quartz.Tests/QuartzTests.cs"
+  },
+  {
+    "name": "DefaultRedisCacheSerializer_Tests.cs",
+    "path": "test\\Abp.RedisCache.Tests\\DefaultRedisCacheSerializer_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.RedisCache.Tests/DefaultRedisCacheSerializer_Tests.cs"
+  },
+  {
+    "name": "ProtoBufRedisCacheSerializer_Test.cs",
+    "path": "test\\Abp.RedisCache.Tests\\ProtoBufRedisCacheSerializer_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.RedisCache.Tests/ProtoBufRedisCacheSerializer_Test.cs"
+  },
+  {
+    "name": "RedisCacheManager_Test.cs",
+    "path": "test\\Abp.RedisCache.Tests\\RedisCacheManager_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.RedisCache.Tests/RedisCacheManager_Test.cs"
+  },
+  {
+    "name": "ApplicationWithoutDb_Tests.cs",
+    "path": "test\\Abp.TestBase.Tests\\Application\\Services\\ApplicationWithoutDb_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.TestBase.Tests/Application/Services/ApplicationWithoutDb_Tests.cs"
+  },
+  {
+    "name": "ServiceWithDifferentInputs_Tests.cs",
+    "path": "test\\Abp.TestBase.Tests\\Application\\Services\\ServiceWithDifferentInputs_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.TestBase.Tests/Application/Services/ServiceWithDifferentInputs_Tests.cs"
+  },
+  {
+    "name": "Validation_Tests.cs",
+    "path": "test\\Abp.TestBase.Tests\\Application\\Services\\Validation_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.TestBase.Tests/Application/Services/Validation_Tests.cs"
+  },
+  {
+    "name": "SessionTests.cs",
+    "path": "test\\Abp.TestBase.Tests\\Runtime\\Session\\SessionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.TestBase.Tests/Runtime/Session/SessionTests.cs"
+  },
+  {
+    "name": "Menu_Tests.cs",
+    "path": "test\\Abp.Tests\\Application\\Navigation\\Menu_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Application/Navigation/Menu_Tests.cs"
+  },
+  {
+    "name": "NavigationTestCase.cs",
+    "path": "test\\Abp.Tests\\Application\\Navigation\\NavigationTestCase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Application/Navigation/NavigationTestCase.cs"
+  },
+  {
+    "name": "AuditingHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Auditing\\AuditingHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Auditing/AuditingHelper_Tests.cs"
+  },
+  {
+    "name": "AuthorizationHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Authorization\\AuthorizationHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Authorization/AuthorizationHelper_Tests.cs"
+  },
+  {
+    "name": "AuthorizationInterceptor_Tests.cs",
+    "path": "test\\Abp.Tests\\Authorization\\AuthorizationInterceptor_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Authorization/AuthorizationInterceptor_Tests.cs"
+  },
+  {
+    "name": "PermissionDefinitionTests.cs",
+    "path": "test\\Abp.Tests\\Authorization\\PermissionDefinitionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Authorization/PermissionDefinitionTests.cs"
+  },
+  {
+    "name": "InMemoryBackgroundJobStore_Tests.cs",
+    "path": "test\\Abp.Tests\\BackgroundJobs\\InMemoryBackgroundJobStore_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/BackgroundJobs/InMemoryBackgroundJobStore_Tests.cs"
+  },
+  {
+    "name": "Castle_Interception_Test.cs",
+    "path": "test\\Abp.Tests\\Castle\\Castle_Interception_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Castle/Castle_Interception_Test.cs"
+  },
+  {
+    "name": "ListExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Collections\\Extensions\\ListExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Collections/Extensions/ListExtensions_Tests.cs"
+  },
+  {
+    "name": "TypeList_Test.cs",
+    "path": "test\\Abp.Tests\\Collections\\TypeList_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Collections/TypeList_Test.cs"
+  },
+  {
+    "name": "DictionaryBasedConfig_Test.cs",
+    "path": "test\\Abp.Tests\\Configuration\\DictionaryBasedConfig_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Configuration/DictionaryBasedConfig_Test.cs"
+  },
+  {
+    "name": "SettingManager_Tests.cs",
+    "path": "test\\Abp.Tests\\Configuration\\SettingManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Configuration/SettingManager_Tests.cs"
+  },
+  {
+    "name": "Circular_Constructor_Dependency_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\Circular_Constructor_Dependency_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/Circular_Constructor_Dependency_Tests.cs"
+  },
+  {
+    "name": "Circular_Property_Dependency_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\Circular_Property_Dependency_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/Circular_Property_Dependency_Tests.cs"
+  },
+  {
+    "name": "DisposableDependencyObjectWrapper_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\DisposableDependencyObjectWrapper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/DisposableDependencyObjectWrapper_Tests.cs"
+  },
+  {
+    "name": "GenericInjection_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\GenericInjection_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/GenericInjection_Tests.cs"
+  },
+  {
+    "name": "IocManager_LifeStyle_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\IocManager_LifeStyle_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/IocManager_LifeStyle_Tests.cs"
+  },
+  {
+    "name": "IocManager_Override_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\IocManager_Override_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/IocManager_Override_Tests.cs"
+  },
+  {
+    "name": "IocManager_Self_Register_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\IocManager_Self_Register_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/IocManager_Self_Register_Tests.cs"
+  },
+  {
+    "name": "IocManager_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\IocManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/IocManager_Tests.cs"
+  },
+  {
+    "name": "PropertyInjection_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\PropertyInjection_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/PropertyInjection_Tests.cs"
+  },
+  {
+    "name": "Registrar_And_Resolver_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\Registrar_And_Resolver_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/Registrar_And_Resolver_Tests.cs"
+  },
+  {
+    "name": "ScopedIocResolver_Inject_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\ScopedIocResolver_Inject_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/ScopedIocResolver_Inject_Tests.cs"
+  },
+  {
+    "name": "ScopedIocResolver_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\ScopedIocResolver_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/ScopedIocResolver_Tests.cs"
+  },
+  {
+    "name": "ShouldInitialize_Simple_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\ShouldInitialize_Simple_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/ShouldInitialize_Simple_Tests.cs"
+  },
+  {
+    "name": "Unicode_Naming_Tests.cs",
+    "path": "test\\Abp.Tests\\Dependency\\Unicode_Naming_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Dependency/Unicode_Naming_Tests.cs"
+  },
+  {
+    "name": "DisposeAction_Test.cs",
+    "path": "test\\Abp.Tests\\DisposeAction_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/DisposeAction_Test.cs"
+  },
+  {
+    "name": "EntityHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Domain\\Entities\\EntityHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Domain/Entities/EntityHelper_Tests.cs"
+  },
+  {
+    "name": "ExtendableObject_Tests.cs",
+    "path": "test\\Abp.Tests\\Domain\\Entities\\ExtendableObject_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Domain/Entities/ExtendableObject_Tests.cs"
+  },
+  {
+    "name": "Test_Entities.cs",
+    "path": "test\\Abp.Tests\\Domain\\Entities\\Test_Entities.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Domain/Entities/Test_Entities.cs"
+  },
+  {
+    "name": "InnerUnitOfWorkCompleteHandle_Test.cs",
+    "path": "test\\Abp.Tests\\Domain\\Uow\\InnerUnitOfWorkCompleteHandle_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Domain/Uow/InnerUnitOfWorkCompleteHandle_Test.cs"
+  },
+  {
+    "name": "UnitOfWorkManager_Tests.cs",
+    "path": "test\\Abp.Tests\\Domain\\Uow\\UnitOfWorkManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Domain/Uow/UnitOfWorkManager_Tests.cs"
+  },
+  {
+    "name": "ValueObject_Simple_Tests.cs",
+    "path": "test\\Abp.Tests\\Domain\\Values\\ValueObject_Simple_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Domain/Values/ValueObject_Simple_Tests.cs"
+  },
+  {
+    "name": "ActionBasedEventHandlerTest.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\ActionBasedEventHandlerTest.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/ActionBasedEventHandlerTest.cs"
+  },
+  {
+    "name": "EventBusTestBase.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\EventBusTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/EventBusTestBase.cs"
+  },
+  {
+    "name": "EventBus_Exception_Test.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\EventBus_Exception_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/EventBus_Exception_Test.cs"
+  },
+  {
+    "name": "EventBus_MultipleHandle_Test.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\EventBus_MultipleHandle_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/EventBus_MultipleHandle_Test.cs"
+  },
+  {
+    "name": "EventRegisterUnregisterTest.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\EventRegisterUnregisterTest.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/EventRegisterUnregisterTest.cs"
+  },
+  {
+    "name": "GenericInheritanceTest.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\GenericInheritanceTest.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/GenericInheritanceTest.cs"
+  },
+  {
+    "name": "InheritanceTest.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\InheritanceTest.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/InheritanceTest.cs"
+  },
+  {
+    "name": "TransientDisposableEventHandlerTest.cs",
+    "path": "test\\Abp.Tests\\Events\\Bus\\TransientDisposableEventHandlerTest.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Events/Bus/TransientDisposableEventHandlerTest.cs"
+  },
+  {
+    "name": "GenericMethodCallTests.cs",
+    "path": "test\\Abp.Tests\\Experimental\\GenericMethodCallTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Experimental/GenericMethodCallTests.cs"
+  },
+  {
+    "name": "ComparableExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Extensions\\ComparableExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Extensions/ComparableExtensions_Tests.cs"
+  },
+  {
+    "name": "DateTimeExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Extensions\\DateTimeExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Extensions/DateTimeExtensions_Tests.cs"
+  },
+  {
+    "name": "DateTimeRange_Tests.cs",
+    "path": "test\\Abp.Tests\\Extensions\\DateTimeRange_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Extensions/DateTimeRange_Tests.cs"
+  },
+  {
+    "name": "DayOfWeekExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Extensions\\DayOfWeekExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Extensions/DayOfWeekExtensions_Tests.cs"
+  },
+  {
+    "name": "ObjectExtension_Test.cs",
+    "path": "test\\Abp.Tests\\Extensions\\ObjectExtension_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Extensions/ObjectExtension_Test.cs"
+  },
+  {
+    "name": "StringExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Extensions\\StringExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Extensions/StringExtensions_Tests.cs"
+  },
+  {
+    "name": "EntityDtoSerialization_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\EntityDtoSerialization_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/EntityDtoSerialization_Tests.cs"
+  },
+  {
+    "name": "JsonExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\JsonExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/JsonExtensions_Tests.cs"
+  },
+  {
+    "name": "JsonSerializationHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\JsonSerializationHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/JsonSerializationHelper_Tests.cs"
+  },
+  {
+    "name": "AbpNullableFromEmptyStringConverterFactory_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\SystemTextJson\\AbpNullableFromEmptyStringConverterFactory_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/SystemTextJson/AbpNullableFromEmptyStringConverterFactory_Tests.cs"
+  },
+  {
+    "name": "AbpStringToBoolean_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\SystemTextJson\\AbpStringToBoolean_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/SystemTextJson/AbpStringToBoolean_Tests.cs"
+  },
+  {
+    "name": "AbpStringToEnum_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\SystemTextJson\\AbpStringToEnum_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/SystemTextJson/AbpStringToEnum_Tests.cs"
+  },
+  {
+    "name": "AbpStringToGuid_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\SystemTextJson\\AbpStringToGuid_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/SystemTextJson/AbpStringToGuid_Tests.cs"
+  },
+  {
+    "name": "AbpSystemTextJsonExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Json\\SystemTextJson\\AbpSystemTextJsonExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Json/SystemTextJson/AbpSystemTextJsonExtensions_Tests.cs"
+  },
+  {
+    "name": "PredicateBuilder_Tests.cs",
+    "path": "test\\Abp.Tests\\Linq\\Expressions\\PredicateBuilder_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Linq/Expressions/PredicateBuilder_Tests.cs"
+  },
+  {
+    "name": "DefaultLanguageProvider_Test.cs",
+    "path": "test\\Abp.Tests\\Localization\\DefaultLanguageProvider_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/DefaultLanguageProvider_Test.cs"
+  },
+  {
+    "name": "HumanizerOfUndefinedLocalizationSource_Tests.cs",
+    "path": "test\\Abp.Tests\\Localization\\HumanizerOfUndefinedLocalizationSource_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/HumanizerOfUndefinedLocalizationSource_Tests.cs"
+  },
+  {
+    "name": "JsonAndXmlSourceMixing_Tests.cs",
+    "path": "test\\Abp.Tests\\Localization\\Json\\JsonAndXmlSourceMixing_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/Json/JsonAndXmlSourceMixing_Tests.cs"
+  },
+  {
+    "name": "JsonEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "path": "test\\Abp.Tests\\Localization\\Json\\JsonEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/Json/JsonEmbeddedFileLocalizationDictionaryProvider_Tests.cs"
+  },
+  {
+    "name": "ResourceFileLocalizationSource_Tests.cs",
+    "path": "test\\Abp.Tests\\Localization\\ResourceFileLocalizationSource_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/ResourceFileLocalizationSource_Tests.cs"
+  },
+  {
+    "name": "MyTestResource.Designer.cs",
+    "path": "test\\Abp.Tests\\Localization\\TestResourceFiles\\MyTestResource.Designer.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/TestResourceFiles/MyTestResource.Designer.cs"
+  },
+  {
+    "name": "Test_DictionaryBasedLocalizationSource.cs",
+    "path": "test\\Abp.Tests\\Localization\\Test_DictionaryBasedLocalizationSource.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/Test_DictionaryBasedLocalizationSource.cs"
+  },
+  {
+    "name": "Test_XmlLocalizationDictionaryBuilder.cs",
+    "path": "test\\Abp.Tests\\Localization\\Test_XmlLocalizationDictionaryBuilder.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/Test_XmlLocalizationDictionaryBuilder.cs"
+  },
+  {
+    "name": "XmlEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "path": "test\\Abp.Tests\\Localization\\XmlEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Localization/XmlEmbeddedFileLocalizationDictionaryProvider_Tests.cs"
+  },
+  {
+    "name": "LogSeverity_Tests.cs",
+    "path": "test\\Abp.Tests\\Logging\\LogSeverity_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Logging/LogSeverity_Tests.cs"
+  },
+  {
+    "name": "MimeTypeMap_Tests.cs",
+    "path": "test\\Abp.Tests\\MimeTypes\\MimeTypeMap_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/MimeTypes/MimeTypeMap_Tests.cs"
+  },
+  {
+    "name": "AbpAssemblyFinder_Tests.cs",
+    "path": "test\\Abp.Tests\\Modules\\AbpAssemblyFinder_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Modules/AbpAssemblyFinder_Tests.cs"
+  },
+  {
+    "name": "PlugInModuleLoading_Tests.cs",
+    "path": "test\\Abp.Tests\\Modules\\PlugInModuleLoading_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Modules/PlugInModuleLoading_Tests.cs"
+  },
+  {
+    "name": "StartupModuleToBeLast_Tests.cs",
+    "path": "test\\Abp.Tests\\Modules\\StartupModuleToBeLast_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Modules/StartupModuleToBeLast_Tests.cs"
+  },
+  {
+    "name": "TestTenantStore.cs",
+    "path": "test\\Abp.Tests\\MultiTenancy\\TestTenantStore.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/MultiTenancy/TestTenantStore.cs"
+  },
+  {
+    "name": "SmtpEmailSender_Tests.cs",
+    "path": "test\\Abp.Tests\\Net\\Mail\\SmtpEmailSender_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Net/Mail/SmtpEmailSender_Tests.cs"
+  },
+  {
+    "name": "NotificationData_Serialization_Tests.cs",
+    "path": "test\\Abp.Tests\\Notifications\\NotificationData_Serialization_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Notifications/NotificationData_Serialization_Tests.cs"
+  },
+  {
+    "name": "NotificationPublisher_Tests.cs",
+    "path": "test\\Abp.Tests\\Notifications\\NotificationPublisher_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Notifications/NotificationPublisher_Tests.cs"
+  },
+  {
+    "name": "BooleanComparators_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\BooleanComparators_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/BooleanComparators_Tests.cs"
+  },
+  {
+    "name": "DateTimeObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\DateTimeObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/DateTimeObjectComparator_Tests.cs"
+  },
+  {
+    "name": "IntObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\IntObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/IntObjectComparator_Tests.cs"
+  },
+  {
+    "name": "LongObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\LongObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/LongObjectComparator_Tests.cs"
+  },
+  {
+    "name": "NullableBooleanComparators_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\NullableBooleanComparators_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/NullableBooleanComparators_Tests.cs"
+  },
+  {
+    "name": "NullableDateTimeObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\NullableDateTimeObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/NullableDateTimeObjectComparator_Tests.cs"
+  },
+  {
+    "name": "NullableIntObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\NullableIntObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/NullableIntObjectComparator_Tests.cs"
+  },
+  {
+    "name": "NullableLongObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\NullableLongObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/NullableLongObjectComparator_Tests.cs"
+  },
+  {
+    "name": "ObjectComparatorManager_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\ObjectComparatorManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/ObjectComparatorManager_Tests.cs"
+  },
+  {
+    "name": "ObjectComparatorTestBase.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\ObjectComparatorTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/ObjectComparatorTestBase.cs"
+  },
+  {
+    "name": "StringObjectComparator_Tests.cs",
+    "path": "test\\Abp.Tests\\ObjectComparators\\StringObjectComparator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/ObjectComparators/StringObjectComparator_Tests.cs"
+  },
+  {
+    "name": "InMemoryOnlineClientManager_Tests.cs",
+    "path": "test\\Abp.Tests\\RealTime\\InMemoryOnlineClientManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/RealTime/InMemoryOnlineClientManager_Tests.cs"
+  },
+  {
+    "name": "InMemoryOnlineClientStore_Tests.cs",
+    "path": "test\\Abp.Tests\\RealTime\\InMemoryOnlineClientStore_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/RealTime/InMemoryOnlineClientStore_Tests.cs"
+  },
+  {
+    "name": "MemberInfoExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Reflection\\Extensions\\MemberInfoExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Reflection/Extensions/MemberInfoExtensions_Tests.cs"
+  },
+  {
+    "name": "ReflectionHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Reflection\\ReflectionHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Reflection/ReflectionHelper_Tests.cs"
+  },
+  {
+    "name": "TypeHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Reflection\\TypeHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Reflection/TypeHelper_Tests.cs"
+  },
+  {
+    "name": "EmbeddedResourceTests.cs",
+    "path": "test\\Abp.Tests\\Resources\\Embedded\\EmbeddedResourceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Resources/Embedded/EmbeddedResourceTests.cs"
+  },
+  {
+    "name": "AbpCacheBase_Tests.cs",
+    "path": "test\\Abp.Tests\\Runtime\\Caching\\AbpCacheBase_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Runtime/Caching/AbpCacheBase_Tests.cs"
+  },
+  {
+    "name": "AbpCacheData_Tests.cs",
+    "path": "test\\Abp.Tests\\Runtime\\Caching\\AbpCacheData_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Runtime/Caching/AbpCacheData_Tests.cs"
+  },
+  {
+    "name": "AbpMemoryCache_Tests.cs",
+    "path": "test\\Abp.Tests\\Runtime\\Caching\\Memory\\AbpMemoryCache_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Runtime/Caching/Memory/AbpMemoryCache_Tests.cs"
+  },
+  {
+    "name": "MemoryCacheManager_Tests.cs",
+    "path": "test\\Abp.Tests\\Runtime\\Caching\\Memory\\MemoryCacheManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Runtime/Caching/Memory/MemoryCacheManager_Tests.cs"
+  },
+  {
+    "name": "DataContextAmbientScopeProvider_Tests.cs",
+    "path": "test\\Abp.Tests\\Runtime\\Remoting\\DataContextAmbientScopeProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Runtime/Remoting/DataContextAmbientScopeProvider_Tests.cs"
+  },
+  {
+    "name": "SimpleStringCipher_Tests.cs",
+    "path": "test\\Abp.Tests\\Runtime\\Security\\SimpleStringCipher_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Runtime/Security/SimpleStringCipher_Tests.cs"
+  },
+  {
+    "name": "Specification_Tests.cs",
+    "path": "test\\Abp.Tests\\Specifications\\Specification_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Specifications/Specification_Tests.cs"
+  },
+  {
+    "name": "AbpBootstraper_Tester.cs",
+    "path": "test\\Abp.Tests\\Startup\\AbpBootstraper_Tester.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Startup/AbpBootstraper_Tester.cs"
+  },
+  {
+    "name": "TestBaseWithLocalIocManager.cs",
+    "path": "test\\Abp.Tests\\TestBaseWithLocalIocManager.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/TestBaseWithLocalIocManager.cs"
+  },
+  {
+    "name": "FormattedStringTokenizer_Test.cs",
+    "path": "test\\Abp.Tests\\Text\\Formatting\\FormattedStringTokenizer_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Text/Formatting/FormattedStringTokenizer_Test.cs"
+  },
+  {
+    "name": "FormattedStringValueExtracter_Tests.cs",
+    "path": "test\\Abp.Tests\\Text\\Formatting\\FormattedStringValueExtracter_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Text/Formatting/FormattedStringValueExtracter_Tests.cs"
+  },
+  {
+    "name": "AsyncHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Threading\\AsyncHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Threading/AsyncHelper_Tests.cs"
+  },
+  {
+    "name": "LockExtensions_Tests.cs",
+    "path": "test\\Abp.Tests\\Threading\\LockExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Threading/LockExtensions_Tests.cs"
+  },
+  {
+    "name": "OneTimeRunner_Tests.cs",
+    "path": "test\\Abp.Tests\\Threading\\OneTimeRunner_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Threading/OneTimeRunner_Tests.cs"
+  },
+  {
+    "name": "TimezoneHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Timing\\TimezoneHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Timing/TimezoneHelper_Tests.cs"
+  },
+  {
+    "name": "UserIdentifier_Tests.cs",
+    "path": "test\\Abp.Tests\\UserIdentifier_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/UserIdentifier_Tests.cs"
+  },
+  {
+    "name": "UrlHelper_Tests.cs",
+    "path": "test\\Abp.Tests\\Web\\Http\\UrlHelper_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Tests/Web/Http/UrlHelper_Tests.cs"
+  },
+  {
+    "name": "AbpWebCommonTestModule.cs",
+    "path": "test\\Abp.Web.Common.Tests\\AbpWebCommonTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/AbpWebCommonTestModule.cs"
+  },
+  {
+    "name": "AbpWebCommonTestModuleAuthProvider.cs",
+    "path": "test\\Abp.Web.Common.Tests\\AbpWebCommonTestModuleAuthProvider.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/AbpWebCommonTestModuleAuthProvider.cs"
+  },
+  {
+    "name": "AbpWebCommonTestModuleSettingProvider.cs",
+    "path": "test\\Abp.Web.Common.Tests\\AbpWebCommonTestModuleSettingProvider.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/AbpWebCommonTestModuleSettingProvider.cs"
+  },
+  {
+    "name": "AbpUserConfigurationBuilder_Tests.cs",
+    "path": "test\\Abp.Web.Common.Tests\\Configuration\\AbpUserConfigurationBuilder_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/Configuration/AbpUserConfigurationBuilder_Tests.cs"
+  },
+  {
+    "name": "CustomConfigScriptManager_Tests.cs",
+    "path": "test\\Abp.Web.Common.Tests\\Configuration\\CustomConfigScriptManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/Configuration/CustomConfigScriptManager_Tests.cs"
+  },
+  {
+    "name": "SettingScriptManager_Tests.cs",
+    "path": "test\\Abp.Web.Common.Tests\\Setting\\SettingScriptManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/Setting/SettingScriptManager_Tests.cs"
+  },
+  {
+    "name": "DefaultErrorInfoConverter_Tests.cs",
+    "path": "test\\Abp.Web.Common.Tests\\Web\\DefaultErrorInfoConverter_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/Web/DefaultErrorInfoConverter_Tests.cs"
+  },
+  {
+    "name": "AbpWebCommonLocalization_Tests.cs",
+    "path": "test\\Abp.Web.Common.Tests\\Web\\Localization\\AbpWebCommonLocalization_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.Web.Common.Tests/Web/Localization/AbpWebCommonLocalization_Tests.cs"
+  },
+  {
+    "name": "AbpZeroIdentityServerTestBase.cs",
+    "path": "test\\Abp.ZeroCore.IdentityServer4.Tests\\IdentityServer4\\AbpZeroIdentityServerTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.IdentityServer4.Tests/IdentityServer4/AbpZeroIdentityServerTestBase.cs"
+  },
+  {
+    "name": "AbpZeroIdentityServerTestModule.cs",
+    "path": "test\\Abp.ZeroCore.IdentityServer4.Tests\\IdentityServer4\\AbpZeroIdentityServerTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.IdentityServer4.Tests/IdentityServer4/AbpZeroIdentityServerTestModule.cs"
+  },
+  {
+    "name": "DependencyInjection_Tests.cs",
+    "path": "test\\Abp.ZeroCore.IdentityServer4.Tests\\IdentityServer4\\DependencyInjection_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.IdentityServer4.Tests/IdentityServer4/DependencyInjection_Tests.cs"
+  },
+  {
+    "name": "TestCustomConfigProvider.cs",
+    "path": "test\\Abp.ZeroCore.SampleApp\\Application\\TestCustomConfigProvider.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.SampleApp/Application/TestCustomConfigProvider.cs"
+  },
+  {
+    "name": "UserTestEntity.cs",
+    "path": "test\\Abp.ZeroCore.SampleApp\\Core\\EntityHistory\\UserTestEntity.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.SampleApp/Core/EntityHistory/UserTestEntity.cs"
+  },
+  {
+    "name": "AbpZeroTestBase.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\AbpZeroTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/AbpZeroTestBase.cs"
+  },
+  {
+    "name": "AbpZeroTestModule.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\AbpZeroTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/AbpZeroTestModule.cs"
+  },
+  {
+    "name": "BackgroundJobManagerEventTriggerExtensions_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\BackgroundJobs\\BackgroundJobManagerEventTriggerExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/BackgroundJobs/BackgroundJobManagerEventTriggerExtensions_Tests.cs"
+  },
+  {
+    "name": "AbpStartupConfiguration_Test.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Configuration\\AbpStartupConfiguration_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Configuration/AbpStartupConfiguration_Test.cs"
+  },
+  {
+    "name": "DependencyInjection_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\DependencyInjection_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/DependencyInjection_Tests.cs"
+  },
+  {
+    "name": "EntityChange_Test.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\EntityChangeTracker\\EntityChange_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/EntityChangeTracker/EntityChange_Test.cs"
+  },
+  {
+    "name": "EntitySnapshotManager_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\EntityHistory\\EntitySnapshotManager_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/EntityHistory/EntitySnapshotManager_Tests.cs"
+  },
+  {
+    "name": "SimpleEntityHistory_Test.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\EntityHistory\\SimpleEntityHistory_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/EntityHistory/SimpleEntityHistory_Test.cs"
+  },
+  {
+    "name": "JsonEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Localization\\JsonEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Localization/JsonEmbeddedFileLocalizationDictionaryProvider_Tests.cs"
+  },
+  {
+    "name": "SimpleLocalization_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Localization\\SimpleLocalization_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Localization/SimpleLocalization_Tests.cs"
+  },
+  {
+    "name": "XmlEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Localization\\XmlEmbeddedFileLocalizationDictionaryProvider_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Localization/XmlEmbeddedFileLocalizationDictionaryProvider_Tests.cs"
+  },
+  {
+    "name": "MultiLingual_Entity_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\MultiLingual\\MultiLingual_Entity_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/MultiLingual/MultiLingual_Entity_Tests.cs"
+  },
+  {
+    "name": "MultiLingual_Mapping_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\MultiLingual\\MultiLingual_Mapping_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/MultiLingual/MultiLingual_Mapping_Tests.cs"
+  },
+  {
+    "name": "NotificationDistributer_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Notifications\\NotificationDistributer_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Notifications/NotificationDistributer_Tests.cs"
+  },
+  {
+    "name": "NotificationStore_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Notifications\\NotificationStore_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Notifications/NotificationStore_Tests.cs"
+  },
+  {
+    "name": "NotificationSubscription_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Notifications\\NotificationSubscription_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Notifications/NotificationSubscription_Tests.cs"
+  },
+  {
+    "name": "RealTimeNotifier_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Notifications\\RealTimeNotifier_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Notifications/RealTimeNotifier_Tests.cs"
+  },
+  {
+    "name": "RealtimeNotification_TargetNotification_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Notifications\\RealtimeNotification_TargetNotification_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Notifications/RealtimeNotification_TargetNotification_Tests.cs"
+  },
+  {
+    "name": "PrimaryKey_Guid_Generation_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\PrimaryKey_Guid_Generation_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/PrimaryKey_Guid_Generation_Tests.cs"
+  },
+  {
+    "name": "AbpPerRequestRedisCacheReplacement_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Redis\\PerRequestRedisCache\\AbpPerRequestRedisCacheReplacement_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Redis/PerRequestRedisCache/AbpPerRequestRedisCacheReplacement_Tests.cs"
+  },
+  {
+    "name": "AbpPerRequestRedisCacheTestModule.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Redis\\PerRequestRedisCache\\AbpPerRequestRedisCacheTestModule.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Redis/PerRequestRedisCache/AbpPerRequestRedisCacheTestModule.cs"
+  },
+  {
+    "name": "AbpPerRequestRedisCache_Test.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Redis\\PerRequestRedisCache\\AbpPerRequestRedisCache_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Redis/PerRequestRedisCache/AbpPerRequestRedisCache_Test.cs"
+  },
+  {
+    "name": "PerRequestRedisCacheTestsBase.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Redis\\PerRequestRedisCache\\PerRequestRedisCacheTestsBase.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Redis/PerRequestRedisCache/PerRequestRedisCacheTestsBase.cs"
+  },
+  {
+    "name": "AbpEntityFrameworkCoreEfPlusExtensions_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Repository\\AbpEntityFrameworkCoreEfPlusExtensions_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Repository/AbpEntityFrameworkCoreEfPlusExtensions_Tests.cs"
+  },
+  {
+    "name": "Repository_Dynamic_Entity_Registration_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Repository\\Repository_Dynamic_Entity_Registration_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Repository/Repository_Dynamic_Entity_Registration_Tests.cs"
+  },
+  {
+    "name": "Repository_Hard_Delete_Test.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Repository\\Repository_Hard_Delete_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Repository/Repository_Hard_Delete_Test.cs"
+  },
+  {
+    "name": "RoleManager_StaticRole_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Roles\\RoleManager_StaticRole_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Roles/RoleManager_StaticRole_Tests.cs"
+  },
+  {
+    "name": "RoleStore_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Roles\\RoleStore_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Roles/RoleStore_Tests.cs"
+  },
+  {
+    "name": "Session_Override_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Sessions\\Session_Override_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Sessions/Session_Override_Tests.cs"
+  },
+  {
+    "name": "FeatureValueStoreTests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Tenants\\FeatureValueStoreTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Tenants/FeatureValueStoreTests.cs"
+  },
+  {
+    "name": "TenantManagerTests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Tenants\\TenantManagerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Tenants/TenantManagerTests.cs"
+  },
+  {
+    "name": "TestDataBuilder.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\TestData\\TestDataBuilder.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/TestData/TestDataBuilder.cs"
+  },
+  {
+    "name": "TestOrganizationUnitsBuilder.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\TestData\\TestOrganizationUnitsBuilder.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/TestData/TestOrganizationUnitsBuilder.cs"
+  },
+  {
+    "name": "TestRolesBuilder.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\TestData\\TestRolesBuilder.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/TestData/TestRolesBuilder.cs"
+  },
+  {
+    "name": "TestServiceCollectionRegistrar.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\TestServiceCollectionRegistrar.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/TestServiceCollectionRegistrar.cs"
+  },
+  {
+    "name": "SecurityStampValidator_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\SecurityStampValidator_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/SecurityStampValidator_Tests.cs"
+  },
+  {
+    "name": "UserAppService_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserAppService_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserAppService_Tests.cs"
+  },
+  {
+    "name": "UserLogin_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserLogin_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserLogin_Tests.cs"
+  },
+  {
+    "name": "UserManager_AddToRole_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_AddToRole_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_AddToRole_Tests.cs"
+  },
+  {
+    "name": "UserManager_DeleteUser_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_DeleteUser_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_DeleteUser_Tests.cs"
+  },
+  {
+    "name": "UserManager_Lockout_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_Lockout_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_Lockout_Tests.cs"
+  },
+  {
+    "name": "UserManager_Options_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_Options_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_Options_Tests.cs"
+  },
+  {
+    "name": "UserManager_Permission_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_Permission_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_Permission_Tests.cs"
+  },
+  {
+    "name": "UserManager_RemoveFromRole_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_RemoveFromRole_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_RemoveFromRole_Tests.cs"
+  },
+  {
+    "name": "UserManager_SetRoles_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_SetRoles_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_SetRoles_Tests.cs"
+  },
+  {
+    "name": "UserManager_Tokens_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserManager_Tokens_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserManager_Tokens_Tests.cs"
+  },
+  {
+    "name": "UserTokenExpirationWorker_Tests.cs",
+    "path": "test\\Abp.ZeroCore.Tests\\Zero\\Users\\UserTokenExpirationWorker_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/Abp.ZeroCore.Tests/Zero/Users/UserTokenExpirationWorker_Tests.cs"
+  },
+  {
+    "name": "TestAppService.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Core\\Application\\TestAppService.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Core/Application/TestAppService.cs"
+  },
+  {
+    "name": "AbpODataDtoControllerPermissionTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\AbpODataDtoControllerPermissionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/AbpODataDtoControllerPermissionTests.cs"
+  },
+  {
+    "name": "AbpODataDtoControllerTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\AbpODataDtoControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/AbpODataDtoControllerTests.cs"
+  },
+  {
+    "name": "AbpODataEntityControllerTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\AbpODataEntityControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/AbpODataEntityControllerTests.cs"
+  },
+  {
+    "name": "DateTimeFormatterControllerTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\DateTimeFormatterControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/DateTimeFormatterControllerTests.cs"
+  },
+  {
+    "name": "InputAndOutputDateTimeFormat_Tests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\InputAndOutputDateTimeFormat_Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/InputAndOutputDateTimeFormat_Tests.cs"
+  },
+  {
+    "name": "MemoryCacheOptions_Test.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\MemoryCacheOptions_Test.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/MemoryCacheOptions_Test.cs"
+  },
+  {
+    "name": "ModelBindingAppServiceTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\ModelBindingAppServiceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/ModelBindingAppServiceTests.cs"
+  },
+  {
+    "name": "RazorAuditPageFilterTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\RazorAuditPageFilterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/RazorAuditPageFilterTests.cs"
+  },
+  {
+    "name": "RazorExceptionPageFilterTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\RazorExceptionPageFilterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/RazorExceptionPageFilterTests.cs"
+  },
+  {
+    "name": "RazorResultPageFilterTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\RazorResultPageFilterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/RazorResultPageFilterTests.cs"
+  },
+  {
+    "name": "RazorUowPageFilterTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\RazorUowPageFilterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/RazorUowPageFilterTests.cs"
+  },
+  {
+    "name": "SanitizerControllerTests.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo.Tests\\Tests\\SanitizerControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo.Tests/Tests/SanitizerControllerTests.cs"
+  },
+  {
+    "name": "AlertsTestController.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo\\Controllers\\AlertsTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo/Controllers/AlertsTestController.cs"
+  },
+  {
+    "name": "ResultWrappingTestController.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo\\Controllers\\ResultWrappingTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo/Controllers/ResultWrappingTestController.cs"
+  },
+  {
+    "name": "SanitizerTestController.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo\\Controllers\\SanitizerTestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo/Controllers/SanitizerTestController.cs"
+  },
+  {
+    "name": "TestController.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo\\Controllers\\TestController.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo/Controllers/TestController.cs"
+  },
+  {
+    "name": "RazorPageAntiforgeryTokenTest.cshtml.cs",
+    "path": "test\\aspnet-core-demo\\AbpAspNetCoreDemo\\Pages\\RazorPageAntiforgeryTokenTest.cshtml.cs",
+    "download_url": "https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/dev/test/aspnet-core-demo/AbpAspNetCoreDemo/Pages/RazorPageAntiforgeryTokenTest.cshtml.cs"
+  }
+]

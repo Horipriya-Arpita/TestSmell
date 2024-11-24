@@ -1,0 +1,245 @@
+[
+  {
+    "file": "DecorationTests.cs",
+    "methods": [
+      {
+        "name": "CanDecorateType",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| var instance = provider.GetRequiredService<IDecoratedService>();| var decorator = Assert.IsType<Decorator>(instance);| Assert.IsType<Decorated>(decorator.Inner);| }"
+      },
+      {
+        "name": "CanDecorateMultipleLevels",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| services.Decorate<IDecoratedService, Decorator>();| });| var instance = provider.GetRequiredService<IDecoratedService>();| var outerDecorator = Assert.IsType<Decorator>(instance);| var innerDecorator = Assert.IsType<Decorator>(outerDecorator.Inner);| _ = Assert.IsType<Decorated>(innerDecorator.Inner);| }"
+      },
+      {
+        "name": "CanDecorateDifferentServices",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService, Decorated>();| services.AddSingleton<IDecoratedService, OtherDecorated>();| services.Decorate<IDecoratedService, Decorator>();| });| var instances = provider| .GetRequiredService<IEnumerable<IDecoratedService>>()| .ToArray();| Assert.Equal(2, instances.Length);| Assert.All(instances, x => Assert.IsType<Decorator>(x));| }"
+      },
+      {
+        "name": "ShouldAddServiceKeyToExistingServiceDescriptor",
+        "body": "{| var services = new ServiceCollection();| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| var descriptors = services.GetDescriptors<IDecoratedService>();| Assert.Equal(2, descriptors.Length);| var decorated = descriptors.SingleOrDefault(x => x.ServiceKey is not null);| Assert.NotNull(decorated);| Assert.NotNull(decorated.KeyedImplementationType);| var key = Assert.IsType<string>(decorated.ServiceKey);| Assert.StartsWith(\"IDecoratedService\", key);| Assert.EndsWith(\"+Decorated\", key);| }"
+      },
+      {
+        "name": "CanDecorateExistingInstance",
+        "body": "{| var existing = new Decorated();| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService>(existing);| services.Decorate<IDecoratedService, Decorator>();| });| var instance = provider.GetRequiredService<IDecoratedService>();| var decorator = Assert.IsType<Decorator>(instance);| var decorated = Assert.IsType<Decorated>(decorator.Inner);| Assert.Same(existing, decorated);| }"
+      },
+      {
+        "name": "CanInjectServicesIntoDecoratedType",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IService, SomeRandomService>();| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| var validator = provider.GetRequiredService<IService>();| var instance = provider.GetRequiredService<IDecoratedService>();| var decorator = Assert.IsType<Decorator>(instance);| var decorated = Assert.IsType<Decorated>(decorator.Inner);| Assert.Same(validator, decorated.InjectedService);| }"
+      },
+      {
+        "name": "CanInjectServicesIntoDecoratingType",
+        "body": "{| var serviceProvider = ConfigureProvider(services =>| {| services.AddSingleton<IService, SomeRandomService>();| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| var validator = serviceProvider.GetRequiredService<IService>();| var instance = serviceProvider.GetRequiredService<IDecoratedService>();| var decorator = Assert.IsType<Decorator>(instance);| Assert.Same(validator, decorator.InjectedService);| }"
+      },
+      {
+        "name": "DisposableServicesAreDisposed",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddScoped<IDisposableService, DisposableService>();| services.Decorate<IDisposableService, DisposableServiceDecorator>();| });| DisposableServiceDecorator decorator;| using (var scope = provider.CreateScope())| {| var disposable = scope.ServiceProvider.GetRequiredService<IDisposableService>();| decorator = Assert.IsType<DisposableServiceDecorator>(disposable);| }| Assert.True(decorator.WasDisposed);| Assert.True(decorator.Inner.WasDisposed);| }"
+      },
+      {
+        "name": "ServicesWithSameServiceTypeAreOnlyDecoratedOnce",
+        "body": "{| // See issue: https://github.com/khellang/Scrutor/issues/125| static bool IsHandlerButNotDecorator(Type type)| {| var isHandlerDecorator = false;| var isHandler = type.GetInterfaces().Any(i =>| i.IsGenericType &&| i.GetGenericTypeDefinition() == typeof(IEventHandler<>)| );| if (isHandler)| {| isHandlerDecorator = type.GetInterfaces().Any(i => i == typeof(IHandlerDecorator));| }| return isHandler && !isHandlerDecorator;| }| var provider = ConfigureProvider(services =>| {| // This should end up with 3 registrations of type IEventHandler<MyEvent>.| services.Scan(s =>| s.FromAssemblyOf<DecorationTests>()| .AddClasses(c => c.Where(IsHandlerButNotDecorator))| .AsImplementedInterfaces()| .WithTransientLifetime());| // This should not decorate each registration 3 times.| services.Decorate(typeof(IEventHandler<>), typeof(MyEventHandlerDecorator<>));| });| var instances = provider.GetRequiredService<IEnumerable<IEventHandler<MyEvent>>>().ToList();| Assert.Equal(3, instances.Count);| Assert.All(instances, instance =>| {| var decorator = Assert.IsType<MyEventHandlerDecorator<MyEvent>>(instance);| // The inner handler should not be a decorator.| Assert.IsNotType<MyEventHandlerDecorator<MyEvent>>(decorator.Handler);| // The return call count should only be 1, we've only called Handle on one decorator.| // If there were nested decorators, this would return a higher call count as it| // would increment at each level.| Assert.Equal(1, decorator.Handle(new MyEvent()));| });| }"
+      },
+      {
+        "name": "Issue148_Decorate_IsAbleToDecorateConcreateTypes",
+        "body": "{| var sp = ConfigureProvider(sc =>| {| sc| .AddTransient<IService, SomeRandomService>()| .AddTransient<DecoratedService>()| .Decorate<DecoratedService, Decorator2>();| });| var result = sp.GetService<DecoratedService>() as Decorator2;| Assert.NotNull(result);| var inner = Assert.IsType<DecoratedService>(result.Inner);| Assert.NotNull(inner.Dependency);| }"
+      },
+      {
+        "name": "DecorationFunctionsDoDecorateRegisteredService",
+        "body": "{| var allDecorationFunctions = new Action<IServiceCollection>[]| {| sc => sc.Decorate<IDecoratedService, Decorator>(),| sc => sc.TryDecorate<IDecoratedService, Decorator>(),| sc => sc.Decorate(typeof(IDecoratedService), typeof(Decorator)),| sc => sc.TryDecorate(typeof(IDecoratedService), typeof(Decorator)),| sc => sc.Decorate((IDecoratedService obj, IServiceProvider sp) => new Decorator(obj)),| sc => sc.TryDecorate((IDecoratedService obj, IServiceProvider sp) => new Decorator(obj)),| sc => sc.Decorate((IDecoratedService obj) => new Decorator(obj)),| sc => sc.TryDecorate((IDecoratedService obj) => new Decorator(obj)),| sc => sc.Decorate(typeof(IDecoratedService), (object obj, IServiceProvider sp) => new Decorator((IDecoratedService)obj)),| sc => sc.TryDecorate(typeof(IDecoratedService), (object obj, IServiceProvider sp) => new Decorator((IDecoratedService)obj)),| sc => sc.Decorate(typeof(IDecoratedService), (object obj) => new Decorator((IDecoratedService)obj)),| sc => sc.TryDecorate(typeof(IDecoratedService), (object obj) => new Decorator((IDecoratedService)obj))| };| foreach (var decorationFunction in allDecorationFunctions)| {| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService, Decorated>();| decorationFunction(services);| });| var instance = provider.GetRequiredService<IDecoratedService>();| var decorator = Assert.IsType<Decorator>(instance);| Assert.IsType<Decorated>(decorator.Inner);| }| }"
+      },
+      {
+        "name": "DecorationFunctionsProvideScopedServiceProvider",
+        "body": "{| IServiceProvider actual = default;| var decorationFunctions = new Action<IServiceCollection>[]| {| sc => sc.Decorate((IDecoratedService obj, IServiceProvider sp) =>| {| actual = sp;| return null;| }),| sc => sc.TryDecorate((IDecoratedService obj, IServiceProvider sp) =>| {| actual = sp;| return null;| }),| sc => sc.Decorate(typeof(IDecoratedService), (object obj, IServiceProvider sp) =>| {| actual = sp;| return null;| }),| sc => sc.TryDecorate(typeof(IDecoratedService), (object obj, IServiceProvider sp) =>| {| actual = sp;| return null;| }),| };| foreach (var decorationMethod in decorationFunctions)| {| var provider = ConfigureProvider(services =>| {| services.AddScoped<IDecoratedService, Decorated>();| decorationMethod(services);| });| using var scope = provider.CreateScope();| var expected = scope.ServiceProvider;| _ = scope.ServiceProvider.GetService<IDecoratedService>();| Assert.Same(expected, actual);| }| }"
+      },
+      {
+        "name": "DecorateThrowsDecorationExceptionWhenNoTypeRegistered",
+        "body": "{| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate<IDecoratedService, Decorator>()));| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate(typeof(IDecoratedService), typeof(Decorator))));| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate((IDecoratedService obj, IServiceProvider sp) => new Decorated())));| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate((IDecoratedService sp) => new Decorated())));| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate(typeof(IDecoratedService), (object obj, IServiceProvider sp) => new Decorated())));| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate(typeof(IDecoratedService), (object obj) => new Decorated())));| }"
+      },
+      {
+        "name": "TryDecorateReturnsBoolResult",
+        "body": "{| var allDecorationMethods = new Func<IServiceCollection, bool>[]| {| sc => sc.TryDecorate<IDecoratedService, Decorator>(),| sc => sc.TryDecorate(typeof(IDecoratedService), typeof(Decorator)),| sc => sc.TryDecorate((IDecoratedService obj, IServiceProvider sp) => new Decorator(obj)),| sc => sc.TryDecorate((IDecoratedService obj) => new Decorator(obj)),| sc => sc.TryDecorate(typeof(IDecoratedService), (object obj, IServiceProvider sp) => new Decorator((IDecoratedService)obj)),| sc => sc.TryDecorate(typeof(IDecoratedService), (object obj) => new Decorator((IDecoratedService)obj))| };| foreach (var decorationMethod in allDecorationMethods)| {| var provider = ConfigureProvider(services =>| {| var isDecorated = decorationMethod(services);| Assert.False(isDecorated);| services.AddSingleton<IDecoratedService, Decorated>();| isDecorated = decorationMethod(services);| Assert.True(isDecorated);| });| }| }"
+      },
+      {
+        "name": "DecoratedTransientServiceRetainsScope",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddTransient<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| using var scope = provider.CreateScope();| var service1 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| var service2 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| Assert.NotEqual(service1, service2);| }"
+      },
+      {
+        "name": "DecoratedScopedServiceRetainsScope",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddScoped<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| object service1;| using (var scope = provider.CreateScope())| {| service1 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| var service2 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| Assert.Same(service1, service2);| }| using (var scope = provider.CreateScope())| {| var service2 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| Assert.NotSame(service1, service2);| }| }"
+      },
+      {
+        "name": "DecoratedSingletonServiceRetainsScope",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| object service1;| using (var scope = provider.CreateScope())| {| service1 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| var service2 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| Assert.Same(service1, service2);| }| using (var scope = provider.CreateScope())| {| var service2 = scope.ServiceProvider.GetRequiredService<IDecoratedService>();| Assert.Same(service1, service2);| }| }"
+      },
+      {
+        "name": "DependentServicesRetainTheirOwnScope",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddScoped<IService, SomeRandomService>();| services.AddTransient<DecoratedService>();| services.Decorate<DecoratedService, Decorator2>();| });| using var scope = provider.CreateScope();| var decorator1 = scope.ServiceProvider.GetRequiredService<DecoratedService>() as Decorator2;| var decorator2 = scope.ServiceProvider.GetRequiredService<DecoratedService>() as Decorator2;| Assert.NotEqual(decorator1, decorator2);| Assert.NotEqual(decorator1.Inner, decorator2.Inner);| Assert.Equal(decorator1.Inner.Dependency, decorator2.Inner.Dependency);| }"
+      }
+    ]
+  },
+  {
+    "file": "OpenGenericDecorationTests.cs",
+    "methods": [
+      {
+        "name": "CanDecorateOpenGenericTypeBasedOnClass",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<QueryHandler<MyQuery, MyResult>, MyQueryHandler>();| services.Decorate(typeof(QueryHandler<,>), typeof(LoggingQueryHandler<,>));| services.Decorate(typeof(QueryHandler<,>), typeof(TelemetryQueryHandler<,>));| });| var instance = provider.GetRequiredService<QueryHandler<MyQuery, MyResult>>();| var telemetryDecorator = Assert.IsType<TelemetryQueryHandler<MyQuery, MyResult>>(instance);| var loggingDecorator = Assert.IsType<LoggingQueryHandler<MyQuery, MyResult>>(telemetryDecorator.Inner);| Assert.IsType<MyQueryHandler>(loggingDecorator.Inner);| }"
+      },
+      {
+        "name": "CanDecorateOpenGenericTypeBasedOnInterface",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IQueryHandler<MyQuery, MyResult>, MyQueryHandler>();| services.Decorate(typeof(IQueryHandler<,>), typeof(LoggingQueryHandler<,>));| services.Decorate(typeof(IQueryHandler<,>), typeof(TelemetryQueryHandler<,>));| });| var instance = provider.GetRequiredService<IQueryHandler<MyQuery, MyResult>>();| var telemetryDecorator = Assert.IsType<TelemetryQueryHandler<MyQuery, MyResult>>(instance);| var loggingDecorator = Assert.IsType<LoggingQueryHandler<MyQuery, MyResult>>(telemetryDecorator.Inner);| Assert.IsType<MyQueryHandler>(loggingDecorator.Inner);| }"
+      },
+      {
+        "name": "DecoratingNonRegisteredOpenGenericServiceThrows",
+        "body": "{| Assert.Throws<DecorationException>(() => ConfigureProvider(services => services.Decorate(typeof(IQueryHandler<,>), typeof(QueryHandler<,>))));| }"
+      },
+      {
+        "name": "CanDecorateOpenGenericTypeBasedOnGrandparentInterface",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<ISpecializedQueryHandler, MySpecializedQueryHandler>();| services.AddSingleton<IQueryHandler<MyQuery, MyResult>, MySpecializedQueryHandler>();| services.Decorate(typeof(IQueryHandler<,>), typeof(LoggingQueryHandler<,>));| });| var instance = provider.GetRequiredService<IQueryHandler<MyQuery, MyResult>>();| var loggingDecorator = Assert.IsType<LoggingQueryHandler<MyQuery, MyResult>>(instance);| Assert.IsType<MySpecializedQueryHandler>(loggingDecorator.Inner);| }"
+      },
+      {
+        "name": "DecoratingOpenGenericTypeBasedOnGrandparentInterfaceDoesNotDecorateParentInterface",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<ISpecializedQueryHandler, MySpecializedQueryHandler>();| services.AddSingleton<IQueryHandler<MyQuery, MyResult>, MySpecializedQueryHandler>();| services.Decorate(typeof(IQueryHandler<,>), typeof(LoggingQueryHandler<,>));| });| var instance = provider.GetRequiredService<ISpecializedQueryHandler>();| Assert.IsType<MySpecializedQueryHandler>(instance);| }"
+      },
+      {
+        "name": "OpenGenericDecoratorsSkipOpenGenericServiceRegistrations",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.Scan(x =>| x.FromAssemblyOf<Message>()| .AddClasses(classes => classes| .AssignableTo(typeof(IMessageProcessor<>)))| .AsImplementedInterfaces()| .WithTransientLifetime());| services.Decorate(typeof(IMessageProcessor<>), typeof(GenericDecorator<>));| });| var processor = provider.GetRequiredService<IMessageProcessor<Message>>();| var decorator = Assert.IsType<GenericDecorator<Message>>(processor);| Assert.IsType<MessageProcessor>(decorator.Decoratee);| }"
+      },
+      {
+        "name": "OpenGenericDecoratorsCanBeConstrained",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IQueryHandler<MyQuery, MyResult>, MyQueryHandler>();| services.AddSingleton<IQueryHandler<MyConstrainedQuery, MyResult>, MyConstrainedQueryHandler>();| services.Decorate(typeof(IQueryHandler<,>), typeof(ConstrainedDecoratorQueryHandler<,>));| });| var instance = provider.GetRequiredService<IQueryHandler<MyQuery, MyResult>>();| var constrainedInstance = provider.GetRequiredService<IQueryHandler<MyConstrainedQuery, MyResult>>();| Assert.IsType<MyQueryHandler>(instance);| Assert.IsType<ConstrainedDecoratorQueryHandler<MyConstrainedQuery, MyResult>>(constrainedInstance);| }"
+      },
+      {
+        "name": "DecorationFunctionsDoSupportOpenGenericType",
+        "body": "{| var allDecorationFunctions = new Action<IServiceCollection>[]| {| sc => sc.Decorate(typeof(QueryHandler<,>), typeof(LoggingQueryHandler<,>)),| sc => sc.TryDecorate(typeof(QueryHandler<,>), typeof(LoggingQueryHandler<,>)),| sc => sc.Decorate(typeof(QueryHandler<,>), (object obj, IServiceProvider sp) => new LoggingQueryHandler<MyQuery, MyResult>((IQueryHandler<MyQuery, MyResult>)obj)),| sc => sc.TryDecorate(typeof(QueryHandler<,>), (object obj, IServiceProvider sp) => new LoggingQueryHandler<MyQuery, MyResult>((IQueryHandler<MyQuery, MyResult>)obj)),| sc => sc.Decorate(typeof(QueryHandler<,>), (object obj) => new LoggingQueryHandler<MyQuery, MyResult>((IQueryHandler<MyQuery, MyResult>)obj)),| sc => sc.TryDecorate(typeof(QueryHandler<,>), (object obj) => new LoggingQueryHandler<MyQuery, MyResult>((IQueryHandler<MyQuery, MyResult>)obj)),| };| foreach (var decorationFunction in allDecorationFunctions)| {| var provider = ConfigureProvider(services =>| {| services.AddSingleton<QueryHandler<MyQuery, MyResult>, MyQueryHandler>();| decorationFunction(services);| });| var instance = provider.GetRequiredService<QueryHandler<MyQuery, MyResult>>();| var decorator = Assert.IsType<LoggingQueryHandler<MyQuery, MyResult>>(instance);| Assert.IsType<MyQueryHandler>(decorator.Inner);| }| }"
+      }
+    ]
+  },
+  {
+    "file": "ScanningTests.cs",
+    "methods": [
+      {
+        "name": "Scan_TheseTypes",
+        "body": "{ | Collection.Scan(scan => scan | .FromTypes<TransientService1, TransientService2>() | .AsImplementedInterfaces(x => x != typeof(IOtherInheritance)) | .WithSingletonLifetime()); | | Assert.Equal(2, Collection.Count); | | Assert.All(Collection, x => | { | Assert.Equal(ServiceLifetime.Singleton, x.Lifetime); | Assert.Equal(typeof(ITransientService), x.ServiceType); | }); | }"
+      },
+      {
+        "name": "UsingRegistrationStrategy_None",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithSingletonLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(8, services.Count(x => x.ServiceType == typeof(ITransientService))); | }"
+      },
+      {
+        "name": "UsingRegistrationStrategy_SkipIfExists",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(RegistrationStrategy.Skip) | .AsImplementedInterfaces() | .WithSingletonLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(4, services.Count(x => x.ServiceType == typeof(ITransientService))); | }"
+      },
+      {
+        "name": "UsingRegistrationStrategy_ReplaceDefault",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(RegistrationStrategy.Replace()) | .AsImplementedInterfaces() | .WithSingletonLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(1, services.Count(x => x.ServiceType == typeof(ITransientService))); | }"
+      },
+      {
+        "name": "UsingRegistrationStrategy_ReplaceServiceTypes",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(RegistrationStrategy.Replace(ReplacementBehavior.ServiceType)) | .AsImplementedInterfaces() | .WithSingletonLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(1, services.Count(x => x.ServiceType == typeof(ITransientService))); | }"
+      },
+      {
+        "name": "UsingRegistrationStrategy_ReplaceImplementationTypes",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(RegistrationStrategy.Replace(ReplacementBehavior.ImplementationType)) | .AsImplementedInterfaces() | .WithSingletonLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(3, services.Count(x => x.ServiceType == typeof(ITransientService))); | }"
+      },
+      {
+        "name": "UsingRegistrationStrategy_Throw",
+        "body": "{ | Assert.Throws<DuplicateTypeRegistrationException>(() => | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(RegistrationStrategy.Throw) | .AsImplementedInterfaces() | .WithSingletonLifetime())); | }"
+      },
+      {
+        "name": "CanFilterTypesToScan",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces(x => x != typeof(IOtherInheritance)) | .WithTransientLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(services, Collection); | | Assert.All(services, service => | { | Assert.Equal(ServiceLifetime.Transient, service.Lifetime); | Assert.Equal(typeof(ITransientService), service.ServiceType); | }); | }"
+      },
+      {
+        "name": "CanRegisterAsSpecificType",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .As<ITransientService>()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(services, Collection); | | Assert.All(services, service => | { | Assert.Equal(ServiceLifetime.Transient, service.Lifetime); | Assert.Equal(typeof(ITransientService), service.ServiceType); | }); | }"
+      },
+      {
+        "name": "CanSpecifyLifetime",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IScopedService>() | .AddClasses(classes => classes.AssignableTo<IScopedService>()) | .AsImplementedInterfaces() | .WithScopedLifetime()); | | var services = Collection.GetDescriptors<IScopedService>(); | | Assert.Equal(services, Collection); | | Assert.All(services, service => | { | Assert.Equal(ServiceLifetime.Scoped, service.Lifetime); | Assert.Equal(typeof(IScopedService), service.ServiceType); | }); | }"
+      },
+      {
+        "name": "LifetimeIsPropagatedToAllRegistrations",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IScopedService>() | .AddClasses(classes => classes.AssignableTo<IScopedService>()) | .AsImplementedInterfaces() | .AsSelf() | .WithScopedLifetime()); | | Assert.All(Collection, service => Assert.Equal(ServiceLifetime.Scoped, service.Lifetime)); | }"
+      },
+      {
+        "name": "CanRegisterGenericTypes",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IScopedService>() | .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>))) | .AsImplementedInterfaces() | .WithScopedLifetime()); | | var service = Collection.GetDescriptor<IQueryHandler<string, int>>(); | | Assert.NotNull(service); | Assert.Equal(ServiceLifetime.Scoped, service.Lifetime); | Assert.Equal(typeof(QueryHandler), service.ImplementationType); | }"
+      },
+      {
+        "name": "CanRegisterFullyClosedGenericWithDifferentArityThanServiceType",
+        "body": "{ | Collection.Scan(scan => scan | .FromTypes(typeof(PartiallyClosedGeneric<string>)) | .AsImplementedInterfaces() | .WithTransientLifetime()); | | var descriptor = Assert.Single(Collection); | | Assert.Equal(typeof(IPartiallyClosedGeneric<string, int>), descriptor.ServiceType); | }"
+      },
+      {
+        "name": "CanScanUsingAttributes",
+        "body": "{ | var interfaces = new[] | { | typeof(ITransientService), | typeof(ITransientServiceToCombine), | typeof(IScopedServiceToCombine), | typeof(ISingletonServiceToCombine), | | }; | | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses(t => t.AssignableToAny(interfaces)) | .UsingAttributes()); | | Assert.Equal(4, Collection.Count); | | var service = Collection.GetDescriptor<ITransientService>(); | | Assert.NotNull(service); | Assert.Equal(ServiceLifetime.Transient, service.Lifetime); | Assert.Equal(typeof(TransientService1), service.ImplementationType); | }"
+      },
+      {
+        "name": "CanFilterAttributeTypes",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses(t => t.AssignableTo<ITransientService>()) | .UsingAttributes()); | | Assert.Single(Collection); | | var service = Collection.GetDescriptor<ITransientService>(); | | Assert.NotNull(service); | Assert.Equal(ServiceLifetime.Transient, service.Lifetime); | Assert.Equal(typeof(TransientService1), service.ImplementationType); | }"
+      },
+      {
+        "name": "CanFilterGenericAttributeTypes",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IGenericAttribute>() | .AddClasses(t => t.AssignableTo<IGenericAttribute>()) | .UsingAttributes()); | | Assert.Single(Collection); | | var service = Collection.GetDescriptor<IGenericAttribute>(); | | Assert.NotNull(service); | Assert.Equal(ServiceLifetime.Transient, service.Lifetime); | Assert.Equal(typeof(GenericAttribute), service.ImplementationType); | }"
+      },
+      {
+        "name": "CanCreateDefault",
+        "body": "{ | var types = new[] | { | typeof(IDefault1), | typeof(IDefault2), | typeof(IDefault3Level1), | typeof(IDefault3Level2) | }; | | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses(t => t.AssignableTo<DefaultAttributes>()) | .UsingAttributes()); | | var remainingSetOfTypes = Collection | .Select(descriptor => descriptor.ServiceType) | .Except(types.Concat(new[] { typeof(DefaultAttributes) })) | .ToList(); | | Assert.Equal(5, Collection.Count); | Assert.Empty(remainingSetOfTypes); | }"
+      },
+      {
+        "name": "ThrowsOnWrongInheritance",
+        "body": "{ | var collection = new ServiceCollection(); | | var ex = Assert.Throws<InvalidOperationException>(() => | collection.Scan(scan => scan.FromAssemblyOf<IWrongInheritanceA>() | .AddClasses() | .UsingAttributes())); | | Assert.Equal(@\"Type \"\"Scrutor.Tests.WrongInheritance\"\" is not assignable to \"\"Scrutor.Tests.IWrongInheritanceA\"\".\", ex.Message); | }"
+      },
+      {
+        "name": "ThrowsOnDuplicate",
+        "body": "{ | var collection = new ServiceCollection(); | | var ex = Assert.Throws<InvalidOperationException>(() => | collection.Scan(scan => scan.FromAssemblyOf<IDuplicateInheritance>() | .AddClasses(t => t.AssignableTo<IDuplicateInheritance>()) | .UsingAttributes())); | | Assert.Equal(@\"Type \"\"Scrutor.Tests.DuplicateInheritance\"\" has multiple ServiceDescriptor attributes with the same service type.\", ex.Message); | }"
+      },
+      {
+        "name": "ThrowsOnDuplicateWithMixedAttributes",
+        "body": "{ | var collection = new ServiceCollection(); | | var ex = Assert.Throws<InvalidOperationException>(() => | collection.Scan(scan => scan.FromAssemblyOf<IMixedAttribute>() | .AddClasses(t => t.AssignableTo<IMixedAttribute>()) | .UsingAttributes())); | | Assert.Equal(@\"Type \"\"Scrutor.Tests.MixedAttribute\"\" has multiple ServiceDescriptor attributes with the same service type.\", ex.Message); | }"
+      },
+      {
+        "name": "CanHandleMultipleAttributes",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<ITransientServiceToCombine>() | .AddClasses(t => t.AssignableTo<ITransientServiceToCombine>()) | .UsingAttributes()); | | var transientService = Collection.GetDescriptor<ITransientServiceToCombine>(); | | Assert.NotNull(transientService); | Assert.Equal(ServiceLifetime.Transient, transientService.Lifetime); | Assert.Equal(typeof(CombinedService), transientService.ImplementationType); | | var scopedService = Collection.GetDescriptor<IScopedServiceToCombine>(); | | Assert.NotNull(scopedService); | Assert.Equal(ServiceLifetime.Scoped, scopedService.Lifetime); | Assert.Equal(typeof(CombinedService), scopedService.ImplementationType); | | var singletonService = Collection.GetDescriptor<ISingletonServiceToCombine>(); | | Assert.NotNull(singletonService); | Assert.Equal(ServiceLifetime.Singleton, singletonService.Lifetime); | Assert.Equal(typeof(CombinedService), singletonService.ImplementationType); | }"
+      },
+      {
+        "name": "AutoRegisterAsMatchingInterface",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses() | .AsMatchingInterface() | .WithTransientLifetime()); | | Assert.Equal(8, Collection.Count); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.NotNull(services); | Assert.All(services, s => | { | Assert.Equal(ServiceLifetime.Transient, s.Lifetime); | Assert.Equal(typeof(ITransientService), s.ServiceType); | }); | }"
+      },
+      {
+        "name": "AutoRegisterAsMatchingInterfaceSameNamespaceOnly",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses() | .AsMatchingInterface((t, x) => x.InNamespaceOf(t)) | .WithTransientLifetime()); | | Assert.Equal(7, Collection.Count); | | var service = Collection.GetDescriptor<ITransientService>(); | | Assert.NotNull(service); | Assert.Equal(ServiceLifetime.Transient, service.Lifetime); | Assert.Equal(typeof(TransientService), service.ImplementationType); | }"
+      },
+      {
+        "name": "ShouldRegisterOpenGenericTypes",
+        "body": "{ | var genericTypes = new[] | { | typeof(OpenGeneric<>), | typeof(QueryHandler<,>), | typeof(PartiallyClosedGeneric<>) | }; | | Collection.Scan(scan => scan | .FromTypes(genericTypes) | .AddClasses() | .AsImplementedInterfaces()); | | var provider = Collection.BuildServiceProvider(); | | Assert.NotNull(provider.GetService<IOpenGeneric<int>>()); | Assert.NotNull(provider.GetService<IOpenGeneric<string>>()); | | Assert.NotNull(provider.GetService<IQueryHandler<string, float>>()); | Assert.NotNull(provider.GetService<IQueryHandler<double, Guid>>()); | | // We don't register partially closed generic types. | Assert.Null(provider.GetService<IPartiallyClosedGeneric<string, int>>()); | }"
+      },
+      {
+        "name": "ShouldNotIncludeCompilerGeneratedTypes",
+        "body": "{ | Assert.Empty(Collection.Scan(scan => scan.FromType<CompilerGenerated>())); | }"
+      },
+      {
+        "name": "ShouldNotRegisterTypesInSubNamespace",
+        "body": "{ | Collection.Scan(scan => scan.FromAssembliesOf(GetType()) | .AddClasses(classes => classes.InExactNamespaceOf<ITransientService>()) | .AsSelf()); | | var provider = Collection.BuildServiceProvider(); | | Assert.Null(provider.GetService<ClassInChildNamespace>()); | }"
+      },
+      {
+        "name": "ScanShouldCreateSeparateRegistrationsPerInterface",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<CombinedService2>() | .AddClasses(classes => classes.AssignableTo<CombinedService2>()) | .AsImplementedInterfaces() | .WithSingletonLifetime() | .AddClasses(classes => classes.AssignableTo<CombinedService2>()) | .AsSelf() | .WithSingletonLifetime()); | | Assert.Equal(5, Collection.Count); | | Assert.All(Collection, x => | { | Assert.Equal(ServiceLifetime.Singleton, x.Lifetime); | Assert.Equal(typeof(CombinedService2), x.ImplementationType); | }); | }"
+      },
+      {
+        "name": "AsSelfWithInterfacesShouldForwardRegistrationsToClass",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<CombinedService2>() | .AddClasses(classes => classes.AssignableTo<CombinedService2>()) | .AsSelfWithInterfaces() | .WithSingletonLifetime()); | | Assert.Equal(5, Collection.Count); | | var service1 = Collection.GetDescriptor<CombinedService2>(); | | Assert.NotNull(service1); | Assert.Equal(ServiceLifetime.Singleton, service1.Lifetime); | Assert.Equal(typeof(CombinedService2), service1.ImplementationType); | | var interfaceDescriptors = Collection.Where(x => x.ImplementationType != typeof(CombinedService2)).ToList(); | Assert.Equal(4, interfaceDescriptors.Count); | | Assert.All(interfaceDescriptors, x => | { | Assert.Equal(ServiceLifetime.Singleton, x.Lifetime); | Assert.NotNull(x.ImplementationFactory); | }); | }"
+      },
+      {
+        "name": "AsSelfWithInterfacesShouldCreateTrueSingletons",
+        "body": "{ | var provider = ConfigureProvider(services => | { | services.Scan(scan => scan | .FromAssemblyOf<CombinedService2>() | .AddClasses(classes => classes.AssignableTo<CombinedService2>()) | .AsSelfWithInterfaces() | .WithSingletonLifetime()); | }); | | var instance1 = provider.GetRequiredService<CombinedService2>(); | var instance2 = provider.GetRequiredService<IDefault1>(); | var instance3 = provider.GetRequiredService<IDefault2>(); | var instance4 = provider.GetRequiredService<IDefault3Level2>(); | var instance5 = provider.GetRequiredService<IDefault3Level1>(); | | Assert.Same(instance1, instance2); | Assert.Same(instance1, instance3); | Assert.Same(instance1, instance4); | Assert.Same(instance1, instance5); | }"
+      },
+      {
+        "name": "AsSelfWithInterfacesShouldFilterInterfaces",
+        "body": "{ | var provider = ConfigureProvider(services => | { | services.Scan(scan => scan | .FromAssemblyOf<CombinedService2>() | .AddClasses(classes => classes.AssignableTo<CombinedService2>()) | .AsSelfWithInterfaces(x => x == typeof(IDefault1) || x == typeof(CombinedService2)) | .WithSingletonLifetime()); | }); | | var instance1 = provider.GetRequiredService<CombinedService2>(); | var instance2 = provider.GetRequiredService<IDefault1>(); | var instance3 = provider.GetService<IDefault2>(); | var instance4 = provider.GetService<IDefault3Level2>(); | var instance5 = provider.GetService<IDefault3Level1>(); | | Assert.Same(instance1, instance2); | Assert.Null(instance3); | Assert.Null(instance4); | Assert.Null(instance5); | }"
+      },
+      {
+        "name": "AsSelfWithInterfacesHandlesOpenGenericTypes",
+        "body": "{ | ConfigureProvider(services => | { | services.Scan(scan => scan | .FromAssemblyOf<CombinedService2>() | .AddClasses(classes => classes.AssignableTo<IOtherInheritance>()) | .AsSelfWithInterfaces() | .WithSingletonLifetime()); | }); | }"
+      }
+    ]
+  }
+]

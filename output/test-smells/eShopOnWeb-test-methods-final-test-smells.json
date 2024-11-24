@@ -1,0 +1,722 @@
+[
+  {
+    "file": "CheckoutTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IndexTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthenticateEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CatalogItemGetByIdEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CreateCatalogItemEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DeleteCatalogItemEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  }
+]

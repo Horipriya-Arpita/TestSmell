@@ -1,0 +1,22 @@
+[
+  {
+    "name": "DecorationTests.cs",
+    "path": "test\\Scrutor.Tests\\DecorationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/khellang/Scrutor/master/test/Scrutor.Tests/DecorationTests.cs"
+  },
+  {
+    "name": "OpenGenericDecorationTests.cs",
+    "path": "test\\Scrutor.Tests\\OpenGenericDecorationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/khellang/Scrutor/master/test/Scrutor.Tests/OpenGenericDecorationTests.cs"
+  },
+  {
+    "name": "ScanningTests.cs",
+    "path": "test\\Scrutor.Tests\\ScanningTests.cs",
+    "download_url": "https://raw.githubusercontent.com/khellang/Scrutor/master/test/Scrutor.Tests/ScanningTests.cs"
+  },
+  {
+    "name": "TestBase.cs",
+    "path": "test\\Scrutor.Tests\\TestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/khellang/Scrutor/master/test/Scrutor.Tests/TestBase.cs"
+  }
+]

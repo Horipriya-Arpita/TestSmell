@@ -1,0 +1,122 @@
+[
+  {
+    "name": "BasketWithItemsSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\BasketWithItemsSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/BasketWithItemsSpecification.cs"
+  },
+  {
+    "name": "CatalogFilterPaginatedSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\CatalogFilterPaginatedSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/CatalogFilterPaginatedSpecification.cs"
+  },
+  {
+    "name": "CatalogFilterSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\CatalogFilterSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/CatalogFilterSpecification.cs"
+  },
+  {
+    "name": "CatalogItemNameSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\CatalogItemNameSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/CatalogItemNameSpecification.cs"
+  },
+  {
+    "name": "CatalogItemsSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\CatalogItemsSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/CatalogItemsSpecification.cs"
+  },
+  {
+    "name": "CustomerOrdersSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\CustomerOrdersSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/CustomerOrdersSpecification.cs"
+  },
+  {
+    "name": "CustomerOrdersWithItemsSpecification.cs",
+    "path": "src\\ApplicationCore\\Specifications\\CustomerOrdersWithItemsSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/CustomerOrdersWithItemsSpecification.cs"
+  },
+  {
+    "name": "OrderWithItemsByIdSpec.cs",
+    "path": "src\\ApplicationCore\\Specifications\\OrderWithItemsByIdSpec.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/src/ApplicationCore/Specifications/OrderWithItemsByIdSpec.cs"
+  },
+  {
+    "name": "ApiTestFixture.cs",
+    "path": "tests\\FunctionalTests\\PublicApi\\ApiTestFixture.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/FunctionalTests/PublicApi/ApiTestFixture.cs"
+  },
+  {
+    "name": "CheckoutTest.cs",
+    "path": "tests\\FunctionalTests\\Web\\Pages\\Basket\\CheckoutTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/FunctionalTests/Web/Pages/Basket/CheckoutTest.cs"
+  },
+  {
+    "name": "IndexTest.cs",
+    "path": "tests\\FunctionalTests\\Web\\Pages\\Basket\\IndexTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/FunctionalTests/Web/Pages/Basket/IndexTest.cs"
+  },
+  {
+    "name": "WebTestFixture.cs",
+    "path": "tests\\FunctionalTests\\Web\\WebTestFixture.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/FunctionalTests/Web/WebTestFixture.cs"
+  },
+  {
+    "name": "AuthenticateEndpointTest.cs",
+    "path": "tests\\PublicApiIntegrationTests\\AuthEndpoints\\AuthenticateEndpointTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/PublicApiIntegrationTests/AuthEndpoints/AuthenticateEndpointTest.cs"
+  },
+  {
+    "name": "CatalogItemGetByIdEndpointTest.cs",
+    "path": "tests\\PublicApiIntegrationTests\\CatalogItemEndpoints\\CatalogItemGetByIdEndpointTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/PublicApiIntegrationTests/CatalogItemEndpoints/CatalogItemGetByIdEndpointTest.cs"
+  },
+  {
+    "name": "CreateCatalogItemEndpointTest.cs",
+    "path": "tests\\PublicApiIntegrationTests\\CatalogItemEndpoints\\CreateCatalogItemEndpointTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/PublicApiIntegrationTests/CatalogItemEndpoints/CreateCatalogItemEndpointTest.cs"
+  },
+  {
+    "name": "DeleteCatalogItemEndpointTest.cs",
+    "path": "tests\\PublicApiIntegrationTests\\CatalogItemEndpoints\\DeleteCatalogItemEndpointTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/PublicApiIntegrationTests/CatalogItemEndpoints/DeleteCatalogItemEndpointTest.cs"
+  },
+  {
+    "name": "ProgramTest.cs",
+    "path": "tests\\PublicApiIntegrationTests\\ProgramTest.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/PublicApiIntegrationTests/ProgramTest.cs"
+  },
+  {
+    "name": "TestChild.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Extensions\\TestChild.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Extensions/TestChild.cs"
+  },
+  {
+    "name": "TestParent.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Extensions\\TestParent.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Extensions/TestParent.cs"
+  },
+  {
+    "name": "BasketWithItemsSpecification.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Specifications\\BasketWithItemsSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Specifications/BasketWithItemsSpecification.cs"
+  },
+  {
+    "name": "CatalogFilterPaginatedSpecification.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Specifications\\CatalogFilterPaginatedSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Specifications/CatalogFilterPaginatedSpecification.cs"
+  },
+  {
+    "name": "CatalogFilterSpecification.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Specifications\\CatalogFilterSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Specifications/CatalogFilterSpecification.cs"
+  },
+  {
+    "name": "CatalogItemsSpecification.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Specifications\\CatalogItemsSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Specifications/CatalogItemsSpecification.cs"
+  },
+  {
+    "name": "CustomerOrdersWithItemsSpecification.cs",
+    "path": "tests\\UnitTests\\ApplicationCore\\Specifications\\CustomerOrdersWithItemsSpecification.cs",
+    "download_url": "https://raw.githubusercontent.com/dotnet-architecture/eShopOnWeb/main/tests/UnitTests/ApplicationCore/Specifications/CustomerOrdersWithItemsSpecification.cs"
+  }
+]

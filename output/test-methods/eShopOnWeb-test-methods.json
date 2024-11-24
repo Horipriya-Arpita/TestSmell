@@ -1,0 +1,144 @@
+[
+  {
+    "file": "BasketWithItemsSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogFilterPaginatedSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogFilterSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogItemNameSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogItemsSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CustomerOrdersSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CustomerOrdersWithItemsSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "OrderWithItemsByIdSpec.cs",
+    "methods": []
+  },
+  {
+    "file": "ApiTestFixture.cs",
+    "methods": []
+  },
+  {
+    "file": "CheckoutTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n\n        // Load Home Page\n        var response = await Client.GetAsync(\"/\");\n        response.EnsureSuccessStatusCode();\n        var stringResponse = await response.Content.ReadAsStringAsync();\n\n        // Add Item to Cart\n        var keyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"id\", \"2\"),\n            new KeyValuePair<string, string>(\"name\", \"shirt\"),\n            new KeyValuePair<string, string>(\"price\", \"19.49\"),\n            new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(stringResponse))\n        };\n        var formContent = new FormUrlEncodedContent(keyValues);\n        var postResponse = await Client.PostAsync(\"/basket/index\", formContent);\n        postResponse.EnsureSuccessStatusCode();\n        var stringPostResponse = await postResponse.Content.ReadAsStringAsync();\n        Assert.Contains(\".NET Black &amp; White Mug\", stringPostResponse);\n\n        //Load login page\n        var loginResponse = await Client.GetAsync(\"/Identity/Account/Login\");\n        var longinKeyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"email\", \"demouser@microsoft.com\"),\n            new KeyValuePair<string, string>(\"password\", \"Pass@word1\"),\n            new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(await loginResponse.Content.ReadAsStringAsync()))\n        };\n        var loginFormContent = new FormUrlEncodedContent(longinKeyValues);\n        var loginPostResponse = await Client.PostAsync(\"/Identity/Account/Login?ReturnUrl=%2FBasket%2FCheckout\", loginFormContent);\n        var loginStringResponse = await loginPostResponse.Content.ReadAsStringAsync();\n\n        //Basket checkout (Pay now)\n        var checkOutKeyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"Items[0].Id\", \"2\"),\n            new KeyValuePair<string, string>(\"Items[0].Quantity\", \"1\"),\n            new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(loginStringResponse))\n        };\n        var checkOutContent = new FormUrlEncodedContent(checkOutKeyValues);     \n        var checkOutResponse = await Client.PostAsync(\"/basket/checkout\", checkOutContent);\n        var stringCheckOutResponse = await checkOutResponse.Content.ReadAsStringAsync();\n\n        Assert.Contains(\"/Basket/Success\", checkOutResponse.RequestMessage!.RequestUri!.ToString());\n        Assert.Contains(\"Thanks for your Order!\", stringCheckOutResponse);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "IndexTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        // Load Home Page\n        var response = await Client.GetAsync(\"/\");\n        response.EnsureSuccessStatusCode();\n        var stringResponse1 = await response.Content.ReadAsStringAsync();\n\n        string token = WebPageHelpers.GetRequestVerificationToken(stringResponse1);\n\n        // Add Item to Cart\n        var keyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"id\", \"2\"),\n            new KeyValuePair<string, string>(\"name\", \"shirt\"),\n            new KeyValuePair<string, string>(\"__RequestVerificationToken\", token)\n        };\n        var formContent = new FormUrlEncodedContent(keyValues);\n        var postResponse = await Client.PostAsync(\"/basket/index\", formContent);\n        postResponse.EnsureSuccessStatusCode();\n        var stringResponse = await postResponse.Content.ReadAsStringAsync();\n        Assert.Contains(\".NET Black &amp; White Mug\", stringResponse);\n\n        //Update\n        var updateKeyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"Items[0].Id\", WebPageHelpers.GetId(stringResponse)),\n            new KeyValuePair<string, string>(\"Items[0].Quantity\", \"49\"),\n            new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(stringResponse))\n        };\n        var updateContent = new FormUrlEncodedContent(updateKeyValues);\n        var updateResponse = await Client.PostAsync(\"/basket/update\", updateContent);\n\n        var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();\n\n        Assert.Contains(\"/basket/update\", updateResponse!.RequestMessage!.RequestUri!.ToString()!);\n        decimal expectedTotalAmount = 416.50M;\n        Assert.Contains(expectedTotalAmount.ToString(\"N2\"), stringUpdateResponse);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        // Load Home Page\n        var response = await Client.GetAsync(\"/\");\n        response.EnsureSuccessStatusCode();\n        var stringResponse1 = await response.Content.ReadAsStringAsync();\n\n        string token = WebPageHelpers.GetRequestVerificationToken(stringResponse1);\n\n        // Add Item to Cart\n        var keyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"id\", \"2\"),\n            new KeyValuePair<string, string>(\"name\", \"shirt\"),\n            new KeyValuePair<string, string>(\"__RequestVerificationToken\", token)\n        };\n        var formContent = new FormUrlEncodedContent(keyValues);\n        var postResponse = await Client.PostAsync(\"/basket/index\", formContent);\n        postResponse.EnsureSuccessStatusCode();\n        var stringResponse = await postResponse.Content.ReadAsStringAsync();\n        Assert.Contains(\".NET Black &amp; White Mug\", stringResponse);\n\n        //Update\n        var updateKeyValues = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"Items[0].Id\", WebPageHelpers.GetId(stringResponse)),\n            new KeyValuePair<string, string>(\"Items[0].Quantity\", \"0\"),\n            new KeyValuePair<string, string>(WebPageHelpers.TokenTag, WebPageHelpers.GetRequestVerificationToken(stringResponse))\n        };\n        var updateContent = new FormUrlEncodedContent(updateKeyValues);\n        var updateResponse = await Client.PostAsync(\"/basket/update\", updateContent);\n\n        var stringUpdateResponse = await updateResponse.Content.ReadAsStringAsync();\n\n        Assert.Contains(\"/basket/update\", updateResponse!.RequestMessage!.RequestUri!.ToString()!);\n        Assert.Contains(\"Basket is empty\", stringUpdateResponse);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "WebTestFixture.cs",
+    "methods": []
+  },
+  {
+    "file": "AuthenticateEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var request = new AuthenticateRequest()\n        {\n            Username = testUsername,\n            Password = testPassword\n        };\n        var jsonContent = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, \"application/json\");\n        var response = await ProgramTest.NewClient.PostAsync(\"api/authenticate\", jsonContent);\n        response.EnsureSuccessStatusCode();\n        var stringResponse = await response.Content.ReadAsStringAsync();\n        var model = stringResponse.FromJson<AuthenticateResponse>();\n\n        Assert.AreEqual(expectedResult, model!.Result);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "CatalogItemGetByIdEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var response = await ProgramTest.NewClient.GetAsync(\"api/catalog-items/5\");\n        response.EnsureSuccessStatusCode();\n        var stringResponse = await response.Content.ReadAsStringAsync();\n        var model = stringResponse.FromJson<GetByIdCatalogItemResponse>();\n\n        Assert.AreEqual(5, model!.CatalogItem.Id);\n        Assert.AreEqual(\"Roslyn Red Sheet\", model.CatalogItem.Name);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var response = await ProgramTest.NewClient.GetAsync(\"api/catalog-items/0\");\n\n        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "CreateCatalogItemEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var jsonContent = GetValidNewItemJson();\n        var token = ApiTokenHelper.GetNormalUserToken();\n        var client = ProgramTest.NewClient;\n        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", token);\n        var response = await client.PostAsync(\"api/catalog-items\", jsonContent);\n\n        Assert.AreEqual(HttpStatusCode.Forbidden, response.StatusCode);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var jsonContent = GetValidNewItemJson();\n        var adminToken = ApiTokenHelper.GetAdminUserToken();\n        var client = ProgramTest.NewClient;\n        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", adminToken);\n        var response = await client.PostAsync(\"api/catalog-items\", jsonContent);\n        response.EnsureSuccessStatusCode();\n        var stringResponse = await response.Content.ReadAsStringAsync();\n        var model = stringResponse.FromJson<CreateCatalogItemResponse>();\n\n        Assert.AreEqual(_testBrandId, model!.CatalogItem.CatalogBrandId);\n        Assert.AreEqual(_testTypeId, model.CatalogItem.CatalogTypeId);\n        Assert.AreEqual(_testDescription, model.CatalogItem.Description);\n        Assert.AreEqual(_testName, model.CatalogItem.Name);\n        Assert.AreEqual(_testPrice, model.CatalogItem.Price);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "DeleteCatalogItemEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var adminToken = ApiTokenHelper.GetAdminUserToken();\n        var client = ProgramTest.NewClient;\n        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", adminToken);\n        var response = await client.DeleteAsync(\"api/catalog-items/12\");\n        response.EnsureSuccessStatusCode();\n        var stringResponse = await response.Content.ReadAsStringAsync();\n        var model = stringResponse.FromJson<DeleteCatalogItemResponse>();\n\n        Assert.AreEqual(\"Deleted\", model!.Status);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var adminToken = ApiTokenHelper.GetAdminUserToken();\n        var client = ProgramTest.NewClient;\n        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", adminToken);\n        var response = await client.DeleteAsync(\"api/catalog-items/0\");\n\n        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ProgramTest.cs",
+    "methods": []
+  },
+  {
+    "file": "TestChild.cs",
+    "methods": []
+  },
+  {
+    "file": "TestParent.cs",
+    "methods": []
+  },
+  {
+    "file": "BasketWithItemsSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogFilterPaginatedSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogFilterSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CatalogItemsSpecification.cs",
+    "methods": []
+  },
+  {
+    "file": "CustomerOrdersWithItemsSpecification.cs",
+    "methods": []
+  }
+]

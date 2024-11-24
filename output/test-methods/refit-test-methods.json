@@ -1,0 +1,732 @@
+[
+  {
+    "file": "GeneratedTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get();\n            \"\"\", false);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        // Refit should not generate any code when no valid Refit interfaces are present.\n        return Fixture.VerifyForBody(\"\", false);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "FunctionTest.cs",
+    "methods": [
+      {
+        "name": "ModifyParameterNameDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change parameter name\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{myUser}\")]\n                Task<string> GetUser(string myUser);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "ModifyParameterTypeDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change parameter type\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(int user);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "ModifyParameterNullabilityDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change parameter nullability\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string? user);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "AddParameterDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // add parameter\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string user, [Query] int myParam);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "ModifyReturnTypeDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change return type\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<int> GetUser(string user);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "ModifyReturnObjectNullabilityDoesNotRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change return nullability\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string?> GetUser(string user);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.Cached);\n    }"
+      },
+      {
+        "name": "ModifyReturnValueNullabilityDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change return nullability\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<int?> GetUser(string user);\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "AddNonRefitMethodDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // change parameter name\n        var newInterface =\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string user);\n\n                void NonRefitMethod();\n            }\n            \"\"\";\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(compilation1, \"IGitHubApi\", newInterface);\n\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.Modified);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "GenericTest.cs",
+    "methods": [
+      {
+        "name": "RenameGenericTypeDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(GenericInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // rename generic type\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGeneratedInterface\",\n            \"\"\"\n            public interface IGeneratedInterface<T>\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "AddGenericConstraintDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(GenericInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // add generic constraint\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGeneratedInterface\",\n            \"\"\"\n            public interface IGeneratedInterface<T1>\n                where T1 : class\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n\n        // add new generic constraint\n        var compilation3 = TestHelper.ReplaceMemberDeclaration(\n            compilation2,\n            \"IGeneratedInterface\",\n            \"\"\"\n            public interface IGeneratedInterface<T1>\n                where T1 : class, new()\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\"\n        );\n        var driver3 = driver2.RunGenerators(compilation3);\n        TestHelper.AssertRunReasons(driver3, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "AddObjectGenericConstraintDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(GenericInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // add object generic constraint\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGeneratedInterface\",\n            \"\"\"\n            public interface IGeneratedInterface<T1>\n                where T1 : IDisposable\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "AddGenericTypeDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(GenericInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // add second generic type\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGeneratedInterface\",\n            \"\"\"\n            public interface IGeneratedInterface<T1, T2>\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "IncrementalTest.cs",
+    "methods": [
+      {
+        "name": "AddUnrelatedTypeDoesntRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        var compilation2 = compilation1.AddSyntaxTrees(CSharpSyntaxTree.ParseText(\"struct MyValue {}\"));\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.Cached);\n    }"
+      },
+      {
+        "name": "SmallChangeDoesntRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // update syntax tree by replacing interface with itself\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGitHubApi\",\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string user);\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.Cached);\n    }"
+      },
+      {
+        "name": "AddNewMemberDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // add unrelated member, don't change the method\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGitHubApi\",\n            \"\"\"\n            public interface IGitHubApi\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string user);\n\n                private record Temp();\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "InheritanceTest.cs",
+    "methods": [
+      {
+        "name": "InheritFromIDisposableDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(DefaultInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // inherit from IDisposable\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGitHubApi\",\n            \"\"\"\n            public interface IGitHubApi : IDisposable\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string user);\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.ModifiedSource);\n    }"
+      },
+      {
+        "name": "InheritFromInterfaceDoesRegenerate",
+        "body": "{\n        var syntaxTree = CSharpSyntaxTree.ParseText(TwoInterface, CSharpParseOptions.Default);\n        var compilation1 = Fixture.CreateLibrary(syntaxTree);\n\n        var driver1 = TestHelper.GenerateTracked(compilation1);\n        TestHelper.AssertRunReasons(driver1, IncrementalGeneratorRunReasons.New);\n\n        // inherit from second interface\n        var compilation2 = TestHelper.ReplaceMemberDeclaration(\n            compilation1,\n            \"IGitHubApi\",\n            \"\"\"\n            public interface IGitHubApi : IBaseInterface\n            {\n                [Get(\"/users/{user}\")]\n                Task<string> GetUser(string user);\n            }\n            \"\"\"\n        );\n        var driver2 = driver1.RunGenerators(compilation2);\n        TestHelper.AssertRunReasons(driver2, IncrementalGeneratorRunReasons.Modified);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "TestHelper.cs",
+    "methods": []
+  },
+  {
+    "file": "InterfaceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public class ContainerType\n            {\n                public interface IContainedInterface\n                {\n                    [Get(\"/users\")]\n                    Task<string> Get();\n                }\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IGeneratedInterface : IBaseInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n\n            public interface IBaseInterface\n            {\n                [Get(\"/posts\")]\n                Task<string> GetPosts();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IGeneratedInterface : IBaseInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n\n            public interface IBaseInterface\n            {\n                void NonRefitMethod();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IBaseInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n\n            public interface IDerivedInterface : IBaseInterface { }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IGeneratedInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n\n                void Default() {{ Console.WriteLine(\"Default\"); }}\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IGeneratedInterface : IBaseInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n\n            public interface IBaseInterface\n            {\n                [Get(\"/posts\")]\n                Task<string> GetPosts();\n\n                void Default() {{ Console.WriteLine(\"Default\"); }}\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IApi\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n\n            public interface Iapi\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForType(\n            \"\"\"\n            public interface IApi\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n\n            public interface IApi<T>\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForDeclaration(\n            \"\"\"\n            namespace Nested.RefitGeneratorTest;\n\n            public interface IGeneratedInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForDeclaration(\n            \"\"\"\n            public interface IGeneratedInterface\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForDeclaration(\n            \"\"\"\n            public interface IGeneratedInterface : IDisposable\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get();\n\n            void NonRefitMethod();\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForDeclaration(\n            \"\"\"\n            public interface IGeneratedInterface<T1, T2, T3, T4, T5>\n                where T1 : class\n                where T2 : unmanaged\n                where T3 : struct\n                where T4 : notnull\n                where T5 : class, IDisposable, new()\n            {\n                [Get(\"/users\")]\n                Task<string> Get();\n            }\n            \"\"\");\n    }"
+      }
+    ]
+  },
+  {
+    "file": "MethodTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get<T1, T2, T3, T4, T5>()\n                where T1 : class\n                where T2 : unmanaged\n                where T3 : struct\n                where T4 : notnull\n                where T5 : class, IDisposable, new();\n\n            void NonRefitMethod<T1, T2, T3, T4, T5>()\n                where T1 : class\n                where T2 : unmanaged\n                where T3 : struct\n                where T4 : notnull\n                where T5 : class, IDisposable, new();\n            \"\"\");\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ParameterTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users/{user}\")]\n            Task<string> Get(string user);\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users/{user}\")]\n            Task<string> Get(string? user);\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users/{user}\")]\n            Task<string> Get(int user);\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users/{user}\")]\n            Task<string> Get(int? user);\n            \"\"\");\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ReturnTypeTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get();\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string?> Get();\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<int?> Get();\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Post(\"/users\")]\n            Task Post();\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get<T>() where T : class, IDisposable, new();\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get<T>() where T : unmanaged;\n            \"\"\");\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        return Fixture.VerifyForBody(\n            \"\"\"\n            [Get(\"/users\")]\n            Task<string> Get<T>() where T : struct\n            \"\"\");\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ApiApprovalTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "No body available"
+      }
+    ]
+  },
+  {
+    "file": "AuthenticatedClientHandlerTests.cs",
+    "methods": [
+      {
+        "name": "DefaultHandlerIsHttpClientHandler",
+        "body": "{\n        var handler = new AuthenticatedHttpClientHandler(((_, _) => Task.FromResult(string.Empty)));\n\n        Assert.IsType<HttpClientHandler>(handler.InnerHandler);\n    }"
+      },
+      {
+        "name": "NullTokenGetterThrows",
+        "body": "{\n        Assert.Throws<ArgumentNullException>(() => new AuthenticatedHttpClientHandler(null));\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            AuthorizationHeaderValueGetter = (_, __) => Task.FromResult(\"tokenValue\"),\n            HttpMessageHandlerFactory = () => handler\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/unauth\")\n            .With(msg => msg.Headers.Authorization == null)\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetUnauthenticated();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            AuthorizationHeaderValueGetter = (_, __) => Task.FromResult(\"tokenValue\"),\n            HttpMessageHandlerFactory = () => handler\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/auth\")\n            .WithHeaders(\"Authorization\", \"Bearer tokenValue\")\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetAuthenticated();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            AuthorizationHeaderValueGetter = (request, _) => Task.FromResult(\"tokenValue\"),\n            HttpMessageHandlerFactory = () => handler\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/auth\")\n            .WithHeaders(\"Authorization\", \"Bearer tokenValue\")\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetAuthenticated();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings() { HttpMessageHandlerFactory = () => handler };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/auth\")\n            .WithHeaders(\"Authorization\", \"Bearer tokenValue\")\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetAuthenticatedWithTokenInMethod(\"tokenValue\");\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings() { HttpMessageHandlerFactory = () => handler };\n\n        var headers = new Dictionary<string, string>\n        {\n            { \"User-Agent\", \"Refit\" },\n            { \"Authorization\", \"Bearer tokenValue\" }\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/auth\")\n            .WithHeaders(headers)\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetAuthenticatedWithTokenInHeaderCollection(headers);\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings() { HttpMessageHandlerFactory = () => handler };\n\n        var expectedHeaders = new Dictionary<string, string>\n        {\n            { \"Authorization\", \"Bearer tokenValue\" },\n            { \"User-Agent\", \"Refit\" },\n            { \"X-Forwarded-For\", \"Refit\" }\n        };\n\n        var headerCollectionHeaders = new Dictionary<string, string>\n        {\n            { \"User-Agent\", \"Refit\" },\n            { \"X-Forwarded-For\", \"Refit\" }\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/auth\")\n            .WithHeaders(expectedHeaders)\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetAuthenticatedWithAuthorizeAttributeAndHeaderCollection(\n            \"tokenValue\",\n            headerCollectionHeaders\n        );\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings() { HttpMessageHandlerFactory = () => handler };\n\n        var expectedHeaders = new Dictionary<string, string>\n        {\n            { \"Authorization\", \"Bearer tokenValue2\" },\n            { \"User-Agent\", \"Refit\" },\n            { \"X-Forwarded-For\", \"Refit\" }\n        };\n\n        var headerCollectionHeaders = new Dictionary<string, string>\n        {\n            { \"Authorization\", \"Bearer tokenValue2\" },\n            { \"User-Agent\", \"Refit\" },\n            { \"X-Forwarded-For\", \"Refit\" }\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/auth\")\n            .WithHeaders(expectedHeaders)\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.GetAuthenticatedWithAuthorizeAttributeAndHeaderCollection(\n            \"tokenValue\",\n            headerCollectionHeaders\n        );\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings() { HttpMessageHandlerFactory = () => handler };\n\n        var id = 1;\n        var someRequestData = new SomeRequestData { ReadablePropertyName = 1 };\n\n        var headers = new Dictionary<string, string>\n        {\n            { \"Authorization\", \"Bearer tokenValue2\" },\n            { \"ThingId\", id.ToString() }\n        };\n\n        handler\n            .Expect(HttpMethod.Post, $\"http://api/auth/{id}\")\n            .WithHeaders(headers)\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IMyAuthenticatedService>(\"http://api\", settings);\n\n        var result = await fixture.PostAuthenticatedWithTokenInHeaderCollection(\n            id,\n            someRequestData,\n            headers\n        );\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            AuthorizationHeaderValueGetter = (_, __) => Task.FromResult(\"tokenValue\"),\n            HttpMessageHandlerFactory = () => handler\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-base-thing\")\n            .WithHeaders(\"Authorization\", \"Bearer tokenValue\")\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IInheritedAuthenticatedServiceWithHeaders>(\n            \"http://api\",\n            settings\n        );\n\n        var result = await fixture.GetThingFromBase();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            AuthorizationHeaderValueGetter = (_, __) => Task.FromResult(\"tokenValue\"),\n            HttpMessageHandlerFactory = () => handler\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-inherited-thing\")\n            .WithHeaders(\"Authorization\", \"Bearer tokenValue\")\n            .Respond(\"text/plain\", \"Ok\");\n\n        var fixture = RestService.For<IInheritedAuthenticatedServiceWithHeaders>(\n            \"http://api\",\n            settings\n        );\n\n        var result = await fixture.GetInheritedThing();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"Ok\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            AuthorizationHeaderValueGetter = (_, __) => Task.FromResult(\"tokenValue\"),\n            HttpMessageHandlerFactory = () => handler,\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-inherited-thing\")\n            .WithHeaders(\"Authorization\", \"Bearer tokenValue\")\n            .Respond(\"text/plain\", \"Ok\");\n\n        await Assert.ThrowsAsync<ArgumentException>(async () =>\n        {\n            var fixture = RestService.For<IInheritedAuthenticatedServiceWithHeadersCRLF>(\n                    \"http://api\",\n                    settings\n                );\n\n            var result = await fixture.GetInheritedThing();\n        });\n    }"
+      }
+    ]
+  },
+  {
+    "file": "DefaultUrlParameterFormatterTest.cs",
+    "methods": [
+      {
+        "name": "NullParameterValue_ReturnsNull",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTime = null\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTime,\n            parameters.GetType().GetProperty(nameof(parameters.DateTime))!,\n            parameters.GetType());\n\n        Assert.Null(output);\n    }"
+      },
+      {
+        "name": "NoFormatters_UseDefaultFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTime = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTime,\n            parameters.GetType().GetProperty(nameof(parameters.DateTime))!,\n            parameters.GetType());\n\n        Assert.Equal(\"08/21/2023 00:00:00\", output);\n    }"
+      },
+      {
+        "name": "QueryAttributeFormatOnly_UseQueryAttributeFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeWithAttributeFormatYear = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTimeWithAttributeFormatYear,\n            parameters.GetType().GetProperty(nameof(parameters.DateTimeWithAttributeFormatYear))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "QueryAttributeAndGeneralFormat_UseQueryAttributeFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeWithAttributeFormatYear = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy-MM-dd\");\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTimeWithAttributeFormatYear,\n            parameters.GetType().GetProperty(nameof(parameters.DateTimeWithAttributeFormatYear))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "QueryAttributeAndSpecificFormat_UseQueryAttributeFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeWithAttributeFormatYear = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DefaultUrlParameterFormatterTestRequest, DateTime>(\"yyyy-MM-dd\");\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTimeWithAttributeFormatYear,\n            parameters.GetType().GetProperty(nameof(parameters.DateTimeWithAttributeFormatYear))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "AllFormats_UseQueryAttributeFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeWithAttributeFormatYear = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy-MM-dd\");\n        urlParameterFormatter.AddFormat<DefaultUrlParameterFormatterTestRequest, DateTime>(\"yyyy-MM-dd\");\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTimeWithAttributeFormatYear,\n            parameters.GetType().GetProperty(nameof(parameters.DateTimeWithAttributeFormatYear))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "GeneralFormatOnly_UseGeneralFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTime = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy\");\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTime,\n            parameters.GetType().GetProperty(nameof(parameters.DateTime))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "SpecificFormatOnly_UseSpecificFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTime = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DefaultUrlParameterFormatterTestRequest, DateTime>(\"yyyy\");\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTime,\n            parameters.GetType().GetProperty(nameof(parameters.DateTime))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "GeneralAndSpecificFormats_UseSpecificFormat",
+        "body": "{\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTime = new DateTime(2023, 8, 21)\n        };\n\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy-MM-dd\");\n        urlParameterFormatter.AddFormat<DefaultUrlParameterFormatterTestRequest, DateTime>(\"yyyy\");\n\n        var output = urlParameterFormatter.Format(\n            parameters.DateTime,\n            parameters.GetType().GetProperty(nameof(parameters.DateTime))!,\n            parameters.GetType());\n\n        Assert.Equal(\"2023\", output);\n    }"
+      },
+      {
+        "name": "RequestWithPlainDateTimeQueryParameter_ProducesCorrectQueryString",
+        "body": "{\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy\");\n\n        var refitSettings = new RefitSettings { UrlParameterFormatter = urlParameterFormatter };\n        var fixture = new RequestBuilderImplementation<IDummyHttpApi>(refitSettings);\n        var factory = fixture.BuildRequestFactoryForMethod(\n            nameof(IDummyHttpApi.PostWithComplexTypeQuery)\n        );\n\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTime = new DateTime(2023, 8, 21),\n        };\n\n        var output = factory([parameters]);\n        var uri = new Uri(new Uri(\"http://api\"), output.RequestUri);\n\n        Assert.Equal(\n            \"?DateTime=2023\",\n            uri.Query\n        );\n    }"
+      },
+      {
+        "name": "RequestWithDateTimeCollectionQueryParameter_ProducesCorrectQueryString",
+        "body": "{\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy\");\n\n        var refitSettings = new RefitSettings { UrlParameterFormatter = urlParameterFormatter };\n        var fixture = new RequestBuilderImplementation<IDummyHttpApi>(refitSettings);\n        var factory = fixture.BuildRequestFactoryForMethod(\n            nameof(IDummyHttpApi.PostWithComplexTypeQuery)\n        );\n\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeCollection = [new DateTime(2023, 8, 21), new DateTime(2024, 8, 21)],\n        };\n\n        var output = factory([parameters]);\n        var uri = new Uri(new Uri(\"http://api\"), output.RequestUri);\n\n        Assert.Equal(\n            \"?DateTimeCollection=2023%2C2024\",\n            uri.Query\n        );\n    }"
+      },
+      {
+        "name": "RequestWithDateTimeDictionaryQueryParameter_ProducesCorrectQueryString",
+        "body": "{\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy\");\n\n        var refitSettings = new RefitSettings { UrlParameterFormatter = urlParameterFormatter };\n        var fixture = new RequestBuilderImplementation<IDummyHttpApi>(refitSettings);\n        var factory = fixture.BuildRequestFactoryForMethod(\n            nameof(IDummyHttpApi.PostWithComplexTypeQuery)\n        );\n\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeDictionary = new Dictionary<int, DateTime>\n            {\n                { 1, new DateTime(2023, 8, 21) },\n                { 2, new DateTime(2024, 8, 21) },\n            },\n        };\n\n        var output = factory([parameters]);\n        var uri = new Uri(new Uri(\"http://api\"), output.RequestUri);\n\n        Assert.Equal(\n            \"?DateTimeDictionary.1=2023&DateTimeDictionary.2=2024\",\n            uri.Query\n        );\n    }"
+      },
+      {
+        "name": "RequestWithDateTimeKeyedDictionaryQueryParameter_ProducesCorrectQueryString",
+        "body": "{\n        var urlParameterFormatter = new DefaultUrlParameterFormatter();\n        urlParameterFormatter.AddFormat<DateTime>(\"yyyy\");\n\n        var refitSettings = new RefitSettings { UrlParameterFormatter = urlParameterFormatter };\n        var fixture = new RequestBuilderImplementation<IDummyHttpApi>(refitSettings);\n        var factory = fixture.BuildRequestFactoryForMethod(\n            nameof(IDummyHttpApi.PostWithComplexTypeQuery)\n        );\n\n        var parameters = new DefaultUrlParameterFormatterTestRequest\n        {\n            DateTimeKeyedDictionary = new Dictionary<DateTime, int>\n            {\n                { new DateTime(2023, 8, 21), 1 },\n                { new DateTime(2024, 8, 21), 2 },\n            },\n        };\n\n        var output = factory([parameters]);\n        var uri = new Uri(new Uri(\"http://api\"), output.RequestUri);\n\n        Assert.Equal(\n            \"?DateTimeKeyedDictionary.2023=1&DateTimeKeyedDictionary.2024=2\",\n            uri.Query\n        );\n    }"
+      }
+    ]
+  },
+  {
+    "file": "DeserializationExceptionFactoryTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n        };\n\n        var intContent = 123;\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent($\"{intContent}\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var result = await fixture.GetWithResult();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(intContent, result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent(\"non-int-result\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var thrownException = await Assert.ThrowsAsync<ApiException>(() => fixture.GetWithResult());\n        Assert.Equal(\"An error occured deserializing the response.\", thrownException.Message);\n\n        handler.VerifyNoOutstandingExpectation();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            DeserializationExceptionFactory = (_, _) => Task.FromResult<Exception>(null)\n        };\n\n        var intContent = 123;\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent($\"{intContent}\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var result = await fixture.GetWithResult();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(intContent, result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            DeserializationExceptionFactory = (_, _) => Task.FromResult<Exception>(null)\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent(\"non-int-result\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var result = await fixture.GetWithResult();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(default, result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var exception = new Exception(\"Unsuccessful Deserialization Exception\");\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            DeserializationExceptionFactory = (_, _) => Task.FromResult<Exception>(exception)\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent(\"non-int-result\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var thrownException = await Assert.ThrowsAsync<Exception>(() => fixture.GetWithResult());\n        Assert.Equal(exception, thrownException);\n\n        handler.VerifyNoOutstandingExpectation();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var exception = new Exception(\"Unsuccessful Deserialization Exception\");\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            DeserializationExceptionFactory = (_, _) => Task.FromResult<Exception>(exception)\n        };\n\n        var intContent = 123;\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent($\"{intContent}\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var result = await fixture.GetWithResult();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(intContent, result);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ExceptionFactoryTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            ExceptionFactory = _ => Task.FromResult<Exception>(null)\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.NotFound, new StringContent(\"error-result\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var result = await fixture.GetWithResult();\n\n        handler.VerifyNoOutstandingExpectation();\n\n        Assert.Equal(\"error-result\", result);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            ExceptionFactory = _ => Task.FromResult<Exception>(null)\n        };\n\n        handler\n            .Expect(HttpMethod.Put, \"http://api/put-without-result\")\n            .Respond(HttpStatusCode.NotFound);\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        await fixture.PutWithoutResult();\n\n        handler.VerifyNoOutstandingExpectation();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var exception = new Exception(\"I like to fail\");\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            ExceptionFactory = _ => Task.FromResult<Exception>(exception)\n        };\n\n        handler\n            .Expect(HttpMethod.Get, \"http://api/get-with-result\")\n            .Respond(HttpStatusCode.OK, new StringContent(\"success-result\"));\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var thrownException = await Assert.ThrowsAsync<Exception>(() => fixture.GetWithResult());\n        Assert.Equal(exception, thrownException);\n\n        handler.VerifyNoOutstandingExpectation();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var handler = new MockHttpMessageHandler();\n        var exception = new Exception(\"I like to fail\");\n        var settings = new RefitSettings()\n        {\n            HttpMessageHandlerFactory = () => handler,\n            ExceptionFactory = _ => Task.FromResult<Exception>(exception)\n        };\n\n        handler.Expect(HttpMethod.Put, \"http://api/put-without-result\").Respond(HttpStatusCode.OK);\n\n        var fixture = RestService.For<IMyService>(\"http://api\", settings);\n\n        var thrownException = await Assert.ThrowsAsync<Exception>(() => fixture.PutWithoutResult());\n        Assert.Equal(exception, thrownException);\n\n        handler.VerifyNoOutstandingExpectation();\n    }"
+      }
+    ]
+  },
+  {
+    "file": "FormValueMultimapTests.cs",
+    "methods": [
+      {
+        "name": "EmptyIfNullPassedIn",
+        "body": "{\n        var target = new FormValueMultimap(null, settings);\n        Assert.Empty(target);\n    }"
+      },
+      {
+        "name": "LoadsFromDictionary",
+        "body": "{\n        var source = new Dictionary<string, string> { { \"foo\", \"bar\" }, { \"xyz\", \"123\" } };\n\n        var target = new FormValueMultimap(source, settings);\n\n        Assert.Equal(source, target);\n    }"
+      },
+      {
+        "name": "LoadsFromObject",
+        "body": "{\n        var source = new ObjectTestClass { A = \"1\", B = \"2\" };\n        var expected = new Dictionary<string, string> { { \"A\", \"1\" }, { \"B\", \"2\" }, };\n\n        var actual = new FormValueMultimap(source, settings);\n\n        Assert.Equal(expected, actual);\n    }"
+      },
+      {
+        "name": "LoadFromObjectWithCollections",
+        "body": "{\n        var source = new ObjectWithRepeatedFieldsTestClass\n        {\n            A = new List<int> { 1, 2 },\n            B = new HashSet<string> { \"set1\", \"set2\" },\n            C = new HashSet<int> { 1, 2 },\n            D = new List<double> { 0.1, 1.0 },\n            E = new List<bool> { true, false }\n        };\n        var expected = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"A\", \"01\"),\n            new KeyValuePair<string, string>(\"A\", \"02\"),\n            new KeyValuePair<string, string>(\"B\", \"set1,set2\"),\n            new KeyValuePair<string, string>(\"C\", \"01 02\"),\n            new KeyValuePair<string, string>(\"D\", \"0.10\\t1.00\"),\n            // The default behavior is to capitalize booleans. This is not a requirement.\n            new KeyValuePair<string, string>(\"E\", \"True|False\")\n        };\n\n        var actual = new FormValueMultimap(source, settings);\n\n        Assert.Equal(expected, actual);\n    }"
+      },
+      {
+        "name": "DefaultCollectionFormatCanBeSpecifiedInSettings_Multi",
+        "body": "{\n        var settingsWithCollectionFormat = new RefitSettings\n        {\n            CollectionFormat = CollectionFormat.Multi\n        };\n        var source = new ObjectWithRepeatedFieldsTestClass\n        {\n            // Members have explicit CollectionFormat\n            A = new List<int> { 1, 2 },\n            B = new HashSet<string> { \"set1\", \"set2\" },\n            C = new HashSet<int> { 1, 2 },\n            D = new List<double> { 0.1, 1.0 },\n            E = new List<bool> { true, false },\n            // Member has no explicit CollectionFormat\n            F = new[] { 1, 2, 3 }\n        };\n        var expected = new List<KeyValuePair<string, string>>\n        {\n            new KeyValuePair<string, string>(\"A\", \"01\"),\n            new KeyValuePair<string, string>(\"A\", \"02\"),\n            new KeyValuePair<string, string>(\"B\", \"set1,set2\"),\n            new KeyValuePair<string, string>(\"C\", \"01 02\"),\n            new KeyValuePair<string, string>(\"D\", \"0.10\\t1.00\"),\n            new KeyValuePair<string, string>(\"E\", \"True|False\"),\n            new KeyValuePair<string, string>(\"F\", \"1\"),\n            new KeyValuePair<string, string>(\"F\", \"2\"),\n            new KeyValuePair<string, string>(\"F\", \"3\"),\n        };\n\n        var actual = new FormValueMultimap(source, settingsWithCollectionFormat);\n\n        Assert.Equal(expected, actual);\n    }"
+      },
+      {
+        "name": "ExcludesPropertiesWithInaccessibleGetters",
+        "body": "{\n        var source = new ClassWithInaccessibleGetters { A = \"Foo\", B = \"Bar\" };\n        var expected = new Dictionary<string, string> { { \"C\", \"FooBar\" } };\n\n        var actual = new FormValueMultimap(source, settings);\n\n        Assert.Equal(expected, actual);\n    }"
+      },
+      {
+        "name": "LoadsFromAnonymousType",
+        "body": "{\n        var source = new { foo = \"bar\", xyz = 123 };\n\n        var expected = new Dictionary<string, string> { { \"foo\", \"bar\" }, { \"xyz\", \"123\" } };\n\n        var actual = new FormValueMultimap(source, settings);\n\n        Assert.Equal(expected, actual);\n    }"
+      },
+      {
+        "name": "UsesAliasAsAttribute",
+        "body": "{\n        var source = new AliasingTestClass { Foo = \"abc\" };\n\n        var target = new FormValueMultimap(source, settings);\n\n        Assert.DoesNotContain(\"Foo\", target.Keys);\n        Assert.Contains(\"f\", target.Keys);\n        Assert.Equal(\"abc\", target.FirstOrDefault(entry => entry.Key == \"f\").Value);\n    }"
+      },
+      {
+        "name": "UsesJsonPropertyAttribute",
+        "body": "{\n        var source = new AliasingTestClass { Bar = \"xyz\" };\n\n        var target = new FormValueMultimap(source, settings);\n\n        Assert.DoesNotContain(\"Bar\", target.Keys);\n        Assert.Contains(\"b\", target.Keys);\n        Assert.Equal(\"xyz\", target.FirstOrDefault(entry => entry.Key == \"b\").Value);\n    }"
+      },
+      {
+        "name": "UsesQueryPropertyAttribute",
+        "body": "{\n        var source = new AliasingTestClass { Frob = 4 };\n\n        var target = new FormValueMultimap(source, settings);\n\n        Assert.DoesNotContain(\"Bar\", target.Keys);\n        Assert.Contains(\"prefix-fr\", target.Keys);\n        Assert.Equal(\"4.0\", target.FirstOrDefault(entry => entry.Key == \"prefix-fr\").Value);\n    }"
+      },
+      {
+        "name": "GivesPrecedenceToAliasAs",
+        "body": "{\n        var source = new AliasingTestClass { Baz = \"123\" };\n\n        var target = new FormValueMultimap(source, settings);\n\n        Assert.DoesNotContain(\"Bar\", target.Keys);\n        Assert.DoesNotContain(\"z\", target.Keys);\n        Assert.Contains(\"a\", target.Keys);\n        Assert.Equal(\"123\", target.FirstOrDefault(entry => entry.Key == \"a\").Value);\n    }"
+      },
+      {
+        "name": "SkipsNullValuesFromDictionary",
+        "body": "{\n        var source = new Dictionary<string, string> { { \"foo\", \"bar\" }, { \"xyz\", null } };\n\n        var target = new FormValueMultimap(source, settings);\n\n        Assert.Single(target);\n        Assert.Contains(\"foo\", target.Keys);\n    }"
+      },
+      {
+        "name": "SerializesEnumWithEnumMemberAttribute",
+        "body": "{\n        var source = new Dictionary<string, EnumWithEnumMember>()\n        {\n            { \"A\", EnumWithEnumMember.A },\n            { \"B\", EnumWithEnumMember.B }\n        };\n\n        var expected = new Dictionary<string, string> { { \"A\", \"A\" }, { \"B\", \"b\" } };\n\n        var actual = new FormValueMultimap(source, settings);\n\n        Assert.Equal(expected, actual);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "HttpClientFactoryExtensionsTests.cs",
+    "methods": [
+      {
+        "name": "GenericHttpClientsAreAssignedUniqueNames",
+        "body": "{\n        var services = new ServiceCollection();\n\n        var userClientName = services.AddRefitClient<IBoringCrudApi<User, string>>().Name;\n        var roleClientName = services.AddRefitClient<IBoringCrudApi<Role, string>>().Name;\n\n        Assert.NotEqual(userClientName, roleClientName);\n    }"
+      },
+      {
+        "name": "HttpClientServicesAreAddedCorrectlyGivenGenericArgument",
+        "body": "{\n        var serviceCollection = new ServiceCollection();\n        serviceCollection.AddRefitClient<IFooWithOtherAttribute>();\n        Assert.Contains(\n            serviceCollection,\n            z => z.ServiceType == typeof(SettingsFor<IFooWithOtherAttribute>)\n        );\n        Assert.Contains(\n            serviceCollection,\n            z => z.ServiceType == typeof(IRequestBuilder<IFooWithOtherAttribute>)\n        );\n    }"
+      },
+      {
+        "name": "HttpClientServicesAreAddedCorrectlyGivenTypeArgument",
+        "body": "{\n        var serviceCollection = new ServiceCollection();\n        serviceCollection.AddRefitClient(typeof(IFooWithOtherAttribute));\n        Assert.Contains(\n            serviceCollection,\n            z => z.ServiceType == typeof(SettingsFor<IFooWithOtherAttribute>)\n        );\n        Assert.Contains(\n            serviceCollection,\n            z => z.ServiceType == typeof(IRequestBuilder<IFooWithOtherAttribute>)\n        );\n    }"
+      },
+      {
+        "name": "HttpClientReturnsClientGivenGenericArgument",
+        "body": "{\n        var serviceCollection = new ServiceCollection();\n        serviceCollection.AddRefitClient<IFooWithOtherAttribute>();\n        var serviceProvider = serviceCollection.BuildServiceProvider();\n        Assert.NotNull(serviceProvider.GetService<IFooWithOtherAttribute>());\n    }"
+      },
+      {
+        "name": "HttpClientReturnsClientGivenTypeArgument",
+        "body": "{\n        var serviceCollection = new ServiceCollection();\n        serviceCollection.AddRefitClient(typeof(IFooWithOtherAttribute));\n        var serviceProvider = serviceCollection.BuildServiceProvider();\n        Assert.NotNull(serviceProvider.GetService<IFooWithOtherAttribute>());\n    }"
+      },
+      {
+        "name": "HttpClientSettingsAreInjectableGivenGenericArgument",
+        "body": "{\n        var serviceCollection = new ServiceCollection().Configure<ClientOptions>(\n            o => o.Serializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions())\n        );\n        serviceCollection.AddRefitClient<IFooWithOtherAttribute>(\n            _ =>\n                new RefitSettings()\n                {\n                    ContentSerializer = _.GetRequiredService<\n                        IOptions<ClientOptions>\n                    >().Value.Serializer\n                }\n        );\n        var serviceProvider = serviceCollection.BuildServiceProvider();\n        Assert.Same(\n            serviceProvider.GetRequiredService<IOptions<ClientOptions>>().Value.Serializer,\n            serviceProvider\n                .GetRequiredService<SettingsFor<IFooWithOtherAttribute>>()\n                .Settings!.ContentSerializer\n        );\n    }"
+      },
+      {
+        "name": "HttpClientSettingsAreInjectableGivenTypeArgument",
+        "body": "{\n        var serviceCollection = new ServiceCollection().Configure<ClientOptions>(\n            o => o.Serializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions())\n        );\n        serviceCollection.AddRefitClient(\n            typeof(IFooWithOtherAttribute),\n            _ =>\n                new RefitSettings()\n                {\n                    ContentSerializer = _.GetRequiredService<\n                        IOptions<ClientOptions>\n                    >().Value.Serializer\n                }\n        );\n        var serviceProvider = serviceCollection.BuildServiceProvider();\n        Assert.Same(\n            serviceProvider.GetRequiredService<IOptions<ClientOptions>>().Value.Serializer,\n            serviceProvider\n                .GetRequiredService<SettingsFor<IFooWithOtherAttribute>>()\n                .Settings!.ContentSerializer\n        );\n    }"
+      },
+      {
+        "name": "HttpClientSettingsCanBeProvidedStaticallyGivenGenericArgument",
+        "body": "{\n        var contentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions());\n        var serviceCollection = new ServiceCollection();\n        serviceCollection.AddRefitClient<IFooWithOtherAttribute>(\n            new RefitSettings() { ContentSerializer = contentSerializer }\n        );\n        var serviceProvider = serviceCollection.BuildServiceProvider();\n        Assert.Same(\n            contentSerializer,\n            serviceProvider\n                .GetRequiredService<SettingsFor<IFooWithOtherAttribute>>()\n                .Settings!.ContentSerializer\n        );\n    }"
+      },
+      {
+        "name": "HttpClientSettingsCanBeProvidedStaticallyGivenTypeArgument",
+        "body": "{\n        var contentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions());\n        var serviceCollection = new ServiceCollection();\n        serviceCollection.AddRefitClient<IFooWithOtherAttribute>(\n            new RefitSettings() { ContentSerializer = contentSerializer }\n        );\n        var serviceProvider = serviceCollection.BuildServiceProvider();\n        Assert.Same(\n            contentSerializer,\n            serviceProvider\n                .GetRequiredService<SettingsFor<IFooWithOtherAttribute>>()\n                .Settings!.ContentSerializer\n        );\n    }"
+      },
+      {
+        "name": "ProvidedHttpClientIsUsedAsNamedClient",
+        "body": "{\n        var baseUri = new Uri(\"https://0:1337\");\n        var services = new ServiceCollection();\n\n        services.AddHttpClient(\"MyHttpClient\", client => {\n            client.BaseAddress = baseUri;\n            client.DefaultRequestHeaders.Add(\"X-Powered-By\", Environment.OSVersion.VersionString);\n        });\n        services.AddRefitClient<IGitHubApi>(null, \"MyHttpClient\");\n\n        var sp = services.BuildServiceProvider();\n        var httpClientFactory = sp.GetRequiredService<IHttpClientFactory>();\n        var httpClient = httpClientFactory.CreateClient(\"MyHttpClient\");\n\n        var gitHubApi = sp.GetRequiredService<IGitHubApi>();\n\n        var memberInfos = typeof(Generated).GetMember(\"RefitTestsIGitHubApi\", BindingFlags.NonPublic);\n        var genApi = Convert.ChangeType(gitHubApi, (Type)memberInfos[0], CultureInfo.InvariantCulture);\n        var genApiProperty = genApi.GetType().GetProperty(\"Client\")!;\n        var genApiClient = (HttpClient)genApiProperty.GetValue(genApi)!;\n\n        Assert.NotSame(httpClient, genApiClient);\n        Assert.Equal(httpClient.BaseAddress, genApiClient.BaseAddress);\n        Assert.Equal(baseUri, genApiClient.BaseAddress);\n        Assert.Contains(\n            new KeyValuePair<string, IEnumerable<string>>(\"X-Powered-By\",\n                new[] { Environment.OSVersion.VersionString }), genApiClient.DefaultRequestHeaders);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "IDefaultInterfaceMethodTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        var mockHttp = new MockHttpMessageHandler();\n\n        var settings = new RefitSettings { HttpMessageHandlerFactory = () => mockHttp };\n\n        mockHttp\n            .Expect(HttpMethod.Get, \"https://httpbin.org/\")\n            .Respond(HttpStatusCode.OK, \"text/html\", \"OK\");\n\n        var fixture = RestService.For<IHaveDims>(\"https://httpbin.org/\", settings);\n        var plainText = await fixture.GetInternal();\n\n        Assert.True(!string.IsNullOrWhiteSpace(plainText));\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var mockHttp = new MockHttpMessageHandler();\n\n        var settings = new RefitSettings { HttpMessageHandlerFactory = () => mockHttp };\n\n        mockHttp\n            .Expect(HttpMethod.Get, \"https://httpbin.org/\")\n            .Respond(HttpStatusCode.OK, \"text/html\", \"OK\");\n\n        var fixture = RestService.For<IHaveDims>(\"https://httpbin.org/\", settings);\n        var plainText = await fixture.GetDim();\n\n        Assert.True(!string.IsNullOrWhiteSpace(plainText));\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var mockHttp = new MockHttpMessageHandler();\n\n        var settings = new RefitSettings { HttpMessageHandlerFactory = () => mockHttp };\n\n        mockHttp\n            .Expect(HttpMethod.Get, \"https://httpbin.org/\")\n            .Respond(HttpStatusCode.OK, \"text/html\", \"OK\");\n\n        var fixture = RestService.For<IHaveDims>(\"https://httpbin.org/\", settings);\n        var plainText = await fixture.GetInternal();\n\n        Assert.True(!string.IsNullOrWhiteSpace(plainText));\n    }"
+      },
+      {
+        "name": "StaticInterfaceMethodTest",
+        "body": "{\n        var plainText = IHaveDims.GetStatic();\n\n        Assert.True(!string.IsNullOrWhiteSpace(plainText));\n    }"
+      }
+    ]
+  },
+  {
+    "file": "IntegrationTestHelper.cs",
+    "methods": []
+  },
+  {
+    "file": "ReflectionTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/bar\")\n            .Respond(\"application/json\", nameof(IBasicApi.GetParam));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetParam))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(parameterInfo, typeof(string));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetParam(\"bar\");\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/DerivedRecord%20%7B%20Value%20%3D%20Derived%20%7D\")\n            .Respond(\"application/json\", nameof(IBasicApi.GetDerivedParam));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetDerivedParam))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(parameterInfo, typeof(BaseRecord));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetDerivedParam(new DerivedRecord(\"Derived\"));\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/propVal\")\n            .Respond(\"application/json\", nameof(IBasicApi.GetPropertyParam));\n\n        var propertyInfo = typeof(MyParams).GetProperties()[0];\n\n        var formatter = new TestUrlFormatter(propertyInfo, typeof(string));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetPropertyParam(new MyParams(\"propVal\"));\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/genericVal\")\n            .Respond(\"application/json\", nameof(IBasicApi.GetGenericParam));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetGenericParam))!;\n        var stringMethod = methodInfo.MakeGenericMethod(typeof(string));\n        var parameterInfo = stringMethod.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(parameterInfo, typeof(string));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetGenericParam(\"genericVal\");\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(\n                new[] { new KeyValuePair<string, string>(\"queryKey\", \"queryValue\"), }\n            )\n            .Respond(\"application/json\", nameof(IBasicApi.GetQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetQuery))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(parameterInfo, typeof(string));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetQuery(\"queryValue\");\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(new[] { new KeyValuePair<string, string>(\"Value\", \"queryVal\"), })\n            .Respond(\"application/json\", nameof(IBasicApi.GetPropertyQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetPropertyQuery))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(parameterInfo, typeof(BaseRecord));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetPropertyQuery(new BaseRecord(\"queryVal\"));\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(\n                new[]\n                {\n                    new KeyValuePair<string, string>(\"Name\", \"queryName\"),\n                    new KeyValuePair<string, string>(\"Value\", \"value\"),\n                }\n            )\n            .Respond(\"application/json\", nameof(IBasicApi.GetPropertyQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetPropertyQuery))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(\n            [parameterInfo, parameterInfo],\n            [typeof(BaseRecord), typeof(BaseRecord)]\n        );\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetPropertyQuery(new DerivedRecordWithProperty(\"queryName\"));\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(\n                new[] { new KeyValuePair<string, string>(\"queryKey\", \"queryValue\"), }\n            )\n            .Respond(\"application/json\", nameof(IBasicApi.GetGenericQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetGenericQuery))!;\n        var stringMethod = methodInfo.MakeGenericMethod(typeof(string));\n        var parameterInfo = stringMethod.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(parameterInfo, typeof(string));\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetGenericQuery(\"queryValue\");\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(new[] { new KeyValuePair<string, string>(\"enums\", \"k0,k1\"), })\n            .Respond(\"application/json\", nameof(IBasicApi.GetEnumerableQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetEnumerableQuery))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(\n            [parameterInfo, parameterInfo],\n            [typeof(IEnumerable<string>), typeof(IEnumerable<string>)]\n        );\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetEnumerableQuery([\"k0\", \"k1\"]);\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(new[] { new KeyValuePair<string, string>(\"Enumerable\", \"0,1\"), })\n            .Respond(\"application/json\", nameof(IBasicApi.GetEnumerablePropertyQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetEnumerablePropertyQuery))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n        var propertyInfo = typeof(MyEnumerableParams).GetProperties()[0];\n\n        var formatter = new TestUrlFormatter(\n            [propertyInfo, propertyInfo, parameterInfo],\n            [typeof(int[]), typeof(int[]), typeof(MyEnumerableParams)]\n        );\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        await service.GetEnumerablePropertyQuery(new MyEnumerableParams([0, 1]));\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"https://foo/\")\n            .WithExactQueryString(\n                new[]\n                {\n                    new KeyValuePair<string, string>(\"key0\", \"1\"),\n                    new KeyValuePair<string, string>(\"key1\", \"2\"),\n                }\n            )\n            .Respond(\"application/json\", nameof(IBasicApi.GetDictionaryQuery));\n\n        var methodInfo = typeof(IBasicApi).GetMethod(nameof(IBasicApi.GetDictionaryQuery))!;\n        var parameterInfo = methodInfo.GetParameters()[0];\n\n        var formatter = new TestUrlFormatter(\n            [typeof(string), typeof(string), parameterInfo, parameterInfo],\n            [\n                typeof(string),\n                typeof(string),\n                typeof(IDictionary<string, object>),\n                typeof(IDictionary<string, object>)\n            ]\n        );\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            UrlParameterFormatter = formatter\n        };\n        var service = RestService.For<IBasicApi>(\"https://foo\", settings);\n\n        var dict = new Dictionary<string, object> { { \"key0\", 1 }, { \"key1\", 2 } };\n        await service.GetDictionaryQuery(dict);\n        formatter.AssertNoOutstandingAssertions();\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ResponseTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"http://api/aliasTest\")\n            .Respond(\n                \"application/json\",\n                \"{\\\"FIELD_WE_SHOULD_SHORTEN_WITH_ALIAS_AS\\\": \\\"Hello\\\", \\\"FIELD_WE_SHOULD_SHORTEN_WITH_JSON_PROPERTY\\\": \\\"World\\\"}\"\n            );\n\n        var result = await fixture.GetTestObject();\n\n        Assert.Equal(\"World\", result.ShortNameForJsonProperty);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        mockHandler\n            .Expect(HttpMethod.Get, \"http://api/aliasTest\")\n            .Respond(\n                \"application/json\",\n                \"{\\\"FIELD_WE_SHOULD_SHORTEN_WITH_ALIAS_AS\\\": \\\"Hello\\\", \\\"FIELD_WE_SHOULD_SHORTEN_WITH_JSON_PROPERTY\\\": \\\"World\\\"}\"\n            );\n\n        var result = await fixture.GetTestObject();\n\n        Assert.Null(result.ShortNameForAlias);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedContent = new ProblemDetails\n        {\n            Detail = \"detail\",\n            Errors =\n            {\n                { \"Field1\", new string[] { \"Problem1\" } },\n                { \"Field2\", new string[] { \"Problem2\" } }\n            },\n            Instance = \"instance\",\n            Status = 1,\n            Title = \"title\",\n            Type = \"type\"\n        };\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(JsonConvert.SerializeObject(expectedContent))\n        };\n        expectedResponse.Content.Headers.ContentType =\n            new System.Net.Http.Headers.MediaTypeHeaderValue(\"application/problem+json\");\n        mockHandler.Expect(HttpMethod.Get, \"http://api/aliasTest\").Respond(req => expectedResponse);\n\n        var actualException = await Assert.ThrowsAsync<ValidationApiException>(\n            () => fixture.GetTestObject()\n        );\n        Assert.NotNull(actualException.Content);\n        Assert.Equal(\"detail\", actualException.Content.Detail);\n        Assert.Equal(\"Problem1\", actualException.Content.Errors[\"Field1\"][0]);\n        Assert.Equal(\"Problem2\", actualException.Content.Errors[\"Field2\"][0]);\n        Assert.Equal(\"instance\", actualException.Content.Instance);\n        Assert.Equal(1, actualException.Content.Status);\n        Assert.Equal(\"title\", actualException.Content.Title);\n        Assert.Equal(\"type\", actualException.Content.Type);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedContent = new ProblemDetails\n        {\n            Detail = \"detail\",\n            Errors =\n            {\n                { \"Field1\", new string[] { \"Problem1\" } },\n                { \"Field2\", new string[] { \"Problem2\" } }\n            },\n            Instance = \"instance\",\n            Status = 1,\n            Title = \"title\",\n            Type = \"type\"\n        };\n\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(JsonConvert.SerializeObject(expectedContent))\n        };\n\n        expectedResponse.Content.Headers.ContentType =\n            new System.Net.Http.Headers.MediaTypeHeaderValue(\"application/problem+json\");\n        mockHandler\n            .Expect(HttpMethod.Get, \"http://api/GetApiResponseTestObject\")\n            .Respond(req => expectedResponse);\n\n        using var response = await fixture.GetApiResponseTestObject();\n        var actualException = await Assert.ThrowsAsync<ValidationApiException>(\n            () => response.EnsureSuccessStatusCodeAsync()\n        );\n\n        Assert.NotNull(actualException.Content);\n        Assert.Equal(\"detail\", actualException.Content.Detail);\n        Assert.Equal(\"Problem1\", actualException.Content.Errors[\"Field1\"][0]);\n        Assert.Equal(\"Problem2\", actualException.Content.Errors[\"Field2\"][0]);\n        Assert.Equal(\"instance\", actualException.Content.Instance);\n        Assert.Equal(1, actualException.Content.Status);\n        Assert.Equal(\"title\", actualException.Content.Title);\n        Assert.Equal(\"type\", actualException.Content.Type);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {\n            Content = new StringContent(\"Invalid JSON\")\n        };\n\n        mockHandler\n            .Expect(HttpMethod.Get, \"http://api/GetApiResponseTestObject\")\n            .Respond(req => expectedResponse);\n\n        using var response = await fixture.GetApiResponseTestObject();\n\n        Assert.True(response.IsSuccessStatusCode);\n        Assert.False(response.IsSuccessful);\n        Assert.NotNull(response.Error);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {\n            Content = new StringContent(\"Invalid JSON\")\n        };\n\n        mockHandler\n            .Expect(HttpMethod.Get, \"http://api/GetApiResponseTestObject\")\n            .Respond(req => expectedResponse);\n\n        using var response = await fixture.GetApiResponseTestObject();\n        await response.EnsureSuccessStatusCodeAsync();        \n\n        Assert.True(response.IsSuccessStatusCode);\n        Assert.False(response.IsSuccessful);\n        Assert.NotNull(response.Error);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {           \n            Content = new StringContent(\"Invalid JSON\")\n        };\n\n        mockHandler\n            .Expect(HttpMethod.Get, \"http://api/GetApiResponseTestObject\")\n            .Respond(req => expectedResponse);\n\n        using var response = await fixture.GetApiResponseTestObject();\n        var actualException = await Assert.ThrowsAsync<ApiException>(\n            () => response.EnsureSuccessfulAsync()\n        );\n\n        Assert.True(response.IsSuccessStatusCode);\n        Assert.False(response.IsSuccessful);\n        Assert.NotNull(actualException);\n        Assert.IsType<System.Text.Json.JsonException>(actualException.InnerException);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedContent = new\n        {\n            Detail = \"detail\",\n            Instance = \"instance\",\n            Status = 1,\n            Title = \"title\",\n            Type = \"type\",\n            Foo = \"bar\",\n            Baz = 123d,\n        };\n\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(JsonConvert.SerializeObject(expectedContent))\n        };\n\n        expectedResponse.Content.Headers.ContentType =\n            new System.Net.Http.Headers.MediaTypeHeaderValue(\"application/problem+json\");\n        mockHandler.Expect(HttpMethod.Get, \"http://api/aliasTest\").Respond(req => expectedResponse);\n\n        mockHandler.Expect(HttpMethod.Get, \"http://api/soloyolo\").Respond(req => expectedResponse);\n\n        var actualException = await Assert.ThrowsAsync<ValidationApiException>(\n            () => fixture.GetTestObject()\n        );\n        Assert.NotNull(actualException.Content);\n        Assert.Equal(\"detail\", actualException.Content.Detail);\n        Assert.Equal(\"instance\", actualException.Content.Instance);\n        Assert.Equal(1, actualException.Content.Status);\n        Assert.Equal(\"title\", actualException.Content.Title);\n        Assert.Equal(\"type\", actualException.Content.Type);\n\n        Assert.Collection(\n            actualException.Content.Extensions,\n            kvp =>\n                Assert.Equal(\n                    new KeyValuePair<string, object>(\n                        nameof(expectedContent.Foo),\n                        expectedContent.Foo\n                    ),\n                    kvp\n                ),\n            kvp =>\n                Assert.Equal(\n                    new KeyValuePair<string, object>(\n                        nameof(expectedContent.Baz),\n                        expectedContent.Baz\n                    ),\n                    kvp\n                )\n        );\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var model = new TestAliasObject\n        {\n            ShortNameForAlias = nameof(WithNonSeekableStream_UsingSystemTextJsonContentSerializer),\n            ShortNameForJsonProperty = nameof(TestAliasObject)\n        };\n\n        var localHandler = new MockHttpMessageHandler();\n\n        var settings = new RefitSettings(new SystemTextJsonContentSerializer())\n        {\n            HttpMessageHandlerFactory = () => localHandler\n        };\n\n        using var utf8BufferWriter = new PooledBufferWriter();\n\n        var utf8JsonWriter = new Utf8JsonWriter(utf8BufferWriter);\n\n        System.Text.Json.JsonSerializer.Serialize(utf8JsonWriter, model);\n\n        using var sourceStream = utf8BufferWriter.DetachStream();\n\n        using var contentStream = new ThrowOnGetLengthMemoryStream { CanGetLength = true };\n\n        sourceStream.CopyTo(contentStream);\n\n        contentStream.Position = 0;\n\n        contentStream.CanGetLength = false;\n\n        var httpContent = new StreamContent(contentStream)\n        {\n            Headers =\n            {\n                ContentType = new MediaTypeHeaderValue(\"application/json\")\n                {\n                    CharSet = Encoding.UTF8.WebName\n                }\n            }\n        };\n\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK) { Content = httpContent };\n\n        expectedResponse.Content.Headers.ContentType = new MediaTypeHeaderValue(\"application/json\");\n        expectedResponse.StatusCode = HttpStatusCode.OK;\n\n        localHandler\n            .Expect(HttpMethod.Get, \"http://api/aliasTest\")\n            .Respond(req => expectedResponse);\n\n        var localFixture = RestService.For<IMyAliasService>(\"http://api\", settings);\n\n        var result = await localFixture.GetTestObject();\n\n        Assert.NotNull(result);\n        Assert.Equal(\n            nameof(WithNonSeekableStream_UsingSystemTextJsonContentSerializer),\n            result.ShortNameForAlias\n        );\n        Assert.Equal(nameof(TestAliasObject), result.ShortNameForJsonProperty);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(\"Hello world\")\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler.Expect(HttpMethod.Get, \"http://api/aliasTest\").Respond(req => expectedResponse);\n\n        var actualException = await Assert.ThrowsAsync<ApiException>(() => fixture.GetTestObject());\n\n        Assert.NotNull(actualException.Content);\n        Assert.Equal(\"Hello world\", actualException.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(\"Hello world\")\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler\n            .Expect(HttpMethod.Get, $\"http://api/{nameof(fixture.GetApiResponseTestObject)}\")\n            .Respond(req => expectedResponse);\n\n        var apiResponse = await fixture.GetApiResponseTestObject();\n\n        Assert.NotNull(apiResponse);\n        Assert.NotNull(apiResponse.Error);\n        Assert.NotNull(apiResponse.Error.Content);\n        Assert.Equal(\"Hello world\", apiResponse.Error.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(\"Hello world\")\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler\n            .Expect(HttpMethod.Get, $\"http://api/{nameof(fixture.GetIApiResponse)}\")\n            .Respond(req => expectedResponse);\n\n        var apiResponse = await fixture.GetIApiResponse();\n\n        Assert.NotNull(apiResponse);\n        Assert.NotNull(apiResponse.Error);\n        Assert.NotNull(apiResponse.Error.Content);\n        Assert.Equal(\"Hello world\", apiResponse.Error.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var expectedProblemDetails = new ProblemDetails\n        {\n            Detail = \"detail\",\n            Instance = \"instance\",\n            Status = 1,\n            Title = \"title\",\n            Type = \"type\"\n        };\n        var expectedContent = JsonConvert.SerializeObject(expectedProblemDetails);\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.BadRequest)\n        {\n            Content = new StringContent(expectedContent)\n        };\n        expectedResponse.Content.Headers.ContentType = new MediaTypeHeaderValue(\n            \"application/problem+json\"\n        );\n        mockHandler.Expect(HttpMethod.Get, \"http://api/aliasTest\").Respond(req => expectedResponse);\n\n        var actualException = await Assert.ThrowsAsync<ValidationApiException>(\n            () => fixture.GetTestObject()\n        );\n        var actualBaseException = actualException as ApiException;\n        Assert.Equal(expectedContent, actualBaseException.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        const string htmlResponse = \"<html><body>Hello world</body></html>\";\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {\n            Content = new StringContent(htmlResponse)\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler.Expect(HttpMethod.Get, \"http://api/aliasTest\").Respond(req => expectedResponse);\n\n        var actualException = await Assert.ThrowsAsync<ApiException>(() => fixture.GetTestObject());\n\n        Assert.IsType<System.Text.Json.JsonException>(actualException.InnerException);\n        Assert.NotNull(actualException.Content);\n        Assert.Equal(htmlResponse, actualException.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        const string htmlResponse = \"<html><body>Hello world</body></html>\";\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {\n            Content = new StringContent(htmlResponse)\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler\n            .Expect(HttpMethod.Get, $\"http://api/{nameof(fixture.GetApiResponseTestObject)}\")\n            .Respond(req => expectedResponse);\n\n        var apiResponse = await fixture.GetApiResponseTestObject();\n\n        Assert.NotNull(apiResponse.Error);\n        Assert.IsType<System.Text.Json.JsonException>(apiResponse.Error.InnerException);\n        Assert.NotNull(apiResponse.Error.Content);\n        Assert.Equal(htmlResponse, apiResponse.Error.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            ContentSerializer = new NewtonsoftJsonContentSerializer()\n        };\n\n        var newtonSoftFixture = RestService.For<IMyAliasService>(\"http://api\", settings);\n\n        const string nonJsonResponse = \"bad response\";\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {\n            Content = new StringContent(nonJsonResponse)\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler.Expect(HttpMethod.Get, \"http://api/aliasTest\").Respond(req => expectedResponse);\n\n        var actualException = await Assert.ThrowsAsync<ApiException>(\n            () => newtonSoftFixture.GetTestObject()\n        );\n\n        Assert.IsType<JsonReaderException>(actualException.InnerException);\n        Assert.NotNull(actualException.Content);\n        Assert.Equal(nonJsonResponse, actualException.Content);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var settings = new RefitSettings\n        {\n            HttpMessageHandlerFactory = () => mockHandler,\n            ContentSerializer = new NewtonsoftJsonContentSerializer()\n        };\n\n        var newtonSoftFixture = RestService.For<IMyAliasService>(\"http://api\", settings);\n\n        const string nonJsonResponse = \"bad response\";\n        var expectedResponse = new HttpResponseMessage(HttpStatusCode.OK)\n        {\n            Content = new StringContent(nonJsonResponse)\n        };\n        expectedResponse.Content.Headers.Clear();\n\n        mockHandler\n            .Expect(HttpMethod.Get, $\"http://api/{nameof(fixture.GetApiResponseTestObject)}\")\n            .Respond(req => expectedResponse);\n\n        var apiResponse = await newtonSoftFixture.GetApiResponseTestObject();\n\n        Assert.NotNull(apiResponse.Error);\n        Assert.IsType<JsonReaderException>(apiResponse.Error.InnerException);\n        Assert.NotNull(apiResponse.Error.Content);\n        Assert.Equal(nonJsonResponse, apiResponse.Error.Content);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "SerializedContentTests.cs",
+    "methods": [
+      {
+        "name": "VerityDefaultSerializer",
+        "body": "{\n        var settings = new RefitSettings();\n\n        Assert.NotNull(settings.ContentSerializer);\n        Assert.IsType<SystemTextJsonContentSerializer>(settings.ContentSerializer);\n\n        settings = new RefitSettings(new NewtonsoftJsonContentSerializer());\n\n        Assert.NotNull(settings.ContentSerializer);\n        Assert.IsType<NewtonsoftJsonContentSerializer>(settings.ContentSerializer);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var model = new TestAliasObject\n        {\n            ShortNameForAlias = nameof(StreamDeserialization_UsingSystemTextJsonContentSerializer),\n            ShortNameForJsonProperty = nameof(TestAliasObject)\n        };\n\n        var serializer = new SystemTextJsonContentSerializer();\n\n        var json = serializer.ToHttpContent(model);\n\n        var result = await serializer.FromHttpContentAsync<TestAliasObject>(json);\n\n        Assert.NotNull(result);\n        Assert.Equal(model.ShortNameForAlias, result.ShortNameForAlias);\n        Assert.Equal(model.ShortNameForJsonProperty, result.ShortNameForJsonProperty);\n    }"
+      },
+      {
+        "name": "StreamDeserialization_UsingSystemTextJsonContentSerializer_SetsCorrectHeaders",
+        "body": "{\n        var model = new TestAliasObject\n        {\n            ShortNameForAlias = nameof(StreamDeserialization_UsingSystemTextJsonContentSerializer),\n            ShortNameForJsonProperty = nameof(TestAliasObject)\n        };\n\n        var serializer = new SystemTextJsonContentSerializer();\n\n        var json = serializer.ToHttpContent(model);\n\n        Assert.NotNull(json.Headers.ContentType);\n        Assert.Equal(\"utf-8\", json.Headers.ContentType.CharSet);\n        Assert.Equal(\"application/json\", json.Headers.ContentType.MediaType);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "UniqueNameTests.cs",
+    "methods": [
+      {
+        "name": "SystemTypeAndLanguageTypeHaveSameNames",
+        "body": "{\n            var name1 = UniqueName.ForType<System.Int32>();\n            var name2 = UniqueName.ForType<int>();\n\n            Assert.Equal(name1, name2);\n        }"
+      },
+      {
+        "name": "GenericClassWithDifferentTypesHaveUniqueNames",
+        "body": "{\n            var name1 = UniqueName.ForType<List<long>>();\n            var name2 = UniqueName.ForType<List<int>>();\n\n            Assert.NotEqual(name1, name2);\n        }"
+      },
+      {
+        "name": "SameClassNameInDifferentNamespacesHaveUniqueNames",
+        "body": "{\n            var name1 = UniqueName.ForType<Http.Client>();\n            var name2 = UniqueName.ForType<Tcp.Client>();\n\n            Assert.NotEqual(name1, name2);\n        }"
+      },
+      {
+        "name": "ClassesWithNestedClassesHaveUniqueNames",
+        "body": "{\n            var name1 = UniqueName.ForType<Http.Client>();\n            var name2 = UniqueName.ForType<Http.Client.Request>();\n\n            Assert.NotEqual(name1, name2);\n        }"
+      },
+      {
+        "name": "NestedClassesHaveUniqueNames",
+        "body": "{\n            var name1 = UniqueName.ForType<Http.Client.Request>();\n            var name2 = UniqueName.ForType<Http.Client.Response>();\n\n            Assert.NotEqual(name1, name2);\n        }"
+      }
+    ]
+  },
+  {
+    "file": "CSharpIncrementalSourceGeneratorVerifier`1+Test.cs",
+    "methods": []
+  },
+  {
+    "file": "CSharpSourceGeneratorVerifier`1+Test.cs",
+    "methods": []
+  },
+  {
+    "file": "XmlContentSerializerTests.cs",
+    "methods": [
+      {
+        "name": "MediaTypeShouldBeApplicationXmlAsync",
+        "body": "{\n        var dto = BuildDto();\n        var sut = new XmlContentSerializer();\n\n        var content = sut.ToHttpContent(dto);\n\n        Assert.Equal(\"application/xml\", content.Headers.ContentType.MediaType);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var dto = BuildDto();\n        var sut = new XmlContentSerializer();\n\n        var content = sut.ToHttpContent(dto);\n        var document = new XmlDocument();\n        document.LoadXml(await content.ReadAsStringAsync());\n\n        var root =\n            document[nameof(Dto)] ?? throw new NullReferenceException(\"Root element was not found\");\n        Assert.Equal(\n            dto.CreatedOn,\n            XmlConvert.ToDateTime(\n                root[nameof(Dto.CreatedOn)].InnerText,\n                XmlDateTimeSerializationMode.Utc\n            )\n        );\n        Assert.Equal(dto.Identifier, root[nameof(Dto.Identifier)].InnerText);\n        Assert.Equal(dto.Name, root[nameof(Dto.Name)].InnerText);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        const string overridenRootElementName = \"dto-ex\";\n\n        var dto = BuildDto();\n        var serializerSettings = new XmlContentSerializerSettings();\n        var attributes = new XmlAttributes\n        {\n            XmlRoot = new XmlRootAttribute(overridenRootElementName)\n        };\n        serializerSettings.XmlAttributeOverrides.Add(dto.GetType(), attributes);\n        var sut = new XmlContentSerializer(serializerSettings);\n\n        var content = sut.ToHttpContent(dto);\n        var document = new XmlDocument();\n        document.LoadXml(await content.ReadAsStringAsync());\n\n        Assert.Equal(overridenRootElementName, document.DocumentElement?.Name);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        const string prefix = \"google\";\n\n        var dto = BuildDto();\n        var serializerSettings = new XmlContentSerializerSettings\n        {\n            XmlNamespaces = new XmlSerializerNamespaces()\n        };\n        serializerSettings.XmlNamespaces.Add(prefix, \"https://google.com\");\n        var sut = new XmlContentSerializer(serializerSettings);\n\n        var content = sut.ToHttpContent(dto);\n        var document = new XmlDocument();\n        document.LoadXml(await content.ReadAsStringAsync());\n\n        Assert.Equal(prefix, document[\"Dto\"]?[\"Name\", \"https://google.com\"]?.Prefix);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var serializerSettings = new XmlContentSerializerSettings\n        {\n            XmlNamespaces = new XmlSerializerNamespaces()\n        };\n        var sut = new XmlContentSerializer(serializerSettings);\n\n        var dto = await sut.FromHttpContentAsync<Dto>(\n            new StringContent(\"<Dto><Identifier>123</Identifier></Dto>\")\n        );\n\n        Assert.Equal(\"123\", dto.Identifier);\n    }"
+      },
+      {
+        "name": "Task",
+        "body": "{\n        var encoding = Encoding.UTF32;\n        var serializerSettings = new XmlContentSerializerSettings\n        {\n            XmlReaderWriterSettings = new XmlReaderWriterSettings()\n            {\n                WriterSettings = new XmlWriterSettings() { Encoding = encoding }\n            }\n        };\n        var sut = new XmlContentSerializer(serializerSettings);\n\n        var dto = BuildDto();\n        var content = sut.ToHttpContent(dto);\n        var xml = XDocument.Parse(await content.ReadAsStringAsync());\n        var documentEncoding = xml.Declaration.Encoding;\n        Assert.Equal(encoding.WebName, documentEncoding);\n    }"
+      }
+    ]
+  },
+  {
+    "file": "ModelForTest.cs",
+    "methods": []
+  }
+]

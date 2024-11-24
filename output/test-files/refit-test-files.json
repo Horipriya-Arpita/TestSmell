@@ -1,0 +1,307 @@
+[
+  {
+    "name": "GeneratedTest.cs",
+    "path": "Refit.GeneratorTests\\GeneratedTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/GeneratedTest.cs"
+  },
+  {
+    "name": "FunctionTest.cs",
+    "path": "Refit.GeneratorTests\\Incremental\\FunctionTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/Incremental/FunctionTest.cs"
+  },
+  {
+    "name": "GenericTest.cs",
+    "path": "Refit.GeneratorTests\\Incremental\\GenericTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/Incremental/GenericTest.cs"
+  },
+  {
+    "name": "IncrementalTest.cs",
+    "path": "Refit.GeneratorTests\\Incremental\\IncrementalTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/Incremental/IncrementalTest.cs"
+  },
+  {
+    "name": "InheritanceTest.cs",
+    "path": "Refit.GeneratorTests\\Incremental\\InheritanceTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/Incremental/InheritanceTest.cs"
+  },
+  {
+    "name": "TestHelper.cs",
+    "path": "Refit.GeneratorTests\\Incremental\\TestHelper.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/Incremental/TestHelper.cs"
+  },
+  {
+    "name": "InterfaceTests.cs",
+    "path": "Refit.GeneratorTests\\InterfaceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/InterfaceTests.cs"
+  },
+  {
+    "name": "MethodTests.cs",
+    "path": "Refit.GeneratorTests\\MethodTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/MethodTests.cs"
+  },
+  {
+    "name": "ParameterTests.cs",
+    "path": "Refit.GeneratorTests\\ParameterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/ParameterTests.cs"
+  },
+  {
+    "name": "ReturnTypeTests.cs",
+    "path": "Refit.GeneratorTests\\ReturnTypeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/ReturnTypeTests.cs"
+  },
+  {
+    "name": "GeneratedTest.ShouldEmitAllFiles#Generated.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\GeneratedTest.ShouldEmitAllFiles#Generated.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/GeneratedTest.ShouldEmitAllFiles#Generated.g.verified.cs"
+  },
+  {
+    "name": "GeneratedTest.ShouldEmitAllFiles#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\GeneratedTest.ShouldEmitAllFiles#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/GeneratedTest.ShouldEmitAllFiles#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "GeneratedTest.ShouldEmitAllFiles#PreserveAttribute.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\GeneratedTest.ShouldEmitAllFiles#PreserveAttribute.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/GeneratedTest.ShouldEmitAllFiles#PreserveAttribute.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.ContainedInterfaceTest#IContainedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.ContainedInterfaceTest#IContainedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.ContainedInterfaceTest#IContainedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.DefaultInterfaceMethod#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.DefaultInterfaceMethod#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.DefaultInterfaceMethod#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.DerivedDefaultInterfaceMethod#IBaseInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.DerivedDefaultInterfaceMethod#IBaseInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.DerivedDefaultInterfaceMethod#IBaseInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.DerivedDefaultInterfaceMethod#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.DerivedDefaultInterfaceMethod#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.DerivedDefaultInterfaceMethod#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.DisposableTest#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.DisposableTest#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.DisposableTest#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.GlobalNamespaceTest#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.GlobalNamespaceTest#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.GlobalNamespaceTest#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfaceDerivedFromRefitBaseTest#IBaseInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfaceDerivedFromRefitBaseTest#IBaseInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfaceDerivedFromRefitBaseTest#IBaseInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfaceDerivedFromRefitBaseTest#IDerivedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfaceDerivedFromRefitBaseTest#IDerivedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfaceDerivedFromRefitBaseTest#IDerivedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfaceWithGenericConstraint#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfaceWithGenericConstraint#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfaceWithGenericConstraint#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfacesWithDifferentCasing#IApi.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfacesWithDifferentCasing#IApi.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfacesWithDifferentCasing#IApi.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfacesWithDifferentCasing#Iapi1.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfacesWithDifferentCasing#Iapi1.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfacesWithDifferentCasing#Iapi1.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfacesWithDifferentSignature#IApi.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfacesWithDifferentSignature#IApi.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfacesWithDifferentSignature#IApi.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.InterfacesWithDifferentSignature#IApi1.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.InterfacesWithDifferentSignature#IApi1.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.InterfacesWithDifferentSignature#IApi1.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.NestedNamespaceTest#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.NestedNamespaceTest#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.NestedNamespaceTest#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.NonRefitMethodShouldRaiseDiagnostic#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.NonRefitMethodShouldRaiseDiagnostic#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.NonRefitMethodShouldRaiseDiagnostic#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.RefitInterfaceDerivedFromBaseTest#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.RefitInterfaceDerivedFromBaseTest#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.RefitInterfaceDerivedFromBaseTest#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.RefitInterfaceDerivedFromRefitBaseTest#IBaseInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.RefitInterfaceDerivedFromRefitBaseTest#IBaseInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.RefitInterfaceDerivedFromRefitBaseTest#IBaseInterface.g.verified.cs"
+  },
+  {
+    "name": "InterfaceTests.RefitInterfaceDerivedFromRefitBaseTest#IGeneratedInterface.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\InterfaceTests.RefitInterfaceDerivedFromRefitBaseTest#IGeneratedInterface.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/InterfaceTests.RefitInterfaceDerivedFromRefitBaseTest#IGeneratedInterface.g.verified.cs"
+  },
+  {
+    "name": "MethodTests.MethodsWithGenericConstraints#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\MethodTests.MethodsWithGenericConstraints#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/MethodTests.MethodsWithGenericConstraints#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ParameterTests.NullableRouteParameter#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ParameterTests.NullableRouteParameter#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ParameterTests.NullableRouteParameter#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ParameterTests.NullableValueTypeRouteParameter#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ParameterTests.NullableValueTypeRouteParameter#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ParameterTests.NullableValueTypeRouteParameter#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ParameterTests.RouteParameter#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ParameterTests.RouteParameter#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ParameterTests.RouteParameter#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ParameterTests.ValueTypeRouteParameter#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ParameterTests.ValueTypeRouteParameter#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ParameterTests.ValueTypeRouteParameter#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.GenericConstraintReturnTask#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.GenericConstraintReturnTask#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.GenericConstraintReturnTask#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.GenericStructConstraintReturnTask#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.GenericStructConstraintReturnTask#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.GenericStructConstraintReturnTask#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.GenericTaskShouldWork#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.GenericTaskShouldWork#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.GenericTaskShouldWork#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.GenericUnmanagedConstraintReturnTask#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.GenericUnmanagedConstraintReturnTask#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.GenericUnmanagedConstraintReturnTask#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.ReturnNullableObject#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.ReturnNullableObject#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.ReturnNullableObject#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.ReturnNullableValueType#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.ReturnNullableValueType#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.ReturnNullableValueType#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ReturnTypeTests.VoidTaskShouldWork#IGeneratedClient.g.verified.cs",
+    "path": "Refit.GeneratorTests\\_snapshots\\ReturnTypeTests.VoidTaskShouldWork#IGeneratedClient.g.verified.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.GeneratorTests/_snapshots/ReturnTypeTests.VoidTaskShouldWork#IGeneratedClient.g.verified.cs"
+  },
+  {
+    "name": "ApiApprovalTests.cs",
+    "path": "Refit.Tests\\API\\ApiApprovalTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/API/ApiApprovalTests.cs"
+  },
+  {
+    "name": "AuthenticatedClientHandlerTests.cs",
+    "path": "Refit.Tests\\AuthenticatedClientHandlerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/AuthenticatedClientHandlerTests.cs"
+  },
+  {
+    "name": "DefaultUrlParameterFormatterTest.cs",
+    "path": "Refit.Tests\\DefaultUrlParameterFormatterTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/DefaultUrlParameterFormatterTest.cs"
+  },
+  {
+    "name": "DeserializationExceptionFactoryTests.cs",
+    "path": "Refit.Tests\\DeserializationExceptionFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/DeserializationExceptionFactoryTests.cs"
+  },
+  {
+    "name": "ExceptionFactoryTests.cs",
+    "path": "Refit.Tests\\ExceptionFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/ExceptionFactoryTests.cs"
+  },
+  {
+    "name": "FormValueMultimapTests.cs",
+    "path": "Refit.Tests\\FormValueMultimapTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/FormValueMultimapTests.cs"
+  },
+  {
+    "name": "HttpClientFactoryExtensionsTests.cs",
+    "path": "Refit.Tests\\HttpClientFactoryExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/HttpClientFactoryExtensionsTests.cs"
+  },
+  {
+    "name": "IDefaultInterfaceMethodTests.cs",
+    "path": "Refit.Tests\\IDefaultInterfaceMethodTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/IDefaultInterfaceMethodTests.cs"
+  },
+  {
+    "name": "IntegrationTestHelper.cs",
+    "path": "Refit.Tests\\IntegrationTestHelper.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/IntegrationTestHelper.cs"
+  },
+  {
+    "name": "MultipartTests.cs",
+    "path": "Refit.Tests\\MultipartTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/MultipartTests.cs"
+  },
+  {
+    "name": "ReflectionTests.cs",
+    "path": "Refit.Tests\\ReflectionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/ReflectionTests.cs"
+  },
+  {
+    "name": "ResponseTests.cs",
+    "path": "Refit.Tests\\ResponseTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/ResponseTests.cs"
+  },
+  {
+    "name": "SerializedContentTests.cs",
+    "path": "Refit.Tests\\SerializedContentTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/SerializedContentTests.cs"
+  },
+  {
+    "name": "UniqueNameTests.cs",
+    "path": "Refit.Tests\\UniqueNameTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/UniqueNameTests.cs"
+  },
+  {
+    "name": "CSharpIncrementalSourceGeneratorVerifier`1+Test.cs",
+    "path": "Refit.Tests\\Verifiers\\CSharpIncrementalSourceGeneratorVerifier`1+Test.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/Verifiers/CSharpIncrementalSourceGeneratorVerifier`1+Test.cs"
+  },
+  {
+    "name": "CSharpSourceGeneratorVerifier`1+Test.cs",
+    "path": "Refit.Tests\\Verifiers\\CSharpSourceGeneratorVerifier`1+Test.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/Verifiers/CSharpSourceGeneratorVerifier`1+Test.cs"
+  },
+  {
+    "name": "XmlContentSerializerTests.cs",
+    "path": "Refit.Tests\\XmlContentSerializerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/Refit.Tests/XmlContentSerializerTests.cs"
+  },
+  {
+    "name": "ModelForTest.cs",
+    "path": "samples\\sampleUsngLocalApi\\LibraryWithSDKandRefitService\\ModelForTest.cs",
+    "download_url": "https://raw.githubusercontent.com/reactiveui/refit/main/samples/sampleUsngLocalApi/LibraryWithSDKandRefitService/ModelForTest.cs"
+  }
+]

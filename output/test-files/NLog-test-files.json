@@ -1,0 +1,1007 @@
+[
+  {
+    "name": "SpecialFolderApplicationDataLayoutRenderer.cs",
+    "path": "src\\NLog\\LayoutRenderers\\SpecialFolderApplicationDataLayoutRenderer.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/src/NLog/LayoutRenderers/SpecialFolderApplicationDataLayoutRenderer.cs"
+  },
+  {
+    "name": "SpecialFolderCommonApplicationDataLayoutRenderer.cs",
+    "path": "src\\NLog\\LayoutRenderers\\SpecialFolderCommonApplicationDataLayoutRenderer.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/src/NLog/LayoutRenderers/SpecialFolderCommonApplicationDataLayoutRenderer.cs"
+  },
+  {
+    "name": "SpecialFolderLayoutRenderer.cs",
+    "path": "src\\NLog\\LayoutRenderers\\SpecialFolderLayoutRenderer.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/src/NLog/LayoutRenderers/SpecialFolderLayoutRenderer.cs"
+  },
+  {
+    "name": "SpecialFolderLocalApplicationDataLayoutRenderer.cs",
+    "path": "src\\NLog\\LayoutRenderers\\SpecialFolderLocalApplicationDataLayoutRenderer.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/src/NLog/LayoutRenderers/SpecialFolderLocalApplicationDataLayoutRenderer.cs"
+  },
+  {
+    "name": "AutoReloadTests.cs",
+    "path": "tests\\NLog.AutoReloadConfig.Tests\\AutoReloadTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.AutoReloadConfig.Tests/AutoReloadTests.cs"
+  },
+  {
+    "name": "DatabaseTargetTests.cs",
+    "path": "tests\\NLog.Database.Tests\\DatabaseTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Database.Tests/DatabaseTargetTests.cs"
+  },
+  {
+    "name": "ColoredConsoleTargetTests.cs",
+    "path": "tests\\NLog.RegEx.Tests\\ColoredConsoleTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.RegEx.Tests/ColoredConsoleTargetTests.cs"
+  },
+  {
+    "name": "ConditionEvaluatorTests.cs",
+    "path": "tests\\NLog.RegEx.Tests\\ConditionEvaluatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.RegEx.Tests/ConditionEvaluatorTests.cs"
+  },
+  {
+    "name": "RegexReplaceTests.cs",
+    "path": "tests\\NLog.RegEx.Tests\\RegexReplaceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.RegEx.Tests/RegexReplaceTests.cs"
+  },
+  {
+    "name": "MailTargetTests.cs",
+    "path": "tests\\NLog.Targets.Mail.Tests\\MailTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.Mail.Tests/MailTargetTests.cs"
+  },
+  {
+    "name": "Log4JXmlTests.cs",
+    "path": "tests\\NLog.Targets.Network.Tests\\Log4JXmlTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.Network.Tests/Log4JXmlTests.cs"
+  },
+  {
+    "name": "HttpNetworkSenderTests.cs",
+    "path": "tests\\NLog.Targets.Network.Tests\\NetworkSenders\\HttpNetworkSenderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.Network.Tests/NetworkSenders/HttpNetworkSenderTests.cs"
+  },
+  {
+    "name": "TcpNetworkSenderTests.cs",
+    "path": "tests\\NLog.Targets.Network.Tests\\NetworkSenders\\TcpNetworkSenderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.Network.Tests/NetworkSenders/TcpNetworkSenderTests.cs"
+  },
+  {
+    "name": "UdpNetworkSenderTests.cs",
+    "path": "tests\\NLog.Targets.Network.Tests\\NetworkSenders\\UdpNetworkSenderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.Network.Tests/NetworkSenders/UdpNetworkSenderTests.cs"
+  },
+  {
+    "name": "NetworkTargetTests.cs",
+    "path": "tests\\NLog.Targets.Network.Tests\\NetworkTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.Network.Tests/NetworkTargetTests.cs"
+  },
+  {
+    "name": "WebServiceTargetTests.cs",
+    "path": "tests\\NLog.Targets.WebService.Tests\\WebServiceTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.Targets.WebService.Tests/WebServiceTargetTests.cs"
+  },
+  {
+    "name": "ApiTests.cs",
+    "path": "tests\\NLog.UnitTests\\ApiTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/ApiTests.cs"
+  },
+  {
+    "name": "AsyncHelperTests.cs",
+    "path": "tests\\NLog.UnitTests\\AsyncHelperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/AsyncHelperTests.cs"
+  },
+  {
+    "name": "InternalLoggerTests.cs",
+    "path": "tests\\NLog.UnitTests\\Common\\InternalLoggerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Common/InternalLoggerTests.cs"
+  },
+  {
+    "name": "ConditionEvaluatorTests.cs",
+    "path": "tests\\NLog.UnitTests\\Conditions\\ConditionEvaluatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Conditions/ConditionEvaluatorTests.cs"
+  },
+  {
+    "name": "ConditionParserTests.cs",
+    "path": "tests\\NLog.UnitTests\\Conditions\\ConditionParserTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Conditions/ConditionParserTests.cs"
+  },
+  {
+    "name": "ConfigApiTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\ConfigApiTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/ConfigApiTests.cs"
+  },
+  {
+    "name": "ConfigurationItemFactoryTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\ConfigurationItemFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/ConfigurationItemFactoryTests.cs"
+  },
+  {
+    "name": "CultureInfoTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\CultureInfoTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/CultureInfoTests.cs"
+  },
+  {
+    "name": "ExtensionTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\ExtensionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/ExtensionTests.cs"
+  },
+  {
+    "name": "IncludeTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\IncludeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/IncludeTests.cs"
+  },
+  {
+    "name": "InternalLoggingTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\InternalLoggingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/InternalLoggingTests.cs"
+  },
+  {
+    "name": "LogFactorySetupTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\LogFactorySetupTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/LogFactorySetupTests.cs"
+  },
+  {
+    "name": "PropertyTypeConverterTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\PropertyTypeConverterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/PropertyTypeConverterTests.cs"
+  },
+  {
+    "name": "ReloadTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\ReloadTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/ReloadTests.cs"
+  },
+  {
+    "name": "RuleConfigurationTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\RuleConfigurationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/RuleConfigurationTests.cs"
+  },
+  {
+    "name": "ServiceRepositoryTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\ServiceRepositoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/ServiceRepositoryTests.cs"
+  },
+  {
+    "name": "TargetConfigurationTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\TargetConfigurationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/TargetConfigurationTests.cs"
+  },
+  {
+    "name": "TimeConfigurationTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\TimeConfigurationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/TimeConfigurationTests.cs"
+  },
+  {
+    "name": "VariableTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\VariableTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/VariableTests.cs"
+  },
+  {
+    "name": "XmlConfigTests.cs",
+    "path": "tests\\NLog.UnitTests\\Config\\XmlConfigTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Config/XmlConfigTests.cs"
+  },
+  {
+    "name": "ConfigFileLocatorTests.cs",
+    "path": "tests\\NLog.UnitTests\\ConfigFileLocatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/ConfigFileLocatorTests.cs"
+  },
+  {
+    "name": "GlobalDiagnosticsContextTests.cs",
+    "path": "tests\\NLog.UnitTests\\Contexts\\GlobalDiagnosticsContextTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Contexts/GlobalDiagnosticsContextTests.cs"
+  },
+  {
+    "name": "MappedDiagnosticsContextTests.cs",
+    "path": "tests\\NLog.UnitTests\\Contexts\\MappedDiagnosticsContextTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Contexts/MappedDiagnosticsContextTests.cs"
+  },
+  {
+    "name": "MappedDiagnosticsLogicalContextTests.cs",
+    "path": "tests\\NLog.UnitTests\\Contexts\\MappedDiagnosticsLogicalContextTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Contexts/MappedDiagnosticsLogicalContextTests.cs"
+  },
+  {
+    "name": "NestedDiagnosticsContextTests.cs",
+    "path": "tests\\NLog.UnitTests\\Contexts\\NestedDiagnosticsContextTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Contexts/NestedDiagnosticsContextTests.cs"
+  },
+  {
+    "name": "ScopeContextTest.cs",
+    "path": "tests\\NLog.UnitTests\\Contexts\\ScopeContextTest.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Contexts/ScopeContextTest.cs"
+  },
+  {
+    "name": "ConditionBasedFilterTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\ConditionBasedFilterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/ConditionBasedFilterTests.cs"
+  },
+  {
+    "name": "WhenContainsTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\WhenContainsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/WhenContainsTests.cs"
+  },
+  {
+    "name": "WhenEqualTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\WhenEqualTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/WhenEqualTests.cs"
+  },
+  {
+    "name": "WhenMethodFilterTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\WhenMethodFilterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/WhenMethodFilterTests.cs"
+  },
+  {
+    "name": "WhenNotContainsTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\WhenNotContainsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/WhenNotContainsTests.cs"
+  },
+  {
+    "name": "WhenNotEqualTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\WhenNotEqualTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/WhenNotEqualTests.cs"
+  },
+  {
+    "name": "WhenRepeatedTests.cs",
+    "path": "tests\\NLog.UnitTests\\Filters\\WhenRepeatedTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Filters/WhenRepeatedTests.cs"
+  },
+  {
+    "name": "LogEventBuilderTests.cs",
+    "path": "tests\\NLog.UnitTests\\Fluent\\LogEventBuilderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Fluent/LogEventBuilderTests.cs"
+  },
+  {
+    "name": "GetLoggerTests.cs",
+    "path": "tests\\NLog.UnitTests\\GetLoggerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/GetLoggerTests.cs"
+  },
+  {
+    "name": "AppDomainPartialTrustTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\AppDomainPartialTrustTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/AppDomainPartialTrustTests.cs"
+  },
+  {
+    "name": "AsyncLogEventInfoTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\AsyncLogEventInfoTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/AsyncLogEventInfoTests.cs"
+  },
+  {
+    "name": "ConversionHelpersTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\ConversionHelpersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/ConversionHelpersTests.cs"
+  },
+  {
+    "name": "ExceptionHelperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\ExceptionHelperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/ExceptionHelperTests.cs"
+  },
+  {
+    "name": "ExpandoTestDictionary.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\ExpandoTestDictionary.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/ExpandoTestDictionary.cs"
+  },
+  {
+    "name": "FileAppenderCacheTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\FileAppenders\\FileAppenderCacheTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/FileAppenders/FileAppenderCacheTests.cs"
+  },
+  {
+    "name": "FilePathLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\FilePathLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/FilePathLayoutTests.cs"
+  },
+  {
+    "name": "GuardTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\GuardTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/GuardTests.cs"
+  },
+  {
+    "name": "MruCacheTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\MruCacheTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/MruCacheTests.cs"
+  },
+  {
+    "name": "PlatformDetectorTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\PlatformDetectorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/PlatformDetectorTests.cs"
+  },
+  {
+    "name": "PropertiesDictionaryTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\PropertiesDictionaryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/PropertiesDictionaryTests.cs"
+  },
+  {
+    "name": "PropertyHelperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\PropertyHelperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/PropertyHelperTests.cs"
+  },
+  {
+    "name": "ReadOnlyExpandoTestDictionary.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\ReadOnlyExpandoTestDictionary.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/ReadOnlyExpandoTestDictionary.cs"
+  },
+  {
+    "name": "SimpleStringReaderTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\SimpleStringReaderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/SimpleStringReaderTests.cs"
+  },
+  {
+    "name": "SortHelpersTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\SortHelpersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/SortHelpersTests.cs"
+  },
+  {
+    "name": "StringBuilderExtTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\StringBuilderExtTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/StringBuilderExtTests.cs"
+  },
+  {
+    "name": "StringBuilderPoolTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\StringBuilderPoolTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/StringBuilderPoolTests.cs"
+  },
+  {
+    "name": "StringHelpersTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\StringHelpersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/StringHelpersTests.cs"
+  },
+  {
+    "name": "StringSplitterTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\StringSplitterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/StringSplitterTests.cs"
+  },
+  {
+    "name": "UrlHelperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Internal\\UrlHelperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Internal/UrlHelperTests.cs"
+  },
+  {
+    "name": "AllEventPropertiesTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\AllEventPropertiesTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/AllEventPropertiesTests.cs"
+  },
+  {
+    "name": "AppDomainLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\AppDomainLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/AppDomainLayoutRendererTests.cs"
+  },
+  {
+    "name": "AppSettingTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\AppSettingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/AppSettingTests.cs"
+  },
+  {
+    "name": "AssemblyVersionTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\AssemblyVersionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/AssemblyVersionTests.cs"
+  },
+  {
+    "name": "BaseDirTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\BaseDirTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/BaseDirTests.cs"
+  },
+  {
+    "name": "CallSiteFileNameLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteFileNameLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/CallSiteFileNameLayoutTests.cs"
+  },
+  {
+    "name": "CallSiteLineNumberTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteLineNumberTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/CallSiteLineNumberTests.cs"
+  },
+  {
+    "name": "CallSiteTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\CallSiteTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/CallSiteTests.cs"
+  },
+  {
+    "name": "CounterTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\CounterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/CounterTests.cs"
+  },
+  {
+    "name": "CurrentDirTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\CurrentDirTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/CurrentDirTests.cs"
+  },
+  {
+    "name": "DateTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\DateTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/DateTests.cs"
+  },
+  {
+    "name": "DbNullLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\DbNullLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/DbNullLayoutRendererTests.cs"
+  },
+  {
+    "name": "DirectorySeparatorLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\DirectorySeparatorLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/DirectorySeparatorLayoutRendererTests.cs"
+  },
+  {
+    "name": "EnvironmentTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\EnvironmentTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/EnvironmentTests.cs"
+  },
+  {
+    "name": "EnvironmentUserLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\EnvironmentUserLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/EnvironmentUserLayoutRendererTests.cs"
+  },
+  {
+    "name": "EventContextTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\EventContextTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/EventContextTests.cs"
+  },
+  {
+    "name": "EventPropertiesTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\EventPropertiesTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/EventPropertiesTests.cs"
+  },
+  {
+    "name": "ExceptionDataLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ExceptionDataLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ExceptionDataLayoutRendererTests.cs"
+  },
+  {
+    "name": "ExceptionTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ExceptionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ExceptionTests.cs"
+  },
+  {
+    "name": "FileContentsTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\FileContentsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/FileContentsTests.cs"
+  },
+  {
+    "name": "FuncLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\FuncLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/FuncLayoutRendererTests.cs"
+  },
+  {
+    "name": "GDCTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\GDCTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/GDCTests.cs"
+  },
+  {
+    "name": "GuidLayoutRendererTest.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\GuidLayoutRendererTest.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/GuidLayoutRendererTest.cs"
+  },
+  {
+    "name": "HostNameLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\HostNameLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/HostNameLayoutRendererTests.cs"
+  },
+  {
+    "name": "IdentityTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\IdentityTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/IdentityTests.cs"
+  },
+  {
+    "name": "LiteralTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\LiteralTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/LiteralTests.cs"
+  },
+  {
+    "name": "LocalIpAddressLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\LocalIpAddressLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/LocalIpAddressLayoutRendererTests.cs"
+  },
+  {
+    "name": "LogLevelTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\LogLevelTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/LogLevelTests.cs"
+  },
+  {
+    "name": "LoggerNameTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\LoggerNameTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/LoggerNameTests.cs"
+  },
+  {
+    "name": "LongDateTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\LongDateTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/LongDateTests.cs"
+  },
+  {
+    "name": "MDCTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\MDCTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/MDCTests.cs"
+  },
+  {
+    "name": "MdlcLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\MdlcLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/MdlcLayoutRendererTests.cs"
+  },
+  {
+    "name": "MessageTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\MessageTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/MessageTests.cs"
+  },
+  {
+    "name": "NDCTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\NDCTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/NDCTests.cs"
+  },
+  {
+    "name": "NDLCTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\NDLCTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/NDLCTests.cs"
+  },
+  {
+    "name": "NLogDirRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\NLogDirRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/NLogDirRendererTests.cs"
+  },
+  {
+    "name": "ProcessDirTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ProcessDirTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ProcessDirTests.cs"
+  },
+  {
+    "name": "ProcessIdLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ProcessIdLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ProcessIdLayoutRendererTests.cs"
+  },
+  {
+    "name": "ProcessNameLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ProcessNameLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ProcessNameLayoutRendererTests.cs"
+  },
+  {
+    "name": "ProcessTimeLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ProcessTimeLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ProcessTimeLayoutRendererTests.cs"
+  },
+  {
+    "name": "ScopeNestedTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ScopeNestedTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ScopeNestedTests.cs"
+  },
+  {
+    "name": "ScopePropertyTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ScopePropertyTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ScopePropertyTests.cs"
+  },
+  {
+    "name": "SequenceIdLayoutRendererTest.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\SequenceIdLayoutRendererTest.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/SequenceIdLayoutRendererTest.cs"
+  },
+  {
+    "name": "ShortDateTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ShortDateTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ShortDateTests.cs"
+  },
+  {
+    "name": "SpecialFolderTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\SpecialFolderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/SpecialFolderTests.cs"
+  },
+  {
+    "name": "StackTraceRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\StackTraceRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/StackTraceRendererTests.cs"
+  },
+  {
+    "name": "TempDirRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\TempDirRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/TempDirRendererTests.cs"
+  },
+  {
+    "name": "ThreadNameTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\ThreadNameTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/ThreadNameTests.cs"
+  },
+  {
+    "name": "TicksLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\TicksLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/TicksLayoutRendererTests.cs"
+  },
+  {
+    "name": "TimeTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\TimeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/TimeTests.cs"
+  },
+  {
+    "name": "VariableLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\VariableLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/VariableLayoutRendererTests.cs"
+  },
+  {
+    "name": "CachedTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\CachedTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/CachedTests.cs"
+  },
+  {
+    "name": "FileSystemNormalizeTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\FileSystemNormalizeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/FileSystemNormalizeTests.cs"
+  },
+  {
+    "name": "JsonEncodeTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\JsonEncodeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/JsonEncodeTests.cs"
+  },
+  {
+    "name": "LeftLayoutRendererWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\LeftLayoutRendererWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/LeftLayoutRendererWrapperTests.cs"
+  },
+  {
+    "name": "LowerCaseLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\LowerCaseLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/LowerCaseLayoutRendererTests.cs"
+  },
+  {
+    "name": "ObjectPathRendererWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\ObjectPathRendererWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/ObjectPathRendererWrapperTests.cs"
+  },
+  {
+    "name": "OnExceptionTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\OnExceptionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/OnExceptionTests.cs"
+  },
+  {
+    "name": "OnHasPropertiesTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\OnHasPropertiesTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/OnHasPropertiesTests.cs"
+  },
+  {
+    "name": "PaddingTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\PaddingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/PaddingTests.cs"
+  },
+  {
+    "name": "ReplaceNewLinesTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\ReplaceNewLinesTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/ReplaceNewLinesTests.cs"
+  },
+  {
+    "name": "ReplaceTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\ReplaceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/ReplaceTests.cs"
+  },
+  {
+    "name": "RightLayoutRendererWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\RightLayoutRendererWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/RightLayoutRendererWrapperTests.cs"
+  },
+  {
+    "name": "Rot13Tests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\Rot13Tests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/Rot13Tests.cs"
+  },
+  {
+    "name": "SubstringLayoutRendererWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\SubstringLayoutRendererWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/SubstringLayoutRendererWrapperTests.cs"
+  },
+  {
+    "name": "TrimWhiteSpaceTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\TrimWhiteSpaceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/TrimWhiteSpaceTests.cs"
+  },
+  {
+    "name": "UpperCaseLayoutRendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\UpperCaseLayoutRendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/UpperCaseLayoutRendererTests.cs"
+  },
+  {
+    "name": "WhenEmptyTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\WhenEmptyTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/WhenEmptyTests.cs"
+  },
+  {
+    "name": "WhenTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\WhenTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/WhenTests.cs"
+  },
+  {
+    "name": "WrapLineTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\WrapLineTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/WrapLineTests.cs"
+  },
+  {
+    "name": "XmlEncodeTests.cs",
+    "path": "tests\\NLog.UnitTests\\LayoutRenderers\\Wrappers\\XmlEncodeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LayoutRenderers/Wrappers/XmlEncodeTests.cs"
+  },
+  {
+    "name": "CompoundLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\CompoundLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/CompoundLayoutTests.cs"
+  },
+  {
+    "name": "CsvLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\CsvLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/CsvLayoutTests.cs"
+  },
+  {
+    "name": "JsonArrayLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\JsonArrayLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/JsonArrayLayoutTests.cs"
+  },
+  {
+    "name": "JsonLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\JsonLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/JsonLayoutTests.cs"
+  },
+  {
+    "name": "LayoutTypedTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\LayoutTypedTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/LayoutTypedTests.cs"
+  },
+  {
+    "name": "SimpleLayoutOutputTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\SimpleLayoutOutputTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/SimpleLayoutOutputTests.cs"
+  },
+  {
+    "name": "SimpleLayoutParserTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\SimpleLayoutParserTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/SimpleLayoutParserTests.cs"
+  },
+  {
+    "name": "ThreadAgnosticTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\ThreadAgnosticTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/ThreadAgnosticTests.cs"
+  },
+  {
+    "name": "XmlLayoutTests.cs",
+    "path": "tests\\NLog.UnitTests\\Layouts\\XmlLayoutTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Layouts/XmlLayoutTests.cs"
+  },
+  {
+    "name": "LogFactoryTestExtensions.cs",
+    "path": "tests\\NLog.UnitTests\\LogFactoryTestExtensions.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LogFactoryTestExtensions.cs"
+  },
+  {
+    "name": "LogFactoryTests.cs",
+    "path": "tests\\NLog.UnitTests\\LogFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LogFactoryTests.cs"
+  },
+  {
+    "name": "LogLevelTests.cs",
+    "path": "tests\\NLog.UnitTests\\LogLevelTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LogLevelTests.cs"
+  },
+  {
+    "name": "LogManagerTests.cs",
+    "path": "tests\\NLog.UnitTests\\LogManagerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LogManagerTests.cs"
+  },
+  {
+    "name": "LogMessageFormatterTests.cs",
+    "path": "tests\\NLog.UnitTests\\LogMessageFormatterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LogMessageFormatterTests.cs"
+  },
+  {
+    "name": "LoggerTests.cs",
+    "path": "tests\\NLog.UnitTests\\LoggerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/LoggerTests.cs"
+  },
+  {
+    "name": "MessageTemplateParameterTests.cs",
+    "path": "tests\\NLog.UnitTests\\MessageTemplates\\MessageTemplateParameterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/MessageTemplates/MessageTemplateParameterTests.cs"
+  },
+  {
+    "name": "MessageTemplateParametersTests.cs",
+    "path": "tests\\NLog.UnitTests\\MessageTemplates\\MessageTemplateParametersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/MessageTemplates/MessageTemplateParametersTests.cs"
+  },
+  {
+    "name": "ParserTests.cs",
+    "path": "tests\\NLog.UnitTests\\MessageTemplates\\ParserTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/MessageTemplates/ParserTests.cs"
+  },
+  {
+    "name": "RendererTests.cs",
+    "path": "tests\\NLog.UnitTests\\MessageTemplates\\RendererTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/MessageTemplates/RendererTests.cs"
+  },
+  {
+    "name": "ValueFormatterTest.cs",
+    "path": "tests\\NLog.UnitTests\\MessageTemplates\\ValueFormatterTest.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/MessageTemplates/ValueFormatterTest.cs"
+  },
+  {
+    "name": "TrickyTestDictionary.cs",
+    "path": "tests\\NLog.UnitTests\\Mocks\\TrickyTestDictionary.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Mocks/TrickyTestDictionary.cs"
+  },
+  {
+    "name": "NLogTestBase.cs",
+    "path": "tests\\NLog.UnitTests\\NLogTestBase.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/NLogTestBase.cs"
+  },
+  {
+    "name": "NLogTraceListenerTests.cs",
+    "path": "tests\\NLog.UnitTests\\NLogTraceListenerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/NLogTraceListenerTests.cs"
+  },
+  {
+    "name": "RegressionTests.cs",
+    "path": "tests\\NLog.UnitTests\\RegressionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/RegressionTests.cs"
+  },
+  {
+    "name": "AsyncTaskTargetTest.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\AsyncTaskTargetTest.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/AsyncTaskTargetTest.cs"
+  },
+  {
+    "name": "ColoredConsoleTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\ColoredConsoleTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/ColoredConsoleTargetTests.cs"
+  },
+  {
+    "name": "ConcurrentFileTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\ConcurrentFileTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/ConcurrentFileTargetTests.cs"
+  },
+  {
+    "name": "ConsoleTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\ConsoleTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/ConsoleTargetTests.cs"
+  },
+  {
+    "name": "DebugSystemTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\DebugSystemTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/DebugSystemTargetTests.cs"
+  },
+  {
+    "name": "DefaultJsonSerializerClassTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\DefaultJsonSerializerClassTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/DefaultJsonSerializerClassTests.cs"
+  },
+  {
+    "name": "DefaultJsonSerializerLegacyTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\DefaultJsonSerializerLegacyTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/DefaultJsonSerializerLegacyTests.cs"
+  },
+  {
+    "name": "DefaultJsonSerializerTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\DefaultJsonSerializerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/DefaultJsonSerializerTests.cs"
+  },
+  {
+    "name": "DefaultJsonSerializerTestsBase.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\DefaultJsonSerializerTestsBase.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/DefaultJsonSerializerTestsBase.cs"
+  },
+  {
+    "name": "EventLogTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\EventLogTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/EventLogTargetTests.cs"
+  },
+  {
+    "name": "FileTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\FileTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/FileTargetTests.cs"
+  },
+  {
+    "name": "LineEndingModeTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\LineEndingModeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/LineEndingModeTests.cs"
+  },
+  {
+    "name": "MemoryTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\MemoryTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/MemoryTargetTests.cs"
+  },
+  {
+    "name": "MethodCallTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\MethodCallTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/MethodCallTests.cs"
+  },
+  {
+    "name": "TargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\TargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/TargetTests.cs"
+  },
+  {
+    "name": "TargetWithContextTest.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\TargetWithContextTest.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/TargetWithContextTest.cs"
+  },
+  {
+    "name": "AsyncRequestQueueTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\AsyncRequestQueueTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/AsyncRequestQueueTests.cs"
+  },
+  {
+    "name": "AsyncTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\AsyncTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/AsyncTargetWrapperTests.cs"
+  },
+  {
+    "name": "AutoFlushTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\AutoFlushTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/AutoFlushTargetWrapperTests.cs"
+  },
+  {
+    "name": "BufferingTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\BufferingTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/BufferingTargetWrapperTests.cs"
+  },
+  {
+    "name": "ConcurrentRequestQueueTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\ConcurrentRequestQueueTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/ConcurrentRequestQueueTests.cs"
+  },
+  {
+    "name": "FallbackGroupTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\FallbackGroupTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/FallbackGroupTargetTests.cs"
+  },
+  {
+    "name": "FilteringTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\FilteringTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/FilteringTargetWrapperTests.cs"
+  },
+  {
+    "name": "GroupByTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\GroupByTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/GroupByTargetWrapperTests.cs"
+  },
+  {
+    "name": "LimitingTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\LimitingTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/LimitingTargetWrapperTests.cs"
+  },
+  {
+    "name": "PostFilteringTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\PostFilteringTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/PostFilteringTargetWrapperTests.cs"
+  },
+  {
+    "name": "RandomizeGroupTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\RandomizeGroupTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/RandomizeGroupTargetTests.cs"
+  },
+  {
+    "name": "RepeatingTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\RepeatingTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/RepeatingTargetWrapperTests.cs"
+  },
+  {
+    "name": "RetryingTargetWrapperTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\RetryingTargetWrapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/RetryingTargetWrapperTests.cs"
+  },
+  {
+    "name": "RoundRobinGroupTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\RoundRobinGroupTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/RoundRobinGroupTargetTests.cs"
+  },
+  {
+    "name": "SplitGroupTargetTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\SplitGroupTargetTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/SplitGroupTargetTests.cs"
+  },
+  {
+    "name": "WrapperTargetBaseTests.cs",
+    "path": "tests\\NLog.UnitTests\\Targets\\Wrappers\\WrapperTargetBaseTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/Targets/Wrappers/WrapperTargetBaseTests.cs"
+  },
+  {
+    "name": "TimeSourceTests.cs",
+    "path": "tests\\NLog.UnitTests\\TimeSourceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.UnitTests/TimeSourceTests.cs"
+  },
+  {
+    "name": "RegistryTests.cs",
+    "path": "tests\\NLog.WindowsRegistry.Tests\\RegistryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tests/NLog.WindowsRegistry.Tests/RegistryTests.cs"
+  },
+  {
+    "name": "SourceCodeTests.cs",
+    "path": "tools\\CheckSourceCode\\src\\NLog.SourceCodeTests\\SourceCodeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/NLog/NLog/dev/tools/CheckSourceCode/src/NLog.SourceCodeTests/SourceCodeTests.cs"
+  }
+]

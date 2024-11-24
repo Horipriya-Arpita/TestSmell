@@ -1,8 +1,10 @@
 
-
 [
-    { "owner": "xunit", "repo": "xunit" },
-    { "owner": "rsm-hcd", "repo": "AndcultureCode.CSharp.Sitefinity.Testing" }
-    
+    { "owner": "8T4", "repo": "c4sharp" },
+    { "owner": "ThreeMammals", "repo": "Ocelot" },
+    { "owner": "reactiveui", "repo": "refit" },
+    { "owner": "khellang", "repo": "Scrutor" },
+    { "owner": "IdentityServer", "repo": "IdentityServer4" },
+    { "owner": "ChilliCream", "repo": "graphql-platform" },
+    { "owner": "dotnet-architecture", "repo": "eShopOnWeb" }
 ]
-

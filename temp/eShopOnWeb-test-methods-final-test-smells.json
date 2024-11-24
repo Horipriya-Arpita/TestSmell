@@ -1,0 +1,206 @@
+[
+  {
+    "file": "CheckoutTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IndexTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthenticateEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CatalogItemGetByIdEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CreateCatalogItemEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DeleteCatalogItemEndpointTest.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "Smells": [
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  }
+]

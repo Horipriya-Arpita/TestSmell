@@ -1,0 +1,1072 @@
+[
+  {
+    "name": "AggregateTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\AggregateTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/AggregateTests.cs"
+  },
+  {
+    "name": "AuthenticationTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Authentication\\AuthenticationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Authentication/AuthenticationTests.cs"
+  },
+  {
+    "name": "MultipleAuthSchemesFeatureTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Authentication\\MultipleAuthSchemesFeatureTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Authentication/MultipleAuthSchemesFeatureTests.cs"
+  },
+  {
+    "name": "AuthorizationTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\AuthorizationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/AuthorizationTests.cs"
+  },
+  {
+    "name": "ButterflyTracingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ButterflyTracingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ButterflyTracingTests.cs"
+  },
+  {
+    "name": "CachingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Caching\\CachingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Caching/CachingTests.cs"
+  },
+  {
+    "name": "CancelRequestTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\CancelRequestTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/CancelRequestTests.cs"
+  },
+  {
+    "name": "CannotStartOcelotTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\CannotStartOcelotTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/CannotStartOcelotTests.cs"
+  },
+  {
+    "name": "CaseSensitiveRoutingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\CaseSensitiveRoutingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/CaseSensitiveRoutingTests.cs"
+  },
+  {
+    "name": "ClaimsToDownstreamPathTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ClaimsToDownstreamPathTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ClaimsToDownstreamPathTests.cs"
+  },
+  {
+    "name": "ClaimsToHeadersForwardingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ClaimsToHeadersForwardingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ClaimsToHeadersForwardingTests.cs"
+  },
+  {
+    "name": "ClaimsToQueryStringForwardingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ClaimsToQueryStringForwardingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ClaimsToQueryStringForwardingTests.cs"
+  },
+  {
+    "name": "ConfigurationInConsulTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Configuration\\ConfigurationInConsulTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Configuration/ConfigurationInConsulTests.cs"
+  },
+  {
+    "name": "ConfigurationMergeTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Configuration\\ConfigurationMergeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Configuration/ConfigurationMergeTests.cs"
+  },
+  {
+    "name": "ConfigurationReloadTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Configuration\\ConfigurationReloadTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Configuration/ConfigurationReloadTests.cs"
+  },
+  {
+    "name": "ContentTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ContentTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ContentTests.cs"
+  },
+  {
+    "name": "CustomMiddlewareTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\CustomMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/CustomMiddlewareTests.cs"
+  },
+  {
+    "name": "DefaultVersionPolicyTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\DefaultVersionPolicyTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/DefaultVersionPolicyTests.cs"
+  },
+  {
+    "name": "GzipTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\GzipTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/GzipTests.cs"
+  },
+  {
+    "name": "HeaderTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\HeaderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/HeaderTests.cs"
+  },
+  {
+    "name": "HttpDelegatingHandlersTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\HttpDelegatingHandlersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/HttpDelegatingHandlersTests.cs"
+  },
+  {
+    "name": "HttpTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\HttpTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/HttpTests.cs"
+  },
+  {
+    "name": "LoadBalancerTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\LoadBalancer\\LoadBalancerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/LoadBalancer/LoadBalancerTests.cs"
+  },
+  {
+    "name": "LogLevelTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\LogLevelTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/LogLevelTests.cs"
+  },
+  {
+    "name": "DownstreamMetadataTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Metadata\\DownstreamMetadataTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Metadata/DownstreamMetadataTests.cs"
+  },
+  {
+    "name": "MethodTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\MethodTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/MethodTests.cs"
+  },
+  {
+    "name": "OpenTracingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\OpenTracingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/OpenTracingTests.cs"
+  },
+  {
+    "name": "PollyQoSTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\PollyQoSTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/PollyQoSTests.cs"
+  },
+  {
+    "name": "ClientRateLimitingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\RateLimiting\\ClientRateLimitingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/RateLimiting/ClientRateLimitingTests.cs"
+  },
+  {
+    "name": "ReasonPhraseTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ReasonPhraseTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ReasonPhraseTests.cs"
+  },
+  {
+    "name": "RequestMapperTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Request\\RequestMapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Request/RequestMapperTests.cs"
+  },
+  {
+    "name": "StreamContentTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Request\\StreamContentTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Request/StreamContentTests.cs"
+  },
+  {
+    "name": "RequestIdTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\RequestIdTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/RequestIdTests.cs"
+  },
+  {
+    "name": "PayloadTooLargeTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Requester\\PayloadTooLargeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Requester/PayloadTooLargeTests.cs"
+  },
+  {
+    "name": "ResponseCodeTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ResponseCodeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ResponseCodeTests.cs"
+  },
+  {
+    "name": "ReturnsErrorTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ReturnsErrorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ReturnsErrorTests.cs"
+  },
+  {
+    "name": "RoutingBasedOnHeadersTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Routing\\RoutingBasedOnHeadersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Routing/RoutingBasedOnHeadersTests.cs"
+  },
+  {
+    "name": "RoutingTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Routing\\RoutingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Routing/RoutingTests.cs"
+  },
+  {
+    "name": "RoutingWithQueryStringTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Routing\\RoutingWithQueryStringTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Routing/RoutingWithQueryStringTests.cs"
+  },
+  {
+    "name": "SecurityOptionsTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\Security\\SecurityOptionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/Security/SecurityOptionsTests.cs"
+  },
+  {
+    "name": "SequentialTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\SequentialTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/SequentialTests.cs"
+  },
+  {
+    "name": "ConsulConfigurationInConsulTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ServiceDiscovery\\ConsulConfigurationInConsulTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ServiceDiscovery/ConsulConfigurationInConsulTests.cs"
+  },
+  {
+    "name": "ConsulServiceDiscoveryTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ServiceDiscovery\\ConsulServiceDiscoveryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ServiceDiscovery/ConsulServiceDiscoveryTests.cs"
+  },
+  {
+    "name": "ConsulWebSocketTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ServiceDiscovery\\ConsulWebSocketTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ServiceDiscovery/ConsulWebSocketTests.cs"
+  },
+  {
+    "name": "EurekaServiceDiscoveryTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ServiceDiscovery\\EurekaServiceDiscoveryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ServiceDiscovery/EurekaServiceDiscoveryTests.cs"
+  },
+  {
+    "name": "KubernetesServiceDiscoveryTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ServiceDiscovery\\KubernetesServiceDiscoveryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ServiceDiscovery/KubernetesServiceDiscoveryTests.cs"
+  },
+  {
+    "name": "ServiceFabricTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\ServiceDiscovery\\ServiceFabricTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/ServiceDiscovery/ServiceFabricTests.cs"
+  },
+  {
+    "name": "SslTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\SslTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/SslTests.cs"
+  },
+  {
+    "name": "StartupTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\StartupTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/StartupTests.cs"
+  },
+  {
+    "name": "StickySessionsTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\StickySessionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/StickySessionsTests.cs"
+  },
+  {
+    "name": "TwoDownstreamServicesTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\TwoDownstreamServicesTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/TwoDownstreamServicesTests.cs"
+  },
+  {
+    "name": "UpstreamHostTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\UpstreamHostTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/UpstreamHostTests.cs"
+  },
+  {
+    "name": "WebSocketTests.cs",
+    "path": "test\\Ocelot.AcceptanceTests\\WebSocketTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.AcceptanceTests/WebSocketTests.cs"
+  },
+  {
+    "name": "AdministrationTests.cs",
+    "path": "test\\Ocelot.IntegrationTests\\AdministrationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.IntegrationTests/AdministrationTests.cs"
+  },
+  {
+    "name": "CacheManagerTests.cs",
+    "path": "test\\Ocelot.IntegrationTests\\CacheManagerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.IntegrationTests/CacheManagerTests.cs"
+  },
+  {
+    "name": "HeaderTests.cs",
+    "path": "test\\Ocelot.IntegrationTests\\HeaderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.IntegrationTests/HeaderTests.cs"
+  },
+  {
+    "name": "ThreadSafeHeadersTests.cs",
+    "path": "test\\Ocelot.IntegrationTests\\ThreadSafeHeadersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.IntegrationTests/ThreadSafeHeadersTests.cs"
+  },
+  {
+    "name": "TestHostBuilder.cs",
+    "path": "test\\Ocelot.Testing\\TestHostBuilder.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.Testing/TestHostBuilder.cs"
+  },
+  {
+    "name": "OcelotAdministrationBuilderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Administration\\OcelotAdministrationBuilderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Administration/OcelotAdministrationBuilderTests.cs"
+  },
+  {
+    "name": "AuthenticationMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Authentication\\AuthenticationMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Authentication/AuthenticationMiddlewareTests.cs"
+  },
+  {
+    "name": "AuthorizationMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Authorization\\AuthorizationMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Authorization/AuthorizationMiddlewareTests.cs"
+  },
+  {
+    "name": "ClaimsAuthorizerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Authorization\\ClaimsAuthorizerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Authorization/ClaimsAuthorizerTests.cs"
+  },
+  {
+    "name": "CacheOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Cache\\CacheOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Cache/CacheOptionsCreatorTests.cs"
+  },
+  {
+    "name": "DefaultCacheKeyGeneratorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Cache\\DefaultCacheKeyGeneratorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Cache/DefaultCacheKeyGeneratorTests.cs"
+  },
+  {
+    "name": "DefaultMemoryCacheTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Cache\\DefaultMemoryCacheTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Cache/DefaultMemoryCacheTests.cs"
+  },
+  {
+    "name": "OutputCacheMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Cache\\OutputCacheMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Cache/OutputCacheMiddlewareTests.cs"
+  },
+  {
+    "name": "OcelotBuilderExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\CacheManager\\OcelotBuilderExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/CacheManager/OcelotBuilderExtensionsTests.cs"
+  },
+  {
+    "name": "OutputCacheMiddlewareRealCacheTests.cs",
+    "path": "test\\Ocelot.UnitTests\\CacheManager\\OutputCacheMiddlewareRealCacheTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/CacheManager/OutputCacheMiddlewareRealCacheTests.cs"
+  },
+  {
+    "name": "AddClaimsToRequestTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Claims\\AddClaimsToRequestTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Claims/AddClaimsToRequestTests.cs"
+  },
+  {
+    "name": "ClaimsToClaimsMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Claims\\ClaimsToClaimsMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Claims/ClaimsToClaimsMiddlewareTests.cs"
+  },
+  {
+    "name": "AggregatesCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\AggregatesCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/AggregatesCreatorTests.cs"
+  },
+  {
+    "name": "AuthenticationOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\AuthenticationOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/AuthenticationOptionsCreatorTests.cs"
+  },
+  {
+    "name": "CacheOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\CacheOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/CacheOptionsCreatorTests.cs"
+  },
+  {
+    "name": "OcelotConfigurationChangeTokenSourceTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\ChangeTracking\\OcelotConfigurationChangeTokenSourceTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/ChangeTracking/OcelotConfigurationChangeTokenSourceTests.cs"
+  },
+  {
+    "name": "OcelotConfigurationChangeTokenTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\ChangeTracking\\OcelotConfigurationChangeTokenTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/ChangeTracking/OcelotConfigurationChangeTokenTests.cs"
+  },
+  {
+    "name": "ClaimToThingConfigurationParserTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\ClaimToThingConfigurationParserTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/ClaimToThingConfigurationParserTests.cs"
+  },
+  {
+    "name": "ClaimsToThingCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\ClaimsToThingCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/ClaimsToThingCreatorTests.cs"
+  },
+  {
+    "name": "ConfigurationCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\ConfigurationCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/ConfigurationCreatorTests.cs"
+  },
+  {
+    "name": "DefaultMetadataCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\DefaultMetadataCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/DefaultMetadataCreatorTests.cs"
+  },
+  {
+    "name": "DiskFileConfigurationRepositoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\DiskFileConfigurationRepositoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/DiskFileConfigurationRepositoryTests.cs"
+  },
+  {
+    "name": "DownstreamAddressesCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\DownstreamAddressesCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/DownstreamAddressesCreatorTests.cs"
+  },
+  {
+    "name": "DownstreamRouteExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\DownstreamRouteExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/DownstreamRouteExtensionsTests.cs"
+  },
+  {
+    "name": "DynamicsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\DynamicsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/DynamicsCreatorTests.cs"
+  },
+  {
+    "name": "FileConfigurationPollerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\FileConfigurationPollerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/FileConfigurationPollerTests.cs"
+  },
+  {
+    "name": "FileConfigurationSetterTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\FileConfigurationSetterTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/FileConfigurationSetterTests.cs"
+  },
+  {
+    "name": "FileInternalConfigurationCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\FileInternalConfigurationCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/FileInternalConfigurationCreatorTests.cs"
+  },
+  {
+    "name": "FileQoSOptionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\FileModels\\FileQoSOptionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/FileModels/FileQoSOptionsTests.cs"
+  },
+  {
+    "name": "HashCreationTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\HashCreationTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/HashCreationTests.cs"
+  },
+  {
+    "name": "HeaderFindAndReplaceCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\HeaderFindAndReplaceCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/HeaderFindAndReplaceCreatorTests.cs"
+  },
+  {
+    "name": "HttpHandlerOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\HttpHandlerOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/HttpHandlerOptionsCreatorTests.cs"
+  },
+  {
+    "name": "HttpVersionPolicyCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\HttpVersionPolicyCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/HttpVersionPolicyCreatorTests.cs"
+  },
+  {
+    "name": "InMemoryConfigurationRepositoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\InMemoryConfigurationRepositoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/InMemoryConfigurationRepositoryTests.cs"
+  },
+  {
+    "name": "LoadBalancerOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\LoadBalancerOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/LoadBalancerOptionsCreatorTests.cs"
+  },
+  {
+    "name": "QoSOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\QoSOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/QoSOptionsCreatorTests.cs"
+  },
+  {
+    "name": "RateLimitOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\RateLimitOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/RateLimitOptionsCreatorTests.cs"
+  },
+  {
+    "name": "RequestIdKeyCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\RequestIdKeyCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/RequestIdKeyCreatorTests.cs"
+  },
+  {
+    "name": "RouteKeyCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\RouteKeyCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/RouteKeyCreatorTests.cs"
+  },
+  {
+    "name": "RouteOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\RouteOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/RouteOptionsCreatorTests.cs"
+  },
+  {
+    "name": "RoutesCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\RoutesCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/RoutesCreatorTests.cs"
+  },
+  {
+    "name": "SecurityOptionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\SecurityOptionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/SecurityOptionsCreatorTests.cs"
+  },
+  {
+    "name": "ServiceProviderCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\ServiceProviderCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/ServiceProviderCreatorTests.cs"
+  },
+  {
+    "name": "UpstreamHeaderTemplatePatternCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\UpstreamHeaderTemplatePatternCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/UpstreamHeaderTemplatePatternCreatorTests.cs"
+  },
+  {
+    "name": "UpstreamTemplatePatternCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\UpstreamTemplatePatternCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/UpstreamTemplatePatternCreatorTests.cs"
+  },
+  {
+    "name": "FileConfigurationFluentValidatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\Validation\\FileConfigurationFluentValidatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/Validation/FileConfigurationFluentValidatorTests.cs"
+  },
+  {
+    "name": "FileQoSOptionsFluentValidatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\Validation\\FileQoSOptionsFluentValidatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/Validation/FileQoSOptionsFluentValidatorTests.cs"
+  },
+  {
+    "name": "HostAndPortValidatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\Validation\\HostAndPortValidatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/Validation/HostAndPortValidatorTests.cs"
+  },
+  {
+    "name": "RouteFluentValidatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\Validation\\RouteFluentValidatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/Validation/RouteFluentValidatorTests.cs"
+  },
+  {
+    "name": "VersionCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Configuration\\VersionCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Configuration/VersionCreatorTests.cs"
+  },
+  {
+    "name": "ConsulFileConfigurationRepositoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Consul\\ConsulFileConfigurationRepositoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Consul/ConsulFileConfigurationRepositoryTests.cs"
+  },
+  {
+    "name": "ConsulProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Consul\\ConsulProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Consul/ConsulProviderFactoryTests.cs"
+  },
+  {
+    "name": "ConsulTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Consul\\ConsulTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Consul/ConsulTests.cs"
+  },
+  {
+    "name": "DefaultConsulServiceBuilderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Consul\\DefaultConsulServiceBuilderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Consul/DefaultConsulServiceBuilderTests.cs"
+  },
+  {
+    "name": "OcelotBuilderExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Consul\\OcelotBuilderExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Consul/OcelotBuilderExtensionsTests.cs"
+  },
+  {
+    "name": "PollingConsulServiceDiscoveryProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Consul\\PollingConsulServiceDiscoveryProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Consul/PollingConsulServiceDiscoveryProviderTests.cs"
+  },
+  {
+    "name": "FileConfigurationControllerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Controllers\\FileConfigurationControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Controllers/FileConfigurationControllerTests.cs"
+  },
+  {
+    "name": "OutputCacheControllerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Controllers\\OutputCacheControllerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Controllers/OutputCacheControllerTests.cs"
+  },
+  {
+    "name": "ConfigurationBuilderExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DependencyInjection\\ConfigurationBuilderExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DependencyInjection/ConfigurationBuilderExtensionsTests.cs"
+  },
+  {
+    "name": "OcelotBuilderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DependencyInjection\\OcelotBuilderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DependencyInjection/OcelotBuilderTests.cs"
+  },
+  {
+    "name": "ServiceCollectionExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DependencyInjection\\ServiceCollectionExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DependencyInjection/ServiceCollectionExtensionsTests.cs"
+  },
+  {
+    "name": "ChangeDownstreamPathTemplateTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamPathManipulation\\ChangeDownstreamPathTemplateTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamPathManipulation/ChangeDownstreamPathTemplateTests.cs"
+  },
+  {
+    "name": "ClaimsToDownstreamPathMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamPathManipulation\\ClaimsToDownstreamPathMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamPathManipulation/ClaimsToDownstreamPathMiddlewareTests.cs"
+  },
+  {
+    "name": "DownstreamRouteCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\DownstreamRouteCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/DownstreamRouteCreatorTests.cs"
+  },
+  {
+    "name": "DownstreamRouteFinderMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\DownstreamRouteFinderMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/DownstreamRouteFinderMiddlewareTests.cs"
+  },
+  {
+    "name": "DownstreamRouteFinderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\DownstreamRouteFinderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/DownstreamRouteFinderTests.cs"
+  },
+  {
+    "name": "DownstreamRouteProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\DownstreamRouteProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/DownstreamRouteProviderFactoryTests.cs"
+  },
+  {
+    "name": "HeaderPlaceholderNameAndValueFinderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\HeaderMatcher\\HeaderPlaceholderNameAndValueFinderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/HeaderMatcher/HeaderPlaceholderNameAndValueFinderTests.cs"
+  },
+  {
+    "name": "HeadersToHeaderTemplatesMatcherTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\HeaderMatcher\\HeadersToHeaderTemplatesMatcherTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/HeaderMatcher/HeadersToHeaderTemplatesMatcherTests.cs"
+  },
+  {
+    "name": "RegExUrlMatcherTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\UrlMatcher\\RegExUrlMatcherTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/UrlMatcher/RegExUrlMatcherTests.cs"
+  },
+  {
+    "name": "UrlPathPlaceholderNameAndValueFinderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamRouteFinder\\UrlMatcher\\UrlPathPlaceholderNameAndValueFinderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamRouteFinder/UrlMatcher/UrlPathPlaceholderNameAndValueFinderTests.cs"
+  },
+  {
+    "name": "DownstreamPathPlaceholderReplacerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamUrlCreator\\DownstreamPathPlaceholderReplacerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamUrlCreator/DownstreamPathPlaceholderReplacerTests.cs"
+  },
+  {
+    "name": "DownstreamUrlCreatorMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\DownstreamUrlCreator\\DownstreamUrlCreatorMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/DownstreamUrlCreator/DownstreamUrlCreatorMiddlewareTests.cs"
+  },
+  {
+    "name": "ErrorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Errors\\ErrorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Errors/ErrorTests.cs"
+  },
+  {
+    "name": "ExceptionHandlerMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Errors\\ExceptionHandlerMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Errors/ExceptionHandlerMiddlewareTests.cs"
+  },
+  {
+    "name": "EurekaMiddlewareConfigurationProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Eureka\\EurekaMiddlewareConfigurationProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Eureka/EurekaMiddlewareConfigurationProviderTests.cs"
+  },
+  {
+    "name": "EurekaProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Eureka\\EurekaProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Eureka/EurekaProviderFactoryTests.cs"
+  },
+  {
+    "name": "EurekaServiceDiscoveryProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Eureka\\EurekaServiceDiscoveryProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Eureka/EurekaServiceDiscoveryProviderTests.cs"
+  },
+  {
+    "name": "OcelotBuilderExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Eureka\\OcelotBuilderExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Eureka/OcelotBuilderExtensionsTests.cs"
+  },
+  {
+    "name": "FileUnitTest.cs",
+    "path": "test\\Ocelot.UnitTests\\FileUnitTest.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/FileUnitTest.cs"
+  },
+  {
+    "name": "AddHeadersToRequestClaimToThingTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\AddHeadersToRequestClaimToThingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/AddHeadersToRequestClaimToThingTests.cs"
+  },
+  {
+    "name": "AddHeadersToRequestPlainTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\AddHeadersToRequestPlainTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/AddHeadersToRequestPlainTests.cs"
+  },
+  {
+    "name": "AddHeadersToResponseTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\AddHeadersToResponseTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/AddHeadersToResponseTests.cs"
+  },
+  {
+    "name": "ClaimsToHeadersMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\ClaimsToHeadersMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/ClaimsToHeadersMiddlewareTests.cs"
+  },
+  {
+    "name": "HttpContextRequestHeaderReplacerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\HttpContextRequestHeaderReplacerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/HttpContextRequestHeaderReplacerTests.cs"
+  },
+  {
+    "name": "HttpHeadersTransformationMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\HttpHeadersTransformationMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/HttpHeadersTransformationMiddlewareTests.cs"
+  },
+  {
+    "name": "HttpResponseHeaderReplacerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\HttpResponseHeaderReplacerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/HttpResponseHeaderReplacerTests.cs"
+  },
+  {
+    "name": "RemoveHeadersTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Headers\\RemoveHeadersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Headers/RemoveHeadersTests.cs"
+  },
+  {
+    "name": "ClaimParserTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\ClaimParserTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/ClaimParserTests.cs"
+  },
+  {
+    "name": "ConfigAwarePlaceholdersTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\ConfigAwarePlaceholdersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/ConfigAwarePlaceholdersTests.cs"
+  },
+  {
+    "name": "HttpDataRepositoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\HttpDataRepositoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/HttpDataRepositoryTests.cs"
+  },
+  {
+    "name": "InMemoryBusTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\InMemoryBusTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/InMemoryBusTests.cs"
+  },
+  {
+    "name": "PlaceholdersTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\PlaceholdersTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/PlaceholdersTests.cs"
+  },
+  {
+    "name": "ScopesAuthorizerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\ScopesAuthorizerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/ScopesAuthorizerTests.cs"
+  },
+  {
+    "name": "StringExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Infrastructure\\StringExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Infrastructure/StringExtensionsTests.cs"
+  },
+  {
+    "name": "KubeProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\KubeProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/KubeProviderFactoryTests.cs"
+  },
+  {
+    "name": "KubeServiceBuilderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\KubeServiceBuilderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/KubeServiceBuilderTests.cs"
+  },
+  {
+    "name": "KubeServiceCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\KubeServiceCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/KubeServiceCreatorTests.cs"
+  },
+  {
+    "name": "KubeTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\KubeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/KubeTests.cs"
+  },
+  {
+    "name": "KubernetesProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\KubernetesProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/KubernetesProviderFactoryTests.cs"
+  },
+  {
+    "name": "OcelotBuilderExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\OcelotBuilderExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/OcelotBuilderExtensionsTests.cs"
+  },
+  {
+    "name": "PollKubeTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Kubernetes\\PollKubeTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Kubernetes/PollKubeTests.cs"
+  },
+  {
+    "name": "CookieStickySessionsCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\CookieStickySessionsCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/CookieStickySessionsCreatorTests.cs"
+  },
+  {
+    "name": "CookieStickySessionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\CookieStickySessionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/CookieStickySessionsTests.cs"
+  },
+  {
+    "name": "DelegateInvokingLoadBalancerCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\DelegateInvokingLoadBalancerCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/DelegateInvokingLoadBalancerCreatorTests.cs"
+  },
+  {
+    "name": "LeastConnectionCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\LeastConnectionCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/LeastConnectionCreatorTests.cs"
+  },
+  {
+    "name": "LeastConnectionTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\LeastConnectionTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/LeastConnectionTests.cs"
+  },
+  {
+    "name": "LoadBalancerFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\LoadBalancerFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/LoadBalancerFactoryTests.cs"
+  },
+  {
+    "name": "LoadBalancerHouseTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\LoadBalancerHouseTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/LoadBalancerHouseTests.cs"
+  },
+  {
+    "name": "LoadBalancerMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\LoadBalancerMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/LoadBalancerMiddlewareTests.cs"
+  },
+  {
+    "name": "LoadBalancerOptionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\LoadBalancerOptionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/LoadBalancerOptionsTests.cs"
+  },
+  {
+    "name": "NoLoadBalancerCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\NoLoadBalancerCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/NoLoadBalancerCreatorTests.cs"
+  },
+  {
+    "name": "NoLoadBalancerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\NoLoadBalancerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/NoLoadBalancerTests.cs"
+  },
+  {
+    "name": "RoundRobinCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\RoundRobinCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/RoundRobinCreatorTests.cs"
+  },
+  {
+    "name": "RoundRobinTests.cs",
+    "path": "test\\Ocelot.UnitTests\\LoadBalancer\\RoundRobinTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/LoadBalancer/RoundRobinTests.cs"
+  },
+  {
+    "name": "OcelotDiagnosticListenerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Logging\\OcelotDiagnosticListenerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Logging/OcelotDiagnosticListenerTests.cs"
+  },
+  {
+    "name": "OcelotLoggerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Logging\\OcelotLoggerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Logging/OcelotLoggerTests.cs"
+  },
+  {
+    "name": "BaseUrlFinderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Middleware\\BaseUrlFinderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Middleware/BaseUrlFinderTests.cs"
+  },
+  {
+    "name": "OcelotPipelineExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Middleware\\OcelotPipelineExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Middleware/OcelotPipelineExtensionsTests.cs"
+  },
+  {
+    "name": "OcelotPiplineBuilderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Middleware\\OcelotPiplineBuilderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Middleware/OcelotPiplineBuilderTests.cs"
+  },
+  {
+    "name": "DefinedAggregatorProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Multiplexing\\DefinedAggregatorProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Multiplexing/DefinedAggregatorProviderTests.cs"
+  },
+  {
+    "name": "MultiplexingMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Multiplexing\\MultiplexingMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Multiplexing/MultiplexingMiddlewareTests.cs"
+  },
+  {
+    "name": "ResponseAggregatorFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Multiplexing\\ResponseAggregatorFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Multiplexing/ResponseAggregatorFactoryTests.cs"
+  },
+  {
+    "name": "SimpleJsonResponseAggregatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Multiplexing\\SimpleJsonResponseAggregatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Multiplexing/SimpleJsonResponseAggregatorTests.cs"
+  },
+  {
+    "name": "UserDefinedResponseAggregatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Multiplexing\\UserDefinedResponseAggregatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Multiplexing/UserDefinedResponseAggregatorTests.cs"
+  },
+  {
+    "name": "OcelotBuilderExtensionsTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Polly\\OcelotBuilderExtensionsTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Polly/OcelotBuilderExtensionsTests.cs"
+  },
+  {
+    "name": "PollyQoSResiliencePipelineProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Polly\\PollyQoSResiliencePipelineProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Polly/PollyQoSResiliencePipelineProviderTests.cs"
+  },
+  {
+    "name": "PollyResiliencePipelineDelegatingHandlerTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Polly\\PollyResiliencePipelineDelegatingHandlerTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Polly/PollyResiliencePipelineDelegatingHandlerTests.cs"
+  },
+  {
+    "name": "AddQueriesToRequestTests.cs",
+    "path": "test\\Ocelot.UnitTests\\QueryStrings\\AddQueriesToRequestTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/QueryStrings/AddQueriesToRequestTests.cs"
+  },
+  {
+    "name": "ClaimsToQueryStringMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\QueryStrings\\ClaimsToQueryStringMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/QueryStrings/ClaimsToQueryStringMiddlewareTests.cs"
+  },
+  {
+    "name": "RateLimitingMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\RateLimiting\\RateLimitingMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/RateLimiting/RateLimitingMiddlewareTests.cs"
+  },
+  {
+    "name": "RateLimitingTests.cs",
+    "path": "test\\Ocelot.UnitTests\\RateLimiting\\RateLimitingTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/RateLimiting/RateLimitingTests.cs"
+  },
+  {
+    "name": "ScopedRequestDataRepositoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Repository\\ScopedRequestDataRepositoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Repository/ScopedRequestDataRepositoryTests.cs"
+  },
+  {
+    "name": "DownstreamRequestCreatorTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Request\\Creator\\DownstreamRequestCreatorTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Request/Creator/DownstreamRequestCreatorTests.cs"
+  },
+  {
+    "name": "DownstreamRequestInitialiserMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Request\\DownstreamRequestInitialiserMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Request/DownstreamRequestInitialiserMiddlewareTests.cs"
+  },
+  {
+    "name": "DownstreamRequestTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Request\\DownstreamRequestTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Request/DownstreamRequestTests.cs"
+  },
+  {
+    "name": "RequestMapperTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Request\\Mapper\\RequestMapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Request/Mapper/RequestMapperTests.cs"
+  },
+  {
+    "name": "StreamHttpContentTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Request\\Mapper\\StreamHttpContentTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Request/Mapper/StreamHttpContentTests.cs"
+  },
+  {
+    "name": "RequestIdMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\RequestId\\RequestIdMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/RequestId/RequestIdMiddlewareTests.cs"
+  },
+  {
+    "name": "DelegatingHandlerHandlerProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Requester\\DelegatingHandlerHandlerProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Requester/DelegatingHandlerHandlerProviderFactoryTests.cs"
+  },
+  {
+    "name": "HttpExceptionToErrorMapperTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Requester\\HttpExceptionToErrorMapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Requester/HttpExceptionToErrorMapperTests.cs"
+  },
+  {
+    "name": "HttpRequesterMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Requester\\HttpRequesterMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Requester/HttpRequesterMiddlewareTests.cs"
+  },
+  {
+    "name": "MessageInvokerPoolTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Requester\\MessageInvokerPoolTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Requester/MessageInvokerPoolTests.cs"
+  },
+  {
+    "name": "QoSFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Requester\\QoSFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Requester/QoSFactoryTests.cs"
+  },
+  {
+    "name": "TracingHandlerFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Requester\\TracingHandlerFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Requester/TracingHandlerFactoryTests.cs"
+  },
+  {
+    "name": "ErrorsToHttpStatusCodeMapperTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Responder\\ErrorsToHttpStatusCodeMapperTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Responder/ErrorsToHttpStatusCodeMapperTests.cs"
+  },
+  {
+    "name": "HttpContextResponderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Responder\\HttpContextResponderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Responder/HttpContextResponderTests.cs"
+  },
+  {
+    "name": "ResponderMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Responder\\ResponderMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Responder/ResponderMiddlewareTests.cs"
+  },
+  {
+    "name": "IPSecurityPolicyTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Security\\IPSecurityPolicyTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Security/IPSecurityPolicyTests.cs"
+  },
+  {
+    "name": "SecurityMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\Security\\SecurityMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/Security/SecurityMiddlewareTests.cs"
+  },
+  {
+    "name": "ConfigurationServiceProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\ServiceDiscovery\\ConfigurationServiceProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/ServiceDiscovery/ConfigurationServiceProviderTests.cs"
+  },
+  {
+    "name": "ServiceDiscoveryProviderFactoryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\ServiceDiscovery\\ServiceDiscoveryProviderFactoryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/ServiceDiscovery/ServiceDiscoveryProviderFactoryTests.cs"
+  },
+  {
+    "name": "ServiceFabricServiceDiscoveryProviderTests.cs",
+    "path": "test\\Ocelot.UnitTests\\ServiceDiscovery\\ServiceFabricServiceDiscoveryProviderTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/ServiceDiscovery/ServiceFabricServiceDiscoveryProviderTests.cs"
+  },
+  {
+    "name": "ServiceRegistryTests.cs",
+    "path": "test\\Ocelot.UnitTests\\ServiceDiscovery\\ServiceRegistryTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/ServiceDiscovery/ServiceRegistryTests.cs"
+  },
+  {
+    "name": "UnitTest.cs",
+    "path": "test\\Ocelot.UnitTests\\UnitTest.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/UnitTest.cs"
+  },
+  {
+    "name": "WebSocketsProxyMiddlewareTests.cs",
+    "path": "test\\Ocelot.UnitTests\\WebSockets\\WebSocketsProxyMiddlewareTests.cs",
+    "download_url": "https://raw.githubusercontent.com/ThreeMammals/Ocelot/develop/test/Ocelot.UnitTests/WebSockets/WebSocketsProxyMiddlewareTests.cs"
+  }
+]
