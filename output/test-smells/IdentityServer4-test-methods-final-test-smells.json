@@ -1,0 +1,1482 @@
+[
+  {
+    "file": "ApiResourceMappersTests.cs",
+    "methods": [
+      {
+        "name": "AutomapperConfigurationIsValid",
+        "body": "{| ApiResourceMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid<ApiResourceMapperProfile>();| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Can_Map",
+        "body": "{| var model = new ApiResource();| var mappedEntity = model.ToEntity();| var mappedModel = mappedEntity.ToModel();| Assert.NotNull(mappedModel);| Assert.NotNull(mappedEntity);| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Properties_Map",
+        "body": "{| var model = new ApiResource()| {| Description = \"description\",| DisplayName = \"displayname\",| Name = \"foo\",| Scopes = { \"foo1\", \"foo2\" },| Enabled = false| };| var mappedEntity = model.ToEntity();| mappedEntity.Scopes.Count.Should().Be(2);| var foo1 = mappedEntity.Scopes.FirstOrDefault(x => x.Sco",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "missing_values_should_use_defaults",
+        "body": "{| var entity = new IdentityServer4.EntityFramework.Entities.ApiResource| {| Secrets = new System.Collections.Generic.List<Entities.ApiResourceSecret>| {| new Entities.ApiResourceSecret| {| }| }| };| var def = new ApiResource| {| ApiSecrets = { new Models.Secret(\"foo\") }| };| var model = entity.ToMo",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "ClientMappersTests.cs",
+    "methods": [
+      {
+        "name": "AutomapperConfigurationIsValid",
+        "body": "{| ClientMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid<ClientMapperProfile>();| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "Can_Map",
+        "body": "{| var model = new Client();| var mappedEntity = model.ToEntity();| var mappedModel = mappedEntity.ToModel();| Assert.NotNull(mappedModel);| Assert.NotNull(mappedEntity);| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Properties_Map",
+        "body": "{| var model = new Client()| {| Properties =| {| {\"foo1\", \"bar1\"},| {\"foo2\", \"bar2\"},| }| };| var mappedEntity = model.ToEntity();| mappedEntity.Properties.Count.Should().Be(2);| var foo1 = mappedEntity.Properties.FirstOrDefault(x => x.Key == \"foo1\");| foo1.Should().NotBeNull();| foo1.Value.Should()",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "missing_values_should_use_defaults",
+        "body": "{| var entity = new IdentityServer4.EntityFramework.Entities.Client| {| ClientSecrets = new System.Collections.Generic.List<Entities.ClientSecret>| {| new Entities.ClientSecret| {| }| }| };| var def = new Client| {| ClientSecrets = { new Models.Secret(\"foo\") }| };| var model = entity.ToModel();| mod",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IdentityResourcesMappersTests.cs",
+    "methods": [
+      {
+        "name": "IdentityResourceAutomapperConfigurationIsValid",
+        "body": "{| IdentityResourceMappers.Mapper.ConfigurationProvider.AssertConfigurationIsValid<IdentityResourceMapperProfile>();| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "CanMapIdentityResources",
+        "body": "{| var model = new IdentityResource();| var mappedEntity = model.ToEntity();| var mappedModel = mappedEntity.ToModel();| Assert.NotNull(mappedModel);| Assert.NotNull(mappedEntity);| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "EndSessionTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.EndSessionEndpoint);| response.StatusCode.Should().NotBe(HttpStatusCode.NotFound);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IntrospectionTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var form = new Dictionary<string, string>();| var response = await _client.PostAsync(IntrospectionEndpoint, new FormUrlEncodedContent(form));| response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "RevocationTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var response = await _mockPipeline.BackChannelClient.GetAsync(IdentityServerPipeline.RevocationEndpoint);| response.StatusCode.Should().Be(HttpStatusCode.MethodNotAllowed);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "TokenEndpointTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var data = new Dictionary<string, string>| {| { \"grant_type\", \"client_credentials\" },| { \"client_id\", client_id },| { \"client_secret\", client_secret },| { \"scope\", scope_name },| };| var form = new FormUrlEncodedContent(data);| _mockPipeline.BackChannelClient.DefaultRequestHeaders.Add(\"Referer\", ",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CustomProfileServiceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| await _mockPipeline.LoginAsync(\"bob\");| var url = _mockPipeline.CreateAuthorizeUrl(| clientId: \"implicit\",| responseType: \"id_token\",| scope: \"openid custom_identity\",| redirectUri: \"https://client/callback\",| state: \"state\",| nonce: \"nonce\");| _mockPipeline.BrowserClient.AllowAutoRedirect = fals",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CorsTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var policy = new StubCorePolicyProvider();| _pipeline.OnPreConfigureServices += services =>| {| services.AddSingleton<ICorsPolicyService>(policy);| };| _pipeline.Initialize();| _pipeline.BackChannelClient.DefaultRequestHeaders.Add(\"Origin\", \"https://client\");| _pipeline.BackChannelClient.DefaultR",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "FederatedSignoutTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| await _pipeline.LoginAsync(_user);| await _pipeline.RequestAuthorizationEndpointAsync(| clientId: \"client1\",| responseType: \"id_token\",| scope: \"openid\",| redirectUri: \"https://client1/callback\",| state: \"123_state\",| nonce: \"123_nonce\");| var response = await _pipeline.BrowserClient.GetAsync(Ide",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "PolicyProviderTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _allowedPaths.AddRange(new string[] {| \"/foo\",| \"/bar\",| \"/baz/quux\"| });| Init();| var ctx = new DefaultHttpContext();| ctx.Request.Scheme = \"https\";| ctx.Request.Host = new HostString(\"server\");| ctx.Request.Path = new PathString(\"/foo\");| ctx.Request.Headers.Add(\"Origin\", \"http://notserver\");|",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeCallbackEndpointTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var parameters = new NameValueCollection()| {| { \"client_id\", \"client\" },| { \"nonce\", \"some_nonce\" },| { \"scope\", \"api1 api2\" }| };| var request = new ConsentRequest(parameters, _user.GetSubjectId());| _mockUserConsentResponseMessageStore.Messages.Add(request.Id, new Message<ConsentResponse>(new ",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeEndpointBaseTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _params.Add(\"prompt\", \"none\");| _stubAuthorizeRequestValidator.Result.ValidatedRequest.IsOpenIdRequest = true;| _stubAuthorizeRequestValidator.Result.ValidatedRequest.ClientId = \"client\";| _stubAuthorizeRequestValidator.Result.ValidatedRequest.SessionId = \"some_session\";| _stubAuthorizeRequestVal",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeEndpointTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _context.Request.Method = \"GET\";| _context.Request.Path = new PathString(\"/connect/authorize\");| _mockUserSession.User = _user;| var result = await _subject.ProcessAsync(_context);| result.Should().BeOfType<AuthorizeResult>();| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "EndSessionCallbackResultTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _validationResult.FrontChannelLogoutUrls = new[] { \"http://foo\" };| var ctx = new DefaultHttpContext();| ctx.Request.Method = \"GET\";| await _subject.ExecuteAsync(ctx);| ctx.Response.Headers[\"Content-Security-Policy\"].First().Should().Contain(\"frame-src http://foo\");| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeResultTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _response.Error = \"some_error\";| await _subject.ExecuteAsync(_context);| _mockErrorMessageStore.Messages.Count.Should().Be(1);| _context.Response.StatusCode.Should().Be(302);| var location = _context.Response.Headers[\"Location\"].First();| location.Should().StartWith(\"https://server/error\");| var ",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "CheckSessionResultTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| await _subject.ExecuteAsync(_context);| _context.Response.StatusCode.Should().Be(200);| _context.Response.ContentType.Should().StartWith(\"text/html\");| _context.Response.Headers[\"Content-Security-Policy\"].First().Should().Contain(\"default-src 'none';\");| _context.Response.Headers[\"Content-Securit",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "EndSessionCallbackResultTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _validationResult.FrontChannelLogoutUrls = new[] { \"http://foo\" };| var ctx = new DefaultHttpContext();| ctx.Request.Method = \"GET\";| await _subject.ExecuteAsync(ctx);| ctx.Response.Headers[\"Content-Security-Policy\"].First().Should().Contain(\"frame-src http://foo\");| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "EndSessionResultTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _result.IsError = false;| _result.ValidatedRequest = new ValidatedEndSessionRequest| {| Client = new Client| {| ClientId = \"client\"| },| PostLogOutUri = \"http://client/post-logout-callback\"| };| await _subject.ExecuteAsync(_context);| _mockLogoutMessageStore.Messages.Count.Should().Be(1);| var lo",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "ApiResourceSigningAlgorithmSelectionTests.cs",
+    "methods": [
+      {
+        "name": "Single_resource_no_allowed_algorithms_set_should_return_empty_list",
+        "body": "{| var resource = new ApiResource();| var allowedAlgorithms = new List<ApiResource> { resource }.FindMatchingSigningAlgorithms();| allowedAlgorithms.Count().Should().Be(0);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "HttpRequestExtensionsTests.cs",
+    "methods": [
+      {
+        "name": "GetCorsOrigin_valid_cors_request_should_return_cors_origin",
+        "body": "{| var ctx = new DefaultHttpContext();| ctx.Request.Scheme = \"http\";| ctx.Request.Host = new HostString(\"foo\");| ctx.Request.Headers.Add(\"Origin\", \"http://bar\");| ctx.Request.GetCorsOrigin().Should().Be(\"http://bar\");| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IResourceStoreExtensionsTests.cs",
+    "methods": [
+      {
+        "name": "GetAllEnabledResourcesAsync_on_duplicate_identity_scopes_should_fail",
+        "body": "{| var store = new MockResourceStore()| {| IdentityResources = {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"A\" } }| };| Func<Task> a = () => store.GetAllEnabledResourcesAsync();| a.Should().Throw<Exception>().And.Message.ToLowerInvariant().Should().Contain(\"duplicate\").And",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var store = new MockResourceStore()| {| IdentityResources = {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"B\" } }| };| await store.GetAllEnabledResourcesAsync();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "GetAllEnabledResourcesAsync_on_duplicate_api_resources_should_fail",
+        "body": "{| var store = new MockResourceStore()| {| ApiResources = { new ApiResource { Name = \"a\" }, new ApiResource { Name = \"a\" } }| };| Func<Task> a = () => store.GetAllEnabledResourcesAsync();| a.Should().Throw<Exception>().And.Message.ToLowerInvariant().Should().Contain(\"duplicate\").And.Contain(\"api res",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var store = new MockResourceStore()| {| IdentityResources = {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"B\" } }| };| await store.GetAllEnabledResourcesAsync();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "FindResourcesByScopeAsync_on_duplicate_identity_scopes_should_fail",
+        "body": "{| var store = new MockResourceStore()| {| IdentityResources = {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"A\" } }| };| Func<Task> a = () => store.FindResourcesByScopeAsync(new string[] { \"A\" });| a.Should().Throw<Exception>().And.Message.ToLowerInvariant().Should().Contai",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var store = new MockResourceStore()| {| IdentityResources = {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"B\" } }| };| await store.GetAllEnabledResourcesAsync();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var store = new MockResourceStore()| {| IdentityResources = {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"B\" } }| };| await store.GetAllEnabledResourcesAsync();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IdentityServerBuilderExtensionsCacheStoreTests.cs",
+    "methods": [
+      {
+        "name": "AddClientStoreCache_should_add_concrete_iclientstore_implementation",
+        "body": "{| var services = new ServiceCollection();| var identityServerBuilder = new IdentityServerBuilder(services);| identityServerBuilder.AddClientStoreCache<CustomClientStore>();| services.Any(x => x.ImplementationType == typeof(CustomClientStore)).Should().BeTrue();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "AddResourceStoreCache_should_attempt_to_register_iresourcestore_implementation",
+        "body": "{| var services = new ServiceCollection();| var identityServerBuilder = new IdentityServerBuilder(services);| identityServerBuilder.AddResourceStoreCache<CustomResourceStore>();| services.Any(x => x.ImplementationType == typeof(CustomResourceStore)).Should().BeTrue();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IdentityServerBuilderExtensionsCryptoTests.cs",
+    "methods": [
+      {
+        "name": "AddSigningCredential_with_json_web_key_containing_asymmetric_key_should_succeed",
+        "body": "{| IServiceCollection services = new ServiceCollection();| IIdentityServerBuilder identityServerBuilder = new IdentityServerBuilder(services);| String json =| @\"{| \"\"alg\"\" : \"\"RS256\"\",| \"\"kty\"\" : \"\"RSA\"\",| \"\"use\"\" : \"\"sig\"\",| \"\"d\"\" : \"\"KGGNkbbgm2hNMqW6fP1fmcWwEBy77WOJIPAXnDJ0KxNTtqDF8K5ULj7EElHO1A8Z",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "AddSigningCredential_with_json_web_key_containing_symmetric_key_should_throw_exception",
+        "body": "{| IServiceCollection services = new ServiceCollection();| IIdentityServerBuilder identityServerBuilder = new IdentityServerBuilder(services);| String json =| @\"{| \"\"alg\"\" : \"\"HS256\"\",| \"\"kty\"\" : \"\"oct\"\",| \"\"use\"\" : \"\"sig\"\",| \"\"k\"\" : \"\"y5FHaQFtC294HLAtPXAcMkxZ5gHzCq24223vSYQUrDuu-3CUw7UzPru-AX30ubeB",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "AddDeveloperSigningCredential_should_succeed",
+        "body": "{| IServiceCollection services = new ServiceCollection();| IIdentityServerBuilder identityServerBuilder = new IdentityServerBuilder(services);| identityServerBuilder.AddDeveloperSigningCredential();| //clean up... delete stored rsa key| var filename = Path.Combine(Directory.GetCurrentDirectory(), \"t",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "JwtPayloadCreationTests.cs",
+    "methods": [
+      {
+        "name": "Should_create_scopes_as_array_by_default",
+        "body": "{| var options = new IdentityServerOptions();| var payload = _token.CreateJwtPayload(new SystemClock(), options, TestLogger.Create<JwtPayloadCreationTests>());| payload.Should().NotBeNull();| var scopes = payload.Claims.Where(c => c.Type == JwtClaimTypes.Scope).ToArray();| scopes.Count().Should().Be",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Should_create_scopes_as_string",
+        "body": "{| var options = new IdentityServerOptions| {| EmitScopesAsSpaceDelimitedStringInJwt = true| };| | var payload = _token.CreateJwtPayload(new SystemClock(), options, TestLogger.Create<JwtPayloadCreationTests>());| payload.Should().NotBeNull();| var scopes = payload.Claims.Where(c => c.Type == JwtClai",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "StringExtensionsTests.cs",
+    "methods": [
+      {
+        "name": "TestGetOrigin",
+        "body": "{| CheckOrigin(\"http://idsvr.com\", \"http://idsvr.com\");| CheckOrigin(\"http://idsvr.com/\", \"http://idsvr.com\");| CheckOrigin(\"http://idsvr.com/test\", \"http://idsvr.com\");| CheckOrigin(\"http://idsvr.com/test/resource\", \"http://idsvr.com\");| CheckOrigin(\"http://idsvr.com:8080\", \"http://idsvr.com:8080\")",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "ValidatedAuthorizeRequestExtensionsTests.cs",
+    "methods": [
+      {
+        "name": "GetAcrValues_should_return_snapshot_of_values",
+        "body": "{| var request = new ValidatedAuthorizeRequest()| {| Raw = new System.Collections.Specialized.NameValueCollection()| };| request.AuthenticationContextReferenceClasses.Add(\"a\");| request.AuthenticationContextReferenceClasses.Add(\"b\");| request.AuthenticationContextReferenceClasses.Add(\"c\");| var acrs",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "EndpointRouterTests.cs",
+    "methods": [
+      {
+        "name": "Find_should_return_null_for_incorrect_path",
+        "body": "{| _endpoints.Add(new IdentityServer4.Hosting.Endpoint(\"ep1\", \"/ep1\", typeof(MyEndpointHandler)));| _endpoints.Add(new IdentityServer4.Hosting.Endpoint(\"ep2\", \"/ep2\", typeof(MyOtherEndpointHandler)));| var ctx = new DefaultHttpContext();| ctx.Request.Path = new PathString(\"/wrong\");| ctx.RequestServ",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "ObjectSerializerTests.cs",
+    "methods": [
+      {
+        "name": "Can_be_deserialize_message",
+        "body": "{| Action a = () => IdentityServer4.ObjectSerializer.FromString<Message<ErrorMessage>>(\"{\\\"created\\\":0, \\\"data\\\": {\\\"error\\\": \\\"error\\\"}}\");| a.Should().NotThrow();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeInteractionResponseGeneratorTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var request = new ValidatedAuthorizeRequest| {| ClientId = \"foo\",| Subject = new IdentityServerUser(\"123\")| {| IdentityProvider = IdentityServerConstants.LocalIdentityProvider| }.CreatePrincipal(),| Client = new Client| {| EnableLocalLogin = false,| IdentityProviderRestrictions = new List<string>",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeInteractionResponseGeneratorTests_Consent.cs",
+    "methods": [
+      {
+        "name": "ProcessConsentAsync_NullRequest_Throws",
+        "body": "{| Func<Task> act = () => _subject.ProcessConsentAsync(null, new ConsentResponse());| act.Should().Throw<ArgumentNullException>()| .And.ParamName.Should().Be(\"request\");| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeInteractionResponseGeneratorTests_Custom.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var request = new ValidatedAuthorizeRequest| {| ClientId = \"foo\",| Subject = new IdentityServerUser(\"123\")| {| IdentityProvider = IdentityServerConstants.LocalIdentityProvider| }.CreatePrincipal(),| Client = new Client| {| },| };| _subject.ProcessLoginResponse = new InteractionResponse| {| Redire",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "AuthorizeInteractionResponseGeneratorTests_Login.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var request = new ValidatedAuthorizeRequest| {| ClientId = \"foo\",| Subject = Principal.Anonymous| };| var result = await _subject.ProcessLoginAsync(request);| result.IsLogin.Should().BeTrue();| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DeviceAuthorizationResponseGeneratorTests.cs",
+    "methods": [
+      {
+        "name": "ProcessAsync_when_valiationresult_null_exect_exception",
+        "body": "{| Func<Task> act = () => generator.ProcessAsync(null, TestBaseUrl);| act.Should().Throw<ArgumentNullException>();| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "UserInfoResponseGeneratorTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var resources = await _subject.GetRequestedResourcesAsync(null);| var claims = await _subject.GetRequestedClaimTypesAsync(resources);| claims.Should().BeEquivalentTo(new string[] { });| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var resources = await _subject.GetRequestedResourcesAsync(null);| var claims = await _subject.GetRequestedClaimTypesAsync(resources);| claims.Should().BeEquivalentTo(new string[] { });| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var resources = await _subject.GetRequestedResourcesAsync(null);| var claims = await _subject.GetRequestedClaimTypesAsync(resources);| claims.Should().BeEquivalentTo(new string[] { });| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var resources = await _subject.GetRequestedResourcesAsync(null);| var claims = await _subject.GetRequestedClaimTypesAsync(resources);| claims.Should().BeEquivalentTo(new string[] { });| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var resources = await _subject.GetRequestedResourcesAsync(null);| var claims = await _subject.GetRequestedClaimTypesAsync(resources);| claims.Should().BeEquivalentTo(new string[] { });| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "Task",
+        "body": "{| var resources = await _subject.GetRequestedResourcesAsync(null);| var claims = await _subject.GetRequestedClaimTypesAsync(resources);| claims.Should().BeEquivalentTo(new string[] { });| }",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "ProcessAsync_should_throw_if_incorrect_sub_issued_by_profile_service",
+        "body": "{| _identityResources.Add(new IdentityResource(\"id1\", new[] { \"foo\" }));| _identityResources.Add(new IdentityResource(\"id2\", new[] { \"bar\" }));| _mockProfileService.ProfileClaims = new[]| {| new Claim(\"sub\", \"fred\")| };| var result = new UserInfoRequestValidationResult| {| Subject = _user,| TokenVal",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DefaultClaimsServiceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var claims = await _subject.GetIdentityTokenClaimsAsync(_user, ResourceValidationResult, false, _validatedRequest);| var types = claims.Select(x => x.Type);| types.Should().Contain(JwtClaimTypes.Subject);| types.Should().Contain(JwtClaimTypes.AuthenticationTime);| types.Should().Contain(JwtClaimT",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DefaultConsentServiceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _client.AllowRememberConsent = false;| await _subject.UpdateConsentAsync(_user, _client, new [] { new ParsedScopeValue(\"scope1\"), new ParsedScopeValue(\"scope2\") });| var consent = await _userConsentStore.GetUserConsentAsync(_user.GetSubjectId(), _client.ClientId);| consent.Should().BeNull();| }",
+        "Smells": [
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DefaultIdentityServerInteractionServiceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| // for this, we're just confirming that since the session has changed, there's not use in doing the iframe and thsu SLO| _mockUserSession.SessionId = null;| _mockLogoutMessageStore.Messages.Add(\"id\", new Message<LogoutMessage>(new LogoutMessage() { SessionId = \"session\" }));| var context = await ",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DefaultUserSessionTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| await _subject.CreateSessionIdAsync(_user, _props);| _props.GetSessionId().Should().NotBeNull();| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DistributedDeviceFlowThrottlingServiceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var handle = Guid.NewGuid().ToString();| var service = new DistributedDeviceFlowThrottlingService(cache, new StubClock {UtcNowFunc = () => testDate}, options);| var result = await service.ShouldSlowDown(handle, deviceCode);| result.Should().BeFalse();| CheckCacheEntry(handle);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "NumericUserCodeServiceTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var sut = new NumericUserCodeGenerator();| var userCode = await sut.GenerateAsync();| var userCodeInt = int.Parse(userCode);| userCodeInt.Should().BeGreaterOrEqualTo(100000000);| userCodeInt.Should().BeLessOrEqualTo(999999999);| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "DefaultPersistedGrantStoreTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var code1 = new AuthorizationCode()| {| ClientId = \"test\",| CreationTime = DateTime.UtcNow,| Lifetime = 10,| Subject = _user,| CodeChallenge = \"challenge\",| RedirectUri = \"http://client/cb\",| Nonce = \"nonce\",| RequestedScopes = new string[] { \"scope1\", \"scope2\" }| };| var handle = await _codes.St",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "InMemoryClientStoreTests.cs",
+    "methods": [
+      {
+        "name": "InMemoryClient_should_throw_if_contain_duplicate_client_ids",
+        "body": "{| List<Client> clients = new List<Client>| {| new Client { ClientId = \"1\"},| new Client { ClientId = \"1\"},| new Client { ClientId = \"3\"}| };| Action act = () => new InMemoryClientStore(clients);| act.Should().Throw<ArgumentException>();| }",
+        "Smells": [
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "InMemoryDeviceFlowStoreTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var deviceCode = Guid.NewGuid().ToString();| var userCode = Guid.NewGuid().ToString();| var data = new DeviceCode| {| ClientId = Guid.NewGuid().ToString(),| CreationTime = DateTime.UtcNow,| Lifetime = 300,| IsAuthorized = false,| IsOpenId = true,| Subject = null,| RequestedScopes = new[] {\"scope1",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "InMemoryPersistedGrantStoreTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| {| var item = await _subject.GetAsync(\"key1\");| item.Should().BeNull();| }| await _subject.StoreAsync(new PersistedGrant() { Key = \"key1\" });| {| var item = await _subject.GetAsync(\"key1\");| item.Should().NotBeNull();| }| }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "InMemoryResourcesStoreTests.cs",
+    "methods": [
+      {
+        "name": "InMemoryResourcesStore_should_throw_if_contains_duplicate_names",
+        "body": "{| List<IdentityResource> identityResources = new List<IdentityResource>| {| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"A\" },| new IdentityResource { Name = \"C\" }| };| List<ApiResource> apiResources = new List<ApiResource>| {| new ApiResource { Name = \"B\" },| new ApiResourc",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "EndSessionRequestValidatorTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| _options.Authentication.RequireAuthenticatedUserForSignOutMessage = true;| var parameters = new NameValueCollection();| var result = await _subject.ValidateAsync(parameters, null);| result.IsError.Should().BeTrue();| result = await _subject.ValidateAsync(parameters, new ClaimsPrincipal());| resul",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "IntrospectionRequestValidatorTests.cs",
+    "methods": [
+      {
+        "name": "Task",
+        "body": "{| var token = new Token {| CreationTime = DateTime.UtcNow,| Issuer = \"http://op\",| ClientId = \"codeclient\",| Lifetime = 1000,| Claims =| {| new System.Security.Claims.Claim(\"scope\", \"a\"),| new System.Security.Claims.Claim(\"scope\", \"b\")| }| };| var handle = await _referenceTokenStore.StoreReferenceT",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Obscure In-Line Setup Test Smell",
+            "Status": "Found"
+          }
+        ]
+      }
+    ]
+  }
+]

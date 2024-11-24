@@ -4,70 +4,15 @@
     "methods": [
       {
         "name": "Task",
+        "body": "{| // Load Home Page| var response = await Client.GetAsync(\"/\");| response.EnsureSuccessStatusCode();| var stringResponse = await response.Content.ReadAsStringAsync();| // Add Item to Cart| var keyValues = new List<KeyValuePair<string, string>>| {| new KeyValuePair<string, string>(\"id\", \"2\"),| new K",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           },
           {
             "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       }
@@ -78,139 +23,29 @@
     "methods": [
       {
         "name": "Task",
+        "body": "{| // Load Home Page| var response = await Client.GetAsync(\"/\");| response.EnsureSuccessStatusCode();| var stringResponse1 = await response.Content.ReadAsStringAsync();| string token = WebPageHelpers.GetRequestVerificationToken(stringResponse1);| // Add Item to Cart| var keyValues = new List<KeyValu",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           },
           {
             "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       },
       {
         "name": "Task",
+        "body": "{| // Load Home Page| var response = await Client.GetAsync(\"/\");| response.EnsureSuccessStatusCode();| var stringResponse1 = await response.Content.ReadAsStringAsync();| string token = WebPageHelpers.GetRequestVerificationToken(stringResponse1);| // Add Item to Cart| var keyValues = new List<KeyValu",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           },
           {
             "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       }
@@ -221,70 +56,11 @@
     "methods": [
       {
         "name": "Task",
+        "body": "{| var request = new AuthenticateRequest()| {| Username = testUsername,| Password = testPassword| };| var jsonContent = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, \"application/json\");| var response = await ProgramTest.NewClient.PostAsync(\"api/authenticate\", jsonContent);| re",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       }
@@ -295,139 +71,25 @@
     "methods": [
       {
         "name": "Task",
+        "body": "{| var response = await ProgramTest.NewClient.GetAsync(\"api/catalog-items/5\");| response.EnsureSuccessStatusCode();| var stringResponse = await response.Content.ReadAsStringAsync();| var model = stringResponse.FromJson<GetByIdCatalogItemResponse>();| Assert.AreEqual(5, model!.CatalogItem.Id);| Asser",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           },
           {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Found"
           }
         ]
       },
       {
         "name": "Task",
+        "body": "{| var response = await ProgramTest.NewClient.GetAsync(\"api/catalog-items/5\");| response.EnsureSuccessStatusCode();| var stringResponse = await response.Content.ReadAsStringAsync();| var model = stringResponse.FromJson<GetByIdCatalogItemResponse>();| Assert.AreEqual(5, model!.CatalogItem.Id);| Asser",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       }
@@ -438,139 +100,21 @@
     "methods": [
       {
         "name": "Task",
+        "body": "{| var jsonContent = GetValidNewItemJson();| var token = ApiTokenHelper.GetNormalUserToken();| var client = ProgramTest.NewClient;| client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", token);| var response = await client.PostAsync(\"api/catalog-items\", jsonContent);| ",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       },
       {
         "name": "Task",
+        "body": "{| var jsonContent = GetValidNewItemJson();| var token = ApiTokenHelper.GetNormalUserToken();| var client = ProgramTest.NewClient;| client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", token);| var response = await client.PostAsync(\"api/catalog-items\", jsonContent);| ",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       }
@@ -581,139 +125,25 @@
     "methods": [
       {
         "name": "Task",
+        "body": "{| var adminToken = ApiTokenHelper.GetAdminUserToken();| var client = ProgramTest.NewClient;| client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", adminToken);| var response = await client.DeleteAsync(\"api/catalog-items/12\");| response.EnsureSuccessStatusCode();| var ",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
           },
           {
             "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       },
       {
         "name": "Task",
+        "body": "{| var adminToken = ApiTokenHelper.GetAdminUserToken();| var client = ProgramTest.NewClient;| client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(\"Bearer\", adminToken);| var response = await client.DeleteAsync(\"api/catalog-items/12\");| response.EnsureSuccessStatusCode();| var ",
         "Smells": [
           {
-            "Name": "Assertion Roulette Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Conditional Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Constructor Initialization Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Duplicate Assert Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Empty Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Eager Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Ignored Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Lack of Cohesion Test Smell",
-            "Status": "Not Found"
-          },
-          {
             "Name": "Magic Number Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Obscure In-Line Setup Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Assertion Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Redundant Print Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sleepy Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Sensitive Equality Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Unknown Test Smell",
-            "Status": "Not Found"
-          },
-          {
-            "Name": "Inappropriate Assertion Test Smell",
-            "Status": "Not Found"
+            "Status": "Found"
           }
         ]
       }

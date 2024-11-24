@@ -231,13 +231,15 @@ function preprocessInput(filePath) {
 }
 function processBatch(batch, includeExamples) {
     return __awaiter(this, void 0, void 0, function* () {
-        var _a, _b;
+        var _a;
         const fileDetails = batch.map(testFile => ({
             file: testFile.file,
             methods: testFile.methods.map(method => ({
                 name: method.name,
+                body: method.body, // Include method body in the prompt
             })),
         }));
+        // Examples of test smells
         const examples = `Example C# Test Smells:
 - Assertion Roulette: Unexplained assertions.
 - Conditional: Logic in tests.
@@ -253,6 +255,7 @@ function processBatch(batch, includeExamples) {
 - Inappropriate Assertion: Misaligned assertions.
 - Eager Test: Premature checks.
 - Magic Number: Hard-coded values.`;
+        // Construct the prompt
         const prompt = `
 You are a software testing expert. Analyze the following C# test methods and detect whether any of the following test smells are present:
 - ${TEST_SMELLS.join('\n- ')}
@@ -277,31 +280,59 @@ Do not include any explanations, prefaces, or additional text. Output ONLY valid
 # Test Files:
 ${JSON.stringify(fileDetails)}`;
         try {
+            console.log('Sending prompt to OpenAI:', prompt.slice(0, 1000), '...'); // Log a preview of the prompt
             const response = yield openai.chat.completions.create({
                 model: 'gpt-4',
                 messages: [{ role: 'user', content: prompt }],
             });
             const content = (_a = response.choices[0].message) === null || _a === void 0 ? void 0 : _a.content;
-            return JSON.parse(content || '[]');
+            // Validate JSON response
+            if (!content || !isValidJson(content)) {
+                throw new Error('Invalid JSON received from OpenAI');
+            }
+            const parsedResponse = JSON.parse(content);
+            // Map the response to include method bodies and smells
+            return parsedResponse.map(fileResult => ({
+                file: fileResult.file,
+                methods: fileResult.methods.map((methodResult) => {
+                    var _a, _b;
+                    return ({
+                        name: methodResult.name,
+                        body: ((_b = (_a = batch
+                            .find(file => file.file === fileResult.file)) === null || _a === void 0 ? void 0 : _a.methods.find(method => method.name === methodResult.name)) === null || _b === void 0 ? void 0 : _b.body) || '',
+                        Smells: Array.isArray(methodResult.Smells)
+                            ? methodResult.Smells.map(smell => ({
+                                Name: smell.Name,
+                                Status: smell.Status,
+                            }))
+                            : [], // Fallback to empty array if Smells is missing
+                    });
+                }),
+            }));
         }
         catch (error) {
             console.error('Error detecting smells in batch:', error);
-            // Retry on rate limits
-            if (((_b = error.response) === null || _b === void 0 ? void 0 : _b.status) === 429) {
-                console.warn('Rate limit exceeded. Retrying...');
-                yield delay(2000); // Wait 2 seconds before retrying
-                return processBatch(batch, includeExamples);
-            }
-            // Fallback response for the batch
+            // Provide a fallback result with all smells marked as "Not Found"
             return batch.map(testFile => ({
                 file: testFile.file,
                 methods: testFile.methods.map(method => ({
                     name: method.name,
+                    body: method.body,
                     Smells: TEST_SMELLS.map(smell => ({ Name: smell, Status: 'Not Found' })),
                 })),
             }));
         }
     });
+}
+// Utility to check if a string is valid JSON
+function isValidJson(content) {
+    try {
+        JSON.parse(content);
+        return true;
+    }
+    catch (_a) {
+        return false;
+    }
 }
 function detectSmellsInBatches(testFiles) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -311,16 +342,33 @@ function detectSmellsInBatches(testFiles) {
         let currentBatchTokenCount = 0;
         let firstBatch = true;
         for (const testFile of testFiles) {
-            const fileTokens = estimateTokens(JSON.stringify(testFile));
-            if (currentBatchTokenCount + fileTokens > BATCH_SIZE) {
-                analyses.push(...(yield processBatch(currentBatch, firstBatch)));
-                currentBatch = [];
-                currentBatchTokenCount = 0;
-                firstBatch = false; // Include examples only in the first batch
+            const fileBatch = { file: testFile.file, methods: [] };
+            //console.log(JSON.stringify(fileBatch,null,2));
+            //console.log("Initialized fileBatch:", JSON.stringify(fileBatch, null, 2));
+            for (const method of testFile.methods) {
+                const methodTokens = estimateTokens(JSON.stringify(method));
+                // Check if adding this method exceeds the batch size
+                if (currentBatchTokenCount + methodTokens > BATCH_SIZE) {
+                    // console.log("___________________Current Batch JSON:", JSON.stringify(currentBatch, null, 2));
+                    // console.log("___________________Current Batch Token Count:", currentBatchTokenCount);
+                    // console.log("___________________Current Method Tokens:", methodTokens);
+                    // Process the current batch
+                    analyses.push(...(yield processBatch(currentBatch, firstBatch)));
+                    currentBatch = [];
+                    currentBatchTokenCount = 0;
+                    firstBatch = false; // Include examples only in the first batch
+                }
+                // Add the method to the file batch and increment the token count
+                //console.log("___________________________Adding Method to FileBatch:", JSON.stringify(method, null, 2));
+                fileBatch.methods.push(method);
+                currentBatchTokenCount += methodTokens;
             }
-            currentBatch.push(testFile);
-            currentBatchTokenCount += fileTokens;
+            // Push the accumulated methods for the current file into the batch
+            if (fileBatch.methods.length > 0) {
+                currentBatch.push(fileBatch);
+            }
         }
+        // Process any remaining methods in the batch
         if (currentBatch.length > 0) {
             analyses.push(...(yield processBatch(currentBatch, firstBatch)));
         }
@@ -345,6 +393,7 @@ function main() {
         }
         const testFiles = yield preprocessInput(inputFilePath);
         console.log(`Processing test file: ${fileName}`);
+        //console.log(JSON.stringify(testFiles,null,2)); //____________
         const analyses = yield detectSmellsInBatches(testFiles);
         const outputFilePath = path_1.default.join(outputFolder, `${path_1.default.basename(fileName, '.json')}-test-smells.json`);
         yield promises_1.default.writeFile(outputFilePath, JSON.stringify(analyses, null, 2), 'utf-8');

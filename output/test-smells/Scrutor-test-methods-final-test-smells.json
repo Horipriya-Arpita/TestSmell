@@ -1,0 +1,289 @@
+[
+  {
+    "file": "DecorationTests.cs",
+    "methods": [
+      {
+        "name": "CanDecorateType",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<IDecoratedService, Decorated>();| services.Decorate<IDecoratedService, Decorator>();| });| var instance = provider.GetRequiredService<IDecoratedService>();| var decorator = Assert.IsType<Decorator>(instance);| Assert.IsType<De",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "OpenGenericDecorationTests.cs",
+    "methods": [
+      {
+        "name": "CanDecorateOpenGenericTypeBasedOnClass",
+        "body": "{| var provider = ConfigureProvider(services =>| {| services.AddSingleton<QueryHandler<MyQuery, MyResult>, MyQueryHandler>();| services.Decorate(typeof(QueryHandler<,>), typeof(LoggingQueryHandler<,>));| services.Decorate(typeof(QueryHandler<,>), typeof(TelemetryQueryHandler<,>));| });| var instance",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Assertion Roulette Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Conditional Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Constructor Initialization Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Duplicate Assert Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Eager Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Ignored Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Lack of Cohesion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Assertion Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Redundant Print Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sleepy Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Sensitive Equality Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Unknown Test Smell",
+            "Status": "Not Found"
+          },
+          {
+            "Name": "Inappropriate Assertion Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "ScanningTests.cs",
+    "methods": [
+      {
+        "name": "Scan_TheseTypes",
+        "body": "{ | Collection.Scan(scan => scan | .FromTypes<TransientService1, TransientService2>() | .AsImplementedInterfaces(x => x != typeof(IOtherInheritance)) | .WithSingletonLifetime()); | | Assert.Equal(2, Collection.Count); | | Assert.All(Collection, x => | { | Assert.Equal(ServiceLifetime.Singleton, x.Li",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "UsingRegistrationStrategy_None",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .With",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "UsingRegistrationStrategy_SkipIfExists",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(Registr",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "UsingRegistrationStrategy_ReplaceDefault",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(Registr",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "UsingRegistrationStrategy_ReplaceServiceTypes",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(Registr",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "UsingRegistrationStrategy_ReplaceImplementationTypes",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .UsingRegistrationStrategy(Registr",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "UsingRegistrationStrategy_Throw",
+        "body": "{ | Assert.Throws<DuplicateTypeRegistrationException>(() => | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces() | .WithTransientLifetime() | .AddClasses(classes => classes.AssignableTo<",
+        "Smells": [
+          {
+            "Name": "Empty Test Smell",
+            "Status": "Found"
+          }
+        ]
+      },
+      {
+        "name": "CanFilterTypesToScan",
+        "body": "{ | Collection.Scan(scan => scan | .FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .AsImplementedInterfaces(x => x != typeof(IOtherInheritance)) | .WithTransientLifetime()); | | var services = Collection.GetDescriptors<ITransientService>(); ",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "CanRegisterAsSpecificType",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses(classes => classes.AssignableTo<ITransientService>()) | .As<ITransientService>()); | | var services = Collection.GetDescriptors<ITransientService>(); | | Assert.Equal(services, Collection); | | Assert.All(services, se",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "CanSpecifyLifetime",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IScopedService>() | .AddClasses(classes => classes.AssignableTo<IScopedService>()) | .AsImplementedInterfaces() | .WithScopedLifetime()); | | var services = Collection.GetDescriptors<IScopedService>(); | | Assert.Equal(services, Collection); | | Assert",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "LifetimeIsPropagatedToAllRegistrations",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IScopedService>() | .AddClasses(classes => classes.AssignableTo<IScopedService>()) | .AsImplementedInterfaces() | .AsSelf() | .WithScopedLifetime()); | | Assert.All(Collection, service => Assert.Equal(ServiceLifetime.Scoped, service.Lifetime)); | }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "CanRegisterGenericTypes",
+        "body": "{ | Collection.Scan(scan => scan.FromAssemblyOf<IScopedService>() | .AddClasses(classes => classes.AssignableTo(typeof(IQueryHandler<,>))) | .AsImplementedInterfaces() | .WithScopedLifetime()); | | var service = Collection.GetDescriptor<IQueryHandler<string, int>>(); | | Assert.NotNull(service); | A",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "CanRegisterFullyClosedGenericWithDifferentArityThanServiceType",
+        "body": "{ | Collection.Scan(scan => scan | .FromTypes(typeof(PartiallyClosedGeneric<string>)) | .AsImplementedInterfaces() | .WithTransientLifetime()); | | var descriptor = Assert.Single(Collection); | | Assert.Equal(typeof(IPartiallyClosedGeneric<string, int>), descriptor.ServiceType); | }",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      },
+      {
+        "name": "CanScanUsingAttributes",
+        "body": "{ | var interfaces = new[] | { | typeof(ITransientService), | typeof(ITransientServiceToCombine), | typeof(IScopedServiceToCombine), | typeof(ISingletonServiceToCombine), | | }; | | Collection.Scan(scan => scan.FromAssemblyOf<ITransientService>() | .AddClasses(t => t.AssignableToAny(interfaces)) | .",
+        "Smells": [
+          {
+            "Name": "Magic Number Test Smell",
+            "Status": "Not Found"
+          }
+        ]
+      }
+    ]
+  }
+]
